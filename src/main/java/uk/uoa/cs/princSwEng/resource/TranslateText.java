@@ -1,4 +1,4 @@
-package com.example.cloud.translate.samples; 
+package uk.uoa.cs.princSwEng.resource; 
 
 import com.google.cloud.translate.Detection; 
 import com.google.cloud.translate.Language; 
