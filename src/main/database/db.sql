@@ -6,6 +6,8 @@
 
 DROP TABLE IF EXISTS Sentences;
 
+
+
 CREATE TABLE Sentences (id SERIAL, internal_id VARCHAR(35), sentence VARCHAR(1000), PRIMARY KEY (id));
 
 

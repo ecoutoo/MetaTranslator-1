@@ -1,0 +1,134 @@
+FLA-aff-pos 513 | Ozzy, a Hero for the hard-rocking masses
+FLA-aff-pos 519 | Male sweat boosts woman hormone levels
+FLA-aff-pos 524 | Inter Milan set Serie A win record
+FLA-aff-pos 525 | US Airways boosts bid for Delta
+FLA-aff-pos 540 | Golden Globes on their way
+FLA-aff-pos 542 | Federer handed tough Aussie draw
+FLA-aff-pos 556 | India's Taj Mahal gets facelift
+FLA-aff-pos 566 | 'Stomp' steps to No. 1 at box office
+FLA-aff-pos 572 | EU will urge China to go green
+FLA-aff-pos 586 | Visitors to Eiffel Tower climb to record in 2006
+FLA-aff-pos 588 | Queen battles James_Bond for Baftas
+FLA-aff-pos 596 | Archaeologists find remains of couple lock_in a hug
+FLA-aff-pos 612 | Federer overcomes a ragged start
+FLA-aff-pos 614 | Terai protesters hail 'historic' victory over government
+FLA-aff-pos 617 | Bebe Neuwirth gets to 'wiggle again'
+FLA-aff-pos 619 | Sleep more to fight childhood obesity
+FLA-aff-pos 622 | Sleuths close in on Odysseus home
+FLA-aff-pos 625 | Park stars as United maintain lead
+FLA-aff-pos 627 | India's famous landmark gets facelift
+FLA-aff-pos 630 | Apple drops bombshell with iPhone
+FLA-aff-pos 637 | Walnuts 'combat unhealthy fats'
+FLA-aff-pos 649 | Matt shines with his Alpine finish
+FLA-aff-pos 653 | The energy challenge. Exotic visions: how to cool a planet (maybe)
+FLA-aff-pos 663 | Space life search turns to TV
+FLA-aff-pos 676 | Rights group halts violent Nepal strikes
+FLA-aff-pos 684 | Guy sweat is babe magnet
+FLA-aff-pos 685 | Township tourism booming in South Africa
+FLA-aff-pos 702 | Commodity lead Europe higher
+FLA-aff-pos 704 | Goetschl ends Austrian win drought
+FLA-aff-pos 728 | Martins leads Newcastle fightback
+FLA-aff-pos 746 | Europe take big Royal Trophy lead
+FLA-aff-pos 765 | Philippine president welcomes Senate approval of anti-terror bill
+FLA-aff-pos 769 | Real Mallorca rock leaders Sevilla
+FLA-aff-pos 772 | Bird watchers flock to see rare owl
+FLA-aff-pos 777 | Rare optimism as North Korea talks reach crossroads
+FLA-aff-pos 783 | Wellcome awards anti-fat research
+FLA-aff-pos 800 | In rigorous test, talk therapy works for panic disorder
+FLA-aff-pos 814 | Israel says hopes to keep Lebanon border calm
+FLA-aff-pos 824 | U.S. keep_open Iran options
+FLA-aff-pos 825 | European shares hit fresh highs
+FLA-aff-pos 831 | Mancuso sparks U.S. celebrations
+FLA-aff-pos 847 | Male sweat boosts woman hormone levels
+FLA-aff-pos 858 | Internet boom in China be build on virtual fun
+FLA-aff-pos 864 | North Korea ready to discuss first steps to nuclear resolution
+FLA-aff-pos 866 | Ferrer victorious in Spanish duel
+FLA-aff-pos 873 | Microsoft supports OpenID authentication standard
+FLA-aff-pos 877 | North Korea may begin to dismantle nukes
+FLA-aff-pos 879 | Barack Obama formally announces bid for president
+FLA-aff-pos 884 | Cutting_edge accessory for digital music players
+FLA-aff-pos 894 | Donald and Goydos share Sony lead
+FLA-aff-pos 910 | 7 GOP senators to force debate on troops in Iraq
+FLA-aff-pos 919 | Luxury digs in South Carolina's Lowcountry
+FLA-aff-pos 927 | Why the smell of a man's armpit be a turn-on
+FLA-aff-pos 930 | Second drop in cancer deaths could point to a trend, researchers say
+FLA-aff-pos 941 | In Egypt, Rice speaks softly
+FLA-aff-pos 947 | De Villiers stretches overall lead
+FLA-aff-pos 952 | Nadal wants Australian Open crown
+FLA-aff-pos 963 | Beckham outlines reasons for move
+FLA-aff-pos 972 | Underarm bowl_over them
+FLA-aff-pos 982 | Israel weighs old city project webcast
+FLA-aff-pos 992 | Gere cheers sex workers in AIDS fight
+FLA-aff-pos 995 | Surprise: China cuts price of gas
+FLA-aff-pos 1002 | Iraqi sunni lands show new oil and gas promise
+FLA-aff-pos 1003 | Princess and heir of Franz Ferdinand fights to repeal a law and gain a castle
+FLA-aff-pos 1030 | Moscow says Palestine-Israeli contacts key to Mideast peace
+FLA-aff-pos 1037 | China: Cheney shore_up the trilateral alliance
+FLA-aff-pos 1048 | Iran top nuclear envoy heads for Vienna for nuke talks
+FLA-aff-pos 1052 | Royal rescues presidential hopes with commanding performance
+FLA-aff-pos 1053 | Royal seeks to revive French bid
+FLA-aff-pos 1054 | Sarkozy comfort_zone offers a royal opportunity
+FLA-aff-pos 1074 | London be pace-setter on congestion toll, says mayor
+FLA-aff-pos 1077 | Thai Govt moves to smooth_over relations with south
+FLA-aff-pos 1081 | Canadian breakthrough offers hope on autism
+FLA-aff-pos 1091 | Stop cancer with a shot
+FLA-aff-pos 1105 | Health returns as hot_issue in '08 race
+FLA-aff-pos 1108 | Whether to save cord blood can be puzzle for parents
+FLA-aff-pos 1113 | Pig cells hope for diabetes cure
+FLA-aff-pos 1126 | Opponent be put on_the_spot over remarks about Clinton
+FLA-aff-pos 1131 | Google unveil do-it-yourself search engine
+FLA-aff-pos 1132 | Firefox 2.0 hit the Web
+FLA-aff-pos 1133 | Oracle World opens with Dell unveil AMD-powered computers
+FLA-aff-pos 1144 | Arthurs upset Robredo in first round at the St. Petersburg Open
+FLA-aff-pos 1151 | Cool millions for YouTube founders
+FLA-aff-pos 1152 | London market a shopping, dining haven
+FLA-aff-pos 1155 | Microsoft to release next generation phone
+FLA-aff-pos 1158 | Oxfam: action needed for Chad
+FLA-aff-pos 1170 | Ronnie and Eto o hug and make_up
+FLA-aff-pos 1176 | Spain ahead although Nadal be out
+FLA-aff-pos 1195 | Mickelson driving_force at masters
+FLA-aff-pos 1200 | Dolphins, sea lions may report for duty soon
+FLA-aff-pos 1201 | Nasdaq-LSE battle nears deadline
+FLA-aff-pos 1203 | U.S. open_door for Iraqi refugees
+FLA-aff-pos 1205 | Study: napping might help heart
+FLA-aff-pos 1206 | MySpace sales surge
+FLA-aff-pos 1208 | Air France KLM profit rises
+FLA-aff-pos 1210 | King and queen reign at British film awards
+FLA-aff-pos 1211 | Murphys rule box office with 'Norbit'
+FLA-aff-pos 1227 | Corn stoves pop_up in U.S. homes
+FLA-aff-pos 1232 | Obama will run in 2008
+FLA-aff-pos 1233 | 'Cagney & Lacey' finally come to DVD
+FLA-aff-pos 1238 | Obama announces presidential bid
+FLA-aff-pos 1239 | Tell your boss: Nap be good_for_you
+FLA-aff-pos 1251 | St. Louis poise for entertainment upswing
+FLA-aff-pos 1263 | Singer on Cowell: Glad he be mean
+FLA-aff-pos 1265 | Beckham goal help Real snatch win
+FLA-aff-pos 1267 | Japan's economy grow
+FLA-aff-pos 1272 | Siesta cut risk of heart disease death, study finds
+FLA-aff-pos 1274 | Nap your way to a successful career
+FLA-aff-pos 1284 | Autos drive European gains
+FLA-aff-pos 1288 | On-the-job naps might cut heart risk
+FLA-aff-pos 1289 | No 1 Florida survives Rupp Arena, streak hit 16
+FLA-aff-pos 1312 | Whistle-blowing Web site expose
+FLA-aff-pos 1322 | Malaysia aggressively woo tourists
+FLA-aff-pos 1349 | Paterson boot Scotland to victory
+FLA-aff-pos 1360 | Iraq unveil new security plans
+FLA-aff-pos 1364 | Prehistoric lovers find lock in eternal embrace
+FLA-aff-pos 1365 | Charts: be your city lean or lethargic?
+FLA-aff-pos 1370 | Siestas may cut heart disease risk
+FLA-aff-pos 1375 | Record-shattering day on Wall St.
+FLA-aff-pos 1398 | UK soldiers clear of Iraq abuse
+FLA-aff-pos 1407 | Higley, Gonzalez lead in Malaysia
+FLA-aff-pos 1408 | Grammys ready to name winners
+FLA-aff-pos 1412 | Allen and Okur get All-Star call
+FLA-aff-pos 1413 | Svindal claim be golden double
+FLA-aff-pos 1428 | Tiempo Libre have Grammy dream
+FLA-aff-pos 1433 | Breast cancer drug promises hope
+FLA-aff-pos 1435 | YouTube yields surprising payback
+FLA-aff-pos 1442 | The breast cancer breakthrough save 1000 woman a year
+FLA-aff-pos 1445 | World tourism set record in 2006
+FLA-aff-pos 1457 | Founder returns to Dell helm
+FLA-aff-pos 1465 | Good news for slackers: Naps may cut risk for heart problems
+FLA-aff-pos 1471 | Durant's success trump the Gators
+FLA-aff-pos 1475 | United hang_on to six-point lead
+FLA-aff-pos 1493 | Escape to Prague without the summer hordes

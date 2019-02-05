@@ -28,3 +28,5 @@ We are going to discuss together the database design to understand how we are go
 * main/webapp contains HTML resources, JavaScript, CascadeStyleSheet and JavaServer Pages (JSP are the **View** in a MVC Pattern). Servlets are going to take this files, process them and send it to the user as a result of an action. 
 
 * pom.xml, context.xml, web.xml are configuration files for the server and the database
+
+LINK TO ACCESS THE WEBSITE: https://metatranslator.herokuapp.com/

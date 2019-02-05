@@ -1,5 +1,7 @@
 package uk.uoa.cs.princSwEng.servlet;
 
+import uk.uoa.cs.princSwEng.resource.Global;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.http.HttpServlet;
@@ -17,6 +19,8 @@ import java.sql.Connection;
  */
 public abstract class AbstractDatabaseServlet extends HttpServlet
 {
+
+private final static String DATABASE_URL = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
 // public void init(ServletConfig config) throws ServletException
 // {
@@ -73,8 +77,10 @@ public abstract class AbstractDatabaseServlet extends HttpServlet
  *          if an exception has occurred that interferes with the servlet's normal operation
  */
 public static Connection getConnection() throws URISyntaxException, SQLException {
-    URI dbUri = new URI(System.getenv("DATABASE_URL"));
-    System.err.println("DATABASE_URL " + dbUri.toString());
+    //URI dbUri = new URI(System.getenv("DATABASE_URL"));
+    URI dbUri = new URI(DATABASE_URL);
+    if (Global.DEBUGMODE)
+    	System.err.println("DATABASE_URL " + dbUri.toString());
 
     String username = dbUri.getUserInfo().split(":")[0];
     String password = dbUri.getUserInfo().split(":")[1];

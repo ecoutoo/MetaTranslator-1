@@ -39,6 +39,15 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+	    google_ad_client: "ca-pub-9489459811655058",
+	    enable_page_level_ads: true
+	  });
+	</script>
+
 	</head>
 	<body>
 		
@@ -51,18 +60,22 @@
 				
 				<div class="row">
 					<div class="col-sm-2 col-xs-2">
-						<div id="gtco-logo"><a href="index.html">MetaTranslator<sup>&trade;</sup></div>
+						<div id="gtco-logo"><a href="index.html">MetaTranslator</a><sup>&trade;</sup></div>
 					</div>
 
 				</div>
 				
 			</div>
 		</nav>
+	</div>
 
 
 
 	<body>
-		<h1><c:out value="${key}"/></h1>
+		<div align="center">
+			<h1>The unique key is: <c:out value="${key}"/></h1>
+		</div>
+		
 	</body>
 
 		<!-- <div id="gtco-project">
@@ -130,7 +143,7 @@
 			</div>
 		</div>
 	 -->
-
+<!-- 
 		<footer id="fh5co-footer">
 			<div class="container">
 				<div class="row">
@@ -155,7 +168,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>
+		</footer> -->
 		
 
 	</div>

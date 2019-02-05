@@ -45,6 +45,8 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+
+
 	</head>
 	<body>
 		
@@ -57,7 +59,7 @@
 				
 				<div class="row">
 					<div class="col-sm-2 col-xs-2">
-						<div id="gtco-logo"><a href="index.html">MetaTranslator<sup>&trade;</sup></a></div>
+						<div id="gtco-logo"><a href="index.html" id="index">MetaTranslator<sup>&trade;</sup></a></div>
 					</div>
 					<!-- <div class="col-xs-10 text-right fh5co-top-social">
 						<ul class="gtco-social">
@@ -82,7 +84,7 @@
 			<div class="row">
 				<div class="col-md2">
 					<p>Choose the translator engine to be used:</p>
-					<form action="/manager" method="post" id="nlp">
+					<form action="manager" method="post" id="nlp">
 					<input type="radio" name="translator" value="google" checked> Google Translator<br>
 					<input type="radio" name="translator" value="bing"> Bing<br>
 					<input type="radio" name="translator" value="both"> Both <br>
@@ -105,6 +107,9 @@
 					<input type="radio" name="corpora" value="VUA" checked> VUA<br>
 					<input type="radio" name="corpora" value="MOH"> MOH-X<br>
 					<input type="radio" name="corpora" value="FLA"> FLA <br>
+					<br>
+					<p>Enter here the email of your clients to send directly the unique key number to them. Separate values with a semicolon, NO SPACES please.</p>
+					<input type="text" name="email">
 					<br>
 					<br>
 					<input type="submit" value="Submit" style="background-color:yellowgreen;color:white;padding:5px;font-size:18px;border:none;padding:8px;">

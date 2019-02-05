@@ -1,0 +1,16 @@
+language: java
+install: true
+env:
+  global:
+    - HEROKU_API_KEY=351d6cf9-6768-42b8-b17c-15a1d8442009
+script:
+- curl https://cli-assets.heroku.com/install.sh | sh
+- heroku plugins:install java
+- heroku plugins:install heroku-cli-deploy
+- mvn clean package 
+- heroku war:deploy target/Echo-Team-0.1.war --app metatranslator
+deploy:
+provider: heroku
+api_key:
+secure: kZQR9EVAuU9czHY0wxbfbswjkoAyKcS7TcgOEacdfboL74TX+/CdF9y+tqjA10DK6zcn1Ei7ir+uBWcQZkHj+SEa8X8dCSJ6UAp5ua/HDkVH0fYbgUgpTPEx6x7yGrUNWtexCDGCh9Ob004nsTr8CWY32bj58I5a8BOc4jJvE6vN7xipLlXDVgjkDrLl6ANBR1G05RKJ8wqTkCS1hGH78h+AFinzqDVFDtaezRwVrmc+n3fyGEPj5PFTjg4phP6X8NAlRh5Fps3tJ8WdDjHUBbD5duZbzSnKTv6RAPDi0qRATLFDH1kTRWcmDY9uy2y0E1C9C1O16vSLpk8r9vyPGb19eKPzMsNntlaD3vDd9M7SssH0ZNpmz4DXTQLiAFBx1f6iM2uF4PQpFEP1SuzCKL2ooDv46G8xaJDhWlMU3Qw8kWc7XxYoJcXLRqqKTZe1Gb203MBabCN9nc5ZvBjW1xlcTzeRQT+inVHi1JnqieeMDCiHHhdiyeOAKh8hEkQnjQdbGyaDS06gAVozuW0pAhSO4It6VovRd1/2pgsg923b1XEDqYdu+geelXXBZhB9KvfXFWH0X1uPMHPhaQrxunNcDIVNMKjmWqHwA3lVVECmrfWPgVaJcB51+y0fsBH0cMdEZEMVrZObhhEWxPZP4NNWD4Qk6yxrnBX9epwYqS0=
+app: nameless-fortress-48670

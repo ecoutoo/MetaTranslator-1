@@ -1,0 +1,647 @@
+MOH_1 |  He absorbed the knowledge or beliefs of his tribe .
+MOH_2 |  He absorbed the costs for the accident .
+MOH_3 |  The sales tax is absorbed into the state income tax .
+MOH_4 |  The immigrants were quickly absorbed into society .
+MOH_5 |  Her interest in butterflies absorbs her completely .
+MOH_6 |  This boss abuses his workers .
+MOH_7 |  Do n't abuse the system .
+MOH_8 |  The actress abused the policeman who gave her a parking ticket .
+MOH_9 |  Her husband often abuses alcohol .
+MOH_10 |  This hotel can accommodate 250 guests .
+MOH_11 |  The scientists had to accommodate the new results with the existing theories .
+MOH_12 |  The program committee acknowledged the submission of the authors of the paper .
+MOH_13 |  He never acknowledges his colleagues when they run into him in the hallway .
+MOH_14 |  We must acknowledge the kindness she showed towards us .
+MOH_15 |  acknowledge the deed .
+MOH_16 |  The Crown Prince was acknowledged as the true heir to the throne .
+MOH_17 |  The residents of this village adhered to Catholicism .
+MOH_18 |  Will this wallpaper adhere to the wall ?
+MOH_19 |  The steering of my new car answers to the slightest touch .
+MOH_20 |  answer the telephone .
+MOH_21 |  The question concerning the meaning of life can not be answered .
+MOH_22 |  The defendant answered to all the charges of the prosecution .
+MOH_23 |  We ascended the mountain .
+MOH_24 |  Inheritance may not ascend linearly .
+MOH_25 |  The path ascended to the top of the hill .
+MOH_26 | " Hitler attacked Poland on September 1 
+MOH_27 |  The editors of the left - leaning paper attacked the new House Speaker .
+MOH_28 |  The Serbs attacked the village at night .
+MOH_29 |  I attacked the problem as soon as I got out of bed .
+MOH_30 |  The cancer cells are attacking his liver .
+MOH_31 |  The Turks besieged Vienna .
+MOH_32 |  She was besieged by so many problems that she got discouraged .
+MOH_33 |  The press photographers besieged the movie star .
+MOH_34 |  The Chinese would bind the feet of their women .
+MOH_35 |  They bind their books in leather .
+MOH_36 |  The hydrogen binds the oxygen .
+MOH_37 |  Meteors blazed across the atmosphere .
+MOH_38 |  The summer sun alone can cause a pine to blaze .
+MOH_39 |  The spaceship blazed out into space .
+MOH_40 |  Her feet blistered during the long hike .
+MOH_41 |  The Senator blistered the administration in his speech on Friday .
+MOH_42 |  The haze blurs the hills .
+MOH_43 |  The fog blurs my vision .
+MOH_44 |  The distinction between the two theories blurred .
+MOH_45 |  The listeners bolted when he discussed his strange ideas .
+MOH_46 |  Do n't bolt your food !
+MOH_47 |  The tax cut will boost the economy .
+MOH_48 |  Boost the voltage in an electrical circuit .
+MOH_49 |  The singer had to be boosted onto the stage by a special contraption .
+MOH_50 |  The rubber ball bounced .
+MOH_51 |  The ex - boxer 's job is to bounce people who want to enter this private club .
+MOH_52 |  The government bowed to the military pressure .
+MOH_53 |  He breathed new life into the old house .
+MOH_54 |  Our new synthetic fabric breathes and is perfect for summer wear .
+MOH_55 |  Johnson brushed the hairs from his jacket .
+MOH_56 |  He brushed the wall lightly .
+MOH_57 |  She brushed the suit before hanging it back into the closet .
+MOH_58 |  Suspense was building right from the beginning of the opera .
+MOH_59 |  The government is building new schools in this state .
+MOH_60 |  build a modern nation .
+MOH_61 |  These architects build in interesting and new styles .
+MOH_62 |  build a defense on nothing but the accused person 's reputation .
+MOH_63 |  This sum will buy you a ride on the train .
+MOH_64 |  She wanted to buy his love with her dedication to him and his work .
+MOH_65 |  I ca n't buy this story .
+MOH_66 |  bees were buzzing around the hive .
+MOH_67 |  Planes buzzed the crowds in the square .
+MOH_68 |  This office is buzzing with activity .
+MOH_69 |  he buzzed the servant .
+MOH_70 |  capture the essence of Spring   .
+MOH_71 |  She captured all the men 's hearts .
+MOH_72 |  This nucleus has captured the slow - moving neutrons .
+MOH_73 |  They clawed their way to the top of the mountain .
+MOH_74 |  She clawed the doorknob .
+MOH_75 |  The politician clawed his rival .
+MOH_76 |  Did you ever climb up the hill behind your house ?
+MOH_77 |  Sales were climbing after prices were lowered .
+MOH_78 |  Sales were climbing after prices were lowered .
+MOH_79 |  The path climbed all the way to the top of the hill .
+MOH_80 |  The leaves clog our drains in the Fall .
+MOH_81 |  horses were clogged until they were tamed .
+MOH_82 |  The market is being clogged by these operations .
+MOH_83 |  Fear clogged her mind .
+MOH_84 |  The smoke clouded above the houses .
+MOH_85 |  Their faces were clouded with sadness .
+MOH_86 |  The stroke clouded memories of her youth .
+MOH_87 |  The chemical clouded the liquid to which it was added .
+MOH_88 |  His political ideas color his lectures .
+MOH_89 |  color the walls with paint in warm tones .
+MOH_90 |  commit a random act of kindness .
+MOH_91 |  Please communicate this message to all employees .
+MOH_92 |  He communicated his anxieties to the psychiatrist .
+MOH_93 |  communicate a disease .
+MOH_94 |  The rooms communicated .
+MOH_95 |  John compared his haircut to his friend 's .
+MOH_96 |  This car does not compare with our line of Mercedes .
+MOH_97 |  We can compare the Han dynasty to the Romans .
+MOH_98 |  Greed and ambition composed his personality .
+MOH_99 |  Beethoven composed nine symphonies .
+MOH_100 |  Our office is fully computerized now .
+MOH_101 |  They computerized the car industry .
+MOH_102 |  condense the contents of a book into a summary .
+MOH_103 |  The cold air condensed the steam .
+MOH_104 |  All our planets condensed out of the same material .
+MOH_105 |  Congress condensed the three - year plan into a six - month plan .
+MOH_106 |  The comedian convulsed the crowd .
+MOH_107 |  earthquakes convulsed the countryside .
+MOH_108 |  The spasm convulses her facial muscles .
+MOH_109 |  The muscles in her face convulsed .
+MOH_110 |  The crocodile was crawling along the riverbed .
+MOH_111 |  My skin crawled -- I was terrified .
+MOH_112 |  The old cheese was crawling with maggots .
+MOH_113 |  European children learn the breast stroke ; they often do n't know how to crawl .
+MOH_114 |  The prince was crowned in Westminster Abbey .
+MOH_115 |  The speech crowned the meeting .
+MOH_116 |  A weather vane crowns the building .
+MOH_117 |  crush an aluminum can .
+MOH_118 |  The car crushed the toy .
+MOH_119 |  She was crushed by his refusal of her invitation .
+MOH_120 |  The plastic bottle crushed against the wall .
+MOH_121 |  The cigar smoke curled up at the ceiling .
+MOH_122 | " Curl my hair 
+MOH_123 |  He dashed the plate against the wall .
+MOH_124 |  dashed ambitions and hopes .
+MOH_125 |  blue paint dashed with white .
+MOH_126 |  deflate the air mattress .
+MOH_127 |  The bad review of his work deflated his self - confidence .
+MOH_128 |  The new measures deflated the economy .
+MOH_129 |  deflate the currency .
+MOH_130 |  The balloons deflated .
+MOH_131 |  Chanel designed the famous suit .
+MOH_132 |  She designed a good excuse for not attending classes that day .
+MOH_133 |  Fire had devoured our home .
+MOH_134 |  She devoured his novels .
+MOH_135 |  he devoured three sandwiches .
+MOH_136 |  I can not digest milk products .
+MOH_137 |  I can not digest all this information .
+MOH_138 |  Protein digests in a few hours .
+MOH_139 |  the government digested the entire law into a code .
+MOH_140 |  He downed three martinis before dinner .
+MOH_141 |  Some people can down a pound of meat in the course of one meal .
+MOH_142 |  The policeman downed the heavily armed suspect .
+MOH_143 |  The rain water drains into this big vat .
+MOH_144 |  We drained the oil tank .
+MOH_145 |  Life in the camp drained him .
+MOH_146 |  snow drifting several feet high .
+MOH_147 |  stock prices are drifting higher .
+MOH_148 |  My son drifted around for years in California before going to law school .
+MOH_149 |  The unknown young man drifted among the invited guests .
+MOH_150 |  drift the boats downstream .
+MOH_151 |  The stock market drifted upward .
+MOH_152 |  The patient must drink several liters each day .
+MOH_153 |  The mother drinks in every word of her son on the stage .
+MOH_154 |  The husband drinks and beats his wife .
+MOH_155 |  She drowned her trouble in alcohol .
+MOH_156 |  The child drowned in the lake .
+MOH_157 |  Age had dulled the surface .
+MOH_158 |  Middle age dulled her appetite for travel .
+MOH_159 |  The truck dumped the garbage in the street .
+MOH_160 | " Suddenly 
+MOH_161 |  Some nice results emerged from the study .
+MOH_162 |  The event engraved itself into her memory .
+MOH_163 |  engrave the pen with the owner 's name .
+MOH_164 |  Please erase the formula on the blackboard -- it is wrong !
+MOH_165 |  Who erased the files form my hard disk ?
+MOH_166 |  Unrest erupted in the country .
+MOH_167 |  The tooth erupted and had to be extracted .
+MOH_168 |  A rash erupted on her arms after she had touched the exotic plant .
+MOH_169 |  We exploded the nuclear bomb .
+MOH_170 |  The champagne bottle exploded .
+MOH_171 |  The boss exploded when he heard of the resignation of the secretary .
+MOH_172 |  The enemy exploded the bridge .
+MOH_173 |  He fastened the lock onto the door .
+MOH_174 |  This dress fastens in the back .
+MOH_175 |  They fastened various nicknames to each other .
+MOH_176 |  We ferment the grapes for a very long time to achieve high alcohol content .
+MOH_177 |  fill the child with pride .
+MOH_178 |  The pool slowly filled with water .
+MOH_179 |  The liquid fills the container .
+MOH_180 |  The bird flapped its wings .
+MOH_181 |  Every star seemed to flare with new intensity .
+MOH_182 |  The lights were flashing .
+MOH_183 |  The latest intelligence is flashed to all command posts .
+MOH_184 |  he flashed a $ 100 bill .
+MOH_185 |  A shooting star flashed and was gone .
+MOH_186 |  He floated the logs down the river .
+MOH_187 |  The Republicans are floating the idea of a tax reform .
+MOH_188 |  The dancer floated across the stage .
+MOH_189 |  The government floated the ruble for a few months .
+MOH_190 |  The swollen river flooded the village .
+MOH_191 |  flood the market with tennis shoes .
+MOH_192 |  Our basement flooded during the heavy rains .
+MOH_193 |  The crowd flowed out of the stadium .
+MOH_194 |  Water flowed into the cave .
+MOH_195 |  The champagne flowed at the wedding .
+MOH_196 |  The garbage flushed down the river .
+MOH_197 |  the sky flushed with rosy splendor .
+MOH_198 |  flush the wound with antibiotics .
+MOH_199 |  form the young child 's character .
+MOH_200 |  the water formed little beads .
+MOH_201 |  This writer really fractures the language .
+MOH_202 |  These events could fracture the balance of power .
+MOH_203 |  The pothole fractured a bolt on the axle .
+MOH_204 | " fuel aircraft 
+MOH_205 |  The tanker fueled in Bahrain .
+MOH_206 |  fuel the debate on creationism .
+MOH_207 |  The press was gagged .
+MOH_208 |  The horse was galloping along .
+MOH_209 |  The girl glared at the man who tried to make a pass at her .
+MOH_210 |  The moon glared back at itself from the lake 's surface .
+MOH_211 |  The sun glared down on us .
+MOH_212 |  The fireflies were glowing and flying about in the garden .
+MOH_213 |  Her face glowed when she came out of the sauna .
+MOH_214 |  The coals were glowing in the dark .
+MOH_215 |  Make the people 's hearts glow .
+MOH_216 |  The passenger grabbed for the oxygen mask .
+MOH_217 |  She grabbed the child 's hand and ran out of the room .
+MOH_218 |  This story will grab you .
+MOH_219 |  The conversation gravitated towards politics .
+MOH_220 |  Boys gravitate towards girls at that age .
+MOH_221 |  The stars gravitate towards each other .
+MOH_222 |  grind the spices in a mortar .
+MOH_223 |  His mind groped to make the connection .
+MOH_224 |  He made some sexual advances at the woman in his office and groped her repeatedly .
+MOH_225 |  There will be men guarding the horses .
+MOH_226 |  Please guard my possessions while I 'm away .
+MOH_227 |  This vaccine will guard you against infection .
+MOH_228 |  The cooling lava continued to gutter toward lower ground .
+MOH_229 |  Tears guttered down her face .
+MOH_230 |  The heavy rain guttered the soil .
+MOH_231 |  The roofer began to gutter the buildings .
+MOH_232 |  The colors do n't harmonize .
+MOH_233 |  harmonize one 's goals with one 's abilities .
+MOH_234 |  He heaped him with work .
+MOH_235 |  heap firewood around the fireplace .
+MOH_236 |  heap the platter with potatoes .
+MOH_237 |  Goering often hunted wild boars in Poland .
+MOH_238 |  They hunted the unwanted immigrants out of the neighborhood .
+MOH_239 |  The oscillator hunts about the correct frequency .
+MOH_240 |  This exercise will hurt your back .
+MOH_241 |  Our business was hurt by the new competition .
+MOH_242 |  Great heat can ignite almost any dry matter .
+MOH_243 |  Marsh gases ignited suddenly .
+MOH_244 |  The ostentatious way of living of the rich ignites the hatred of the poor .
+MOH_245 |  only few plants can immigrate to the island .
+MOH_246 |  Many people immigrated at the beginning of the 20th century .
+MOH_247 |  She inclined her head to the student .
+MOH_248 |  Their language inclines us to believe them .
+MOH_249 |  Your children have infected you with this head cold .
+MOH_250 |  society was infected by racism .
+MOH_251 |  His laughter infects everyone who is in the same room .
+MOH_252 |  The charges were inflated .
+MOH_253 |  The war inflated the economy .
+MOH_254 |  inflate the currency .
+MOH_255 |  I inherited a castle from my French grandparents .
+MOH_256 |  The new chairman inherited many problems from the previous chair .
+MOH_257 |  I inherited my good eyesight from my mother .
+MOH_258 |  We injected the glucose into the patient 's vein .
+MOH_259 |  He injected new life into the performance .
+MOH_260 |  inject hydrogen into the balloon .
+MOH_261 |  We interrupt the program for the following messages .
+MOH_262 |  She interrupted her pregnancy .
+MOH_263 | " Hitler invaded Poland on September 1 
+MOH_264 |  This new colleague invades my territory .
+MOH_265 |  The cancer had invaded her lungs .
+MOH_266 |  The driver jammed the brake pedal to the floor .
+MOH_267 |  the mechanism jammed .
+MOH_268 |  juggle an account so as to hide a deficit .
+MOH_269 |  She had to juggle her job and her children .
+MOH_270 |  the player juggled the ball .
+MOH_271 |  key one 's actions to the voters ' prevailing attitude .
+MOH_272 |  The boy kicked the dog .
+MOH_273 |  The gun kicked back into my shoulder .
+MOH_274 |  He kited many checks .
+MOH_275 |  The businessman kited millions of dollars .
+MOH_276 |  The pilot kited for a long time over the mountains .
+MOH_277 |  The bird landed on the highest branch .
+MOH_278 |  the pilot managed to land the airplane safely .
+MOH_279 |  this may land you in jail .
+MOH_280 |  The drug smugglers landed the heroin on the beach of the island .
+MOH_281 |  He landed several blows on his opponent 's head .
+MOH_282 |  The ship landed in Pearl Harbor .
+MOH_283 |  lay the books on the table .
+MOH_284 |  lay the foundation for a new health care plan .
+MOH_285 |  lay a responsibility on someone .
+MOH_286 |  The news were leaked to the paper .
+MOH_287 |  Water leaked out of the can into the backpack .
+MOH_288 |  The container leaked gasoline .
+MOH_289 |  He leaned his rifle against the wall .
+MOH_290 |  I will lend you my car .
+MOH_291 |  This story would lend itself well to serialization on television .
+MOH_292 |  level criticism or charges at somebody .
+MOH_293 |  The building was levelled .
+MOH_294 |  The ground levelled off .
+MOH_295 |  The fate of Bosnia lies in the hands of the West .
+MOH_296 |  the conversation lightened me up a bit .
+MOH_297 |  she lightened the load on the tired donkey .
+MOH_298 |  The room lightened up .
+MOH_299 |  trees line the riverbank .
+MOH_300 |  sorrow had lined his face .
+MOH_301 |  lined books are more enduring .
+MOH_302 |  load the truck with hay .
+MOH_303 |  He loaded his gun carefully .
+MOH_304 |  load the bags onto the trucks .
+MOH_305 |  Lock the bike to the fence !
+MOH_306 |  The therapist noticed that the patient 's knees tended to lock in this exercise .
+MOH_307 |  He locked his hands around her neck .
+MOH_308 |  He was locked in a laughing fit .
+MOH_309 |  She locked her jewels in the safe .
+MOH_310 |  The bicycle looped around the tree .
+MOH_311 |  The stunt pilot looped his plane .
+MOH_312 |  map the surface of Venus .
+MOH_313 |  We have n't even begun to map the many galaxies that we know exist .
+MOH_314 |  sorrow was mapped on the mother 's face .
+MOH_315 |  The Japanese marched their prisoners through Manchuria .
+MOH_316 |  The company matched the employees ' contributions .
+MOH_317 |  This job does n't match my dreams .
+MOH_318 |  Let them match their best athletes against ours .
+MOH_319 |  The two pieces match .
+MOH_320 |  Age and experience mellowed him over the years .
+MOH_321 |  These apples need to mellow a bit more .
+MOH_322 |  The wax melted in the sun .
+MOH_323 |  The sun melted the ice .
+MOH_324 |  Hundreds of actors were melting into the scene .
+MOH_325 |  her resistance melted under his charm .
+MOH_326 |  The furniture molded in the old house .
+MOH_327 |  She molded the rice balls carefully .
+MOH_328 |  The dress molds her beautiful figure .
+MOH_329 |  They mounted the aerator on a floating .
+MOH_330 |  mount slides for macroscopic analysis .
+MOH_331 |  mount a campaign against pornography .
+MOH_332 |  mount a theater production .
+MOH_333 |  She nags her husband all day long .
+MOH_334 |  nagging concerns and doubts .
+MOH_335 |  negociate securities .
+MOH_336 |  The hiker negociated the high mountain pass .
+MOH_337 |  The parties negociated all night .
+MOH_338 |  The treaty neutralized the small republic .
+MOH_339 |  Her optimism neutralizes his gloom .
+MOH_340 |  She neutralized the solution .
+MOH_341 |  He nodded his approval .
+MOH_342 |  The teacher nodded when the student gave the right answer .
+MOH_343 |  The old man was nodding in his chair .
+MOH_344 |  the flowers were nodding in the breeze .
+MOH_345 |  We painted the rooms yellow .
+MOH_346 |  He painted his mistress many times .
+MOH_347 |  Her violent feelings palpitated the young woman 's heart .
+MOH_348 |  paste the sign on the wall .
+MOH_349 |  paste the sign on the wall .
+MOH_350 |  He pasted his opponent .
+MOH_351 |  The new moon peeped through the tree tops .
+MOH_352 |  The cold pierced her bones .
+MOH_353 |  The scream pierced the night .
+MOH_354 |  The needle pierced her flesh .
+MOH_355 |  pin the needle to the shirt .
+MOH_356 |  The bugs pinged the lamp shade .
+MOH_357 |  the bullet pinged when they struck the car .
+MOH_358 |  I 'll ping my accountant -- April 15 is nearing .
+MOH_359 |  ping your machine in the office .
+MOH_360 |  the stock market plunged .
+MOH_361 |  The professor plunged his students into the study of the Italian text .
+MOH_362 |  poison someone 's mind .
+MOH_363 |  She poisoned her husband .
+MOH_364 |  Her husband poisoned her drink in order to kill her .
+MOH_365 |  This mushrooms can poison .
+MOH_366 |  The book portrays the actor as a selfish person .
+MOH_367 |  The father is portrayed as a good - looking man in this painting .
+MOH_368 |  This poses an interesting question .
+MOH_369 |  We do n't know the woman who posed for Leonardo so often .
+MOH_370 |  the salesman pounded the door knocker .
+MOH_371 |  The locks pound the water of the canal .
+MOH_372 |  The prisoners are safely pounded .
+MOH_373 |  They poured water over the floor .
+MOH_374 |  They poured water over the floor .
+MOH_375 |  People were pouring out of the theater .
+MOH_376 |  We poured money into the education of our children .
+MOH_377 |  The crisis precipitated by Russia 's revolution .
+MOH_378 |  Our economy precipitated into complete ruin .
+MOH_379 |  The bridge broke and precipitated the train into the river below .
+MOH_380 |  preserve the peace in the family .
+MOH_381 |  preserve the forest and the lakes .
+MOH_382 |  The nurse pricked my finger to get a small blood sample .
+MOH_383 |  The needle pricked his skin .
+MOH_384 |  The thought of her unhappiness pricked his conscience .
+MOH_385 |  The sudden fame puffed her ego .
+MOH_386 |  The critics puffed up this Broadway production .
+MOH_387 |  Her faced puffed up from the drugs .
+MOH_388 |  He pumped bullets into the dummy .
+MOH_389 |  The athlete pumps weights in the gym .
+MOH_390 |  She pumped the witnesses for information .
+MOH_391 |  He pushed the table into a corner .
+MOH_392 | " "" Now push hard "" 
+MOH_393 |  The salesman is aggressively pushing the new computer model .
+MOH_394 |  She is pushing fifty .
+MOH_395 |  The liberal party pushed for reforms .
+MOH_396 |  The guy hanging around the school is pushing drugs .
+MOH_397 |  The crowd pushed forward .
+MOH_398 |  The sun radiates heat .
+MOH_399 |  The sun radiates heat .
+MOH_400 |  She radiates happiness .
+MOH_401 |  The police raided the crack house .
+MOH_402 |  The pirates raided the coastal villages regularly .
+MOH_403 |  T. Boone Pickens raided many large companies .
+MOH_404 |  Our babysitter raided our refrigerator .
+MOH_405 |  She could not recapture that feeling of happiness .
+MOH_406 |  The author recaptures an old idea here .
+MOH_407 |  The military forces managed to recapture the fort .
+MOH_408 |  They tried to recapture the escaped prisoner .
+MOH_409 |  The bell cracked and had to be recast .
+MOH_410 |  She had to recast her image to please the electorate in her home state .
+MOH_411 |  Fame redounds to the heroes .
+MOH_412 |  Her efforts will redound to the general good .
+MOH_413 |  This action reflects his true beliefs .
+MOH_414 |  Sound is reflected well in this auditorium .
+MOH_415 |  Drive carefully -- the wet road reflects .
+MOH_416 |  her sunglasses reflected his image .
+MOH_417 |  His lack of interest in the project reflects badly on him .
+MOH_418 |  The mess in his dorm room reflects on the student .
+MOH_419 |  reform a political system .
+MOH_420 |  relax the tension on the rope .
+MOH_421 |  A hot bath always relaxes me .
+MOH_422 |  our new colleague relaxed when he saw that we were a friendly group .
+MOH_423 |  The government relaxed the curfew after most of the rebels were caught .
+MOH_424 |  The rules relaxed after the new director arrived .
+MOH_425 |  One can never fully repair the suffering and losses of the Jews in the Third Reich .
+MOH_426 |  The doctors revived the comatose man .
+MOH_427 |  A hot soup will revive me .
+MOH_428 |  Interest in ESP revived .
+MOH_429 |  He revived this style of opera .
+MOH_430 |  The curtain ripped from top to bottom .
+MOH_431 |  The tornado ripped along the coast .
+MOH_432 |  The candidate ripped into his opponent mercilessly .
+MOH_433 |  this plant roots quickly .
+MOH_434 |  The problem roots in her depression .
+MOH_435 |  the pig was rooting for truffles .
+MOH_436 |  We rotate the lead soprano every night .
+MOH_437 |  Interns have to rotate for a few months .
+MOH_438 |  We rotate the crops so as to maximize the use of the soil .
+MOH_439 |  She wanted to ruffle his composure .
+MOH_440 |  This play is going to ruffle some people .
+MOH_441 |  The bird ruffled its feathers .
+MOH_442 |  The wind ruffled the surface of the water .
+MOH_443 |  The seamstress ruffled the curtain fabric .
+MOH_444 |  You have ruined my car by pouring sugar in the tank !
+MOH_445 |  This behavior will ruin your chances of winning the election .
+MOH_446 |  the rebels had salted the fields with mines and traps .
+MOH_447 |  She salts her lectures with jokes .
+MOH_448 |  people used to salt meats on ships .
+MOH_449 |  I salute your courage !
+MOH_450 |  a terrible stench saluted our nostrils .
+MOH_451 | " When the officers show up 
+MOH_452 |  the surgeon scanned the X - ray .
+MOH_453 |  She scanned the newspaper headlines while waiting for the taxi .
+MOH_454 |  The beams scanned the night sky .
+MOH_455 |  The heat scorched the countryside .
+MOH_456 |  The wildfire scorched the forest and several homes .
+MOH_457 |  The cat scraped at the armchair .
+MOH_458 |  They scraped a letter into the stone .
+MOH_459 |  She had scraped together enough money for college .
+MOH_460 |  The sales clerk quickly seized the money on the counter .
+MOH_461 |  the invaders seized the land and property of the inhabitants .
+MOH_462 |  Fear seized the prisoners .
+MOH_463 |  These books sell like hot cakes .
+MOH_464 |  The French try to sell us their image as great lovers .
+MOH_465 |  The brothers sell shoes .
+MOH_466 |  The bad news shook her hopes .
+MOH_467 |  Shake the salt out of the salt shaker .
+MOH_468 |  We had to sharpen our arguments .
+MOH_469 |  The debate sharpened .
+MOH_470 |  This drug will sharpen your vision .
+MOH_471 |  He shed his image as a pushy boss .
+MOH_472 |  She shed a lot of tears when this happened .
+MOH_473 |  Our dog sheds every Spring .
+MOH_474 |  You have shipwrecked my career .
+MOH_475 |  The vessel was shipwrecked .
+MOH_476 |  He was showered with praise .
+MOH_477 |  Meteors showered down over half of Australia .
+MOH_478 |  He showered her with presents .
+MOH_479 |  The soldiers sifted through the woods .
+MOH_480 |  He sifted the information .
+MOH_481 |  They sifted through the job candidates .
+MOH_482 |  The nightingale was singing .
+MOH_483 |  the kettle was singing .
+MOH_484 |  When does the court of law sit ?
+MOH_485 |  The White House sits on Pennsylvania Avenue .
+MOH_486 |  She smashed her car against the guard rail .
+MOH_487 |  The motorcycle smashed into the guard rail .
+MOH_488 |  The police smashed the drug ring after they were tipped off .
+MOH_489 |  smother the meat in gravy .
+MOH_490 |  the butter cream smothered the cake .
+MOH_491 |  she snorted her disapproval of the proposed bridegroom .
+MOH_492 |  The critic snorted contemptuously .
+MOH_493 |  The addict was snorting cocaine almost every day .
+MOH_494 |  She sowed sunflower seeds .
+MOH_495 |  sow suspicion or beliefs .
+MOH_496 |  sow the ground with sunflower seeds .
+MOH_497 |  How do you spell this word ?
+MOH_498 |  I 'm afraid this spells trouble !
+MOH_499 |  She spelled her husband at the wheel .
+MOH_500 |  the workers spell every four hours .
+MOH_501 |  She splashed the water around her .
+MOH_502 |  She splashed the water around her .
+MOH_503 |  The mountain was splashed with snow .
+MOH_504 |  The wine spotted the tablecloth .
+MOH_505 |  This dress spots quickly .
+MOH_506 |  spot the areas that one should clearly identify .
+MOH_507 |  Water sprayed all over the floor .
+MOH_508 |  spray water on someone .
+MOH_509 |  spray the wall with paint .
+MOH_510 |  The invaders spread their language all over the country .
+MOH_511 |  spread cheese on a piece of bread .
+MOH_512 |  the infection spread .
+MOH_513 |  A big oil spot spread across the water .
+MOH_514 |  square the wood with a file .
+MOH_515 |  He squared his shoulders .
+MOH_516 |  one idea squares with the other one .
+MOH_517 |  The drunken man staggered into the room .
+MOH_518 |  The architect decided to stagger the chairs in the lecture hall .
+MOH_519 |  She was staggered with bills after she tried to rebuild her house following the earthquake .
+MOH_520 |  Industry will stagnate if we do not stimulate our economy .
+MOH_521 |  There are marshes that stagnate the waters .
+MOH_522 |  blood stagnates in the capillaries .
+MOH_523 |  a man whose name is permanently stamped on our maps .
+MOH_524 |  Are the letters properly stamped ?
+MOH_525 |  Thunderbolts can stampede animals .
+MOH_526 |  Companies will now stampede to release their latest software .
+MOH_527 |  The ship steamed off into the Pacific .
+MOH_528 |  her indifference to his amorous advances really steamed the young man .
+MOH_529 |  just steam the vegetables .
+MOH_530 |  The Senator steamrollered the bill to defeat .
+MOH_531 |  The new teacher tends to steamroller .
+MOH_532 |  steamroller the road .
+MOH_533 |  steamroller the opposition .
+MOH_534 |  their manes streamed like stiff black pennants in the wind .
+MOH_535 |  She was streaming with sweat .
+MOH_536 |  Tears streamed down her face .
+MOH_537 |  My nose is all stuffed .
+MOH_538 |  She stuffed herself at the dinner .
+MOH_539 |  stuff a pillow with feathers .
+MOH_540 |  Have you stuffed the turkey yet ?
+MOH_541 |  suck the poison from the place where the snake bit .
+MOH_542 |  The current boom in the economy sucked many workers in from abroad .
+MOH_543 |  The Nazis swallowed the Baltic countries .
+MOH_544 |  The huge waves swallowed the small boat and it sank shortly thereafter .
+MOH_545 |  She swallowed the last words of her speech .
+MOH_546 |  He swallowed his words .
+MOH_547 |  I swallowed my anger and kept quiet .
+MOH_548 |  Am I supposed to swallow that story ?
+MOH_549 |  The music swelled to a crescendo .
+MOH_550 |  The mother was swelling with importance when she spoke of her son .
+MOH_551 |  The bellies of the starving children are swelling .
+MOH_552 |  The water swells the wood .
+MOH_553 |  my brain is swimming after the bottle of champagne .
+MOH_554 |  the meat was swimming in a fatty gravy .
+MOH_555 |  this snake swims through the soil where it lives .
+MOH_556 |  tack the notice on the board .
+MOH_557 |  The sailors decided to tack the boat .
+MOH_558 |  He tacked together some verses .
+MOH_559 |  Actions talk louder than words .
+MOH_560 |  The baby talks already .
+MOH_561 |  Can you taste the garlic ?
+MOH_562 |  We tasted wines last night .
+MOH_563 |  The ex - slave tasted freedom shortly before she died .
+MOH_564 |  The State taxes alcohol heavily .
+MOH_565 |  You are taxing my patience .
+MOH_566 |  They taxed him failure to appear in court .
+MOH_567 |  the bodybuilder 's neck muscles tensed .
+MOH_568 |  The bus thundered down the road .
+MOH_569 |  The river thundered below .
+MOH_570 |  They tied their victim to the chair .
+MOH_571 |  These big jets are tied to large airports .
+MOH_572 |  The fishermen tied their flies .
+MOH_573 |  They topped off their dinner with a cognac .
+MOH_574 |  A star tops the Christmas Tree .
+MOH_575 |  The towers were topped with conical roofs .
+MOH_576 |  The hikers topped the mountain just before noon .
+MOH_577 |  trace the outline of a figure in the sand .
+MOH_578 |  The hunters traced the deer into the woods .
+MOH_579 |  She traced the circumstances of her birth .
+MOH_580 |  This experience transformed her completely .
+MOH_581 |  It can transform energy to light .
+MOH_582 |  tread grapes to make wine .
+MOH_583 |  male birds tread the females .
+MOH_584 |  He trenched his military camp .
+MOH_585 |  letters trenched into the stone .
+MOH_586 |  trench the fallen soldiers .
+MOH_587 |  The prisoner tugged at the chains .
+MOH_588 |  She tugged for years to make a decent living .
+MOH_589 |  The tugboat tugged the freighter into the harbor .
+MOH_590 |  The horse finally tugged the cart out of the mud .
+MOH_591 |  The wrestler twisted his shoulder .
+MOH_592 |  The cord is all twisted .
+MOH_593 |  Do n't twist my words .
+MOH_594 |  The war uprooted many people .
+MOH_595 |  The vestiges of political democracy were soon uprooted .
+MOH_596 |  They plan to uproot the vine that has spread all over the garden .
+MOH_597 |  She vested her vast fortune in her two sons .
+MOH_598 |  The property vests in the trustees .
+MOH_599 |  Did you ever visit Paris ? .
+MOH_600 |  The principal visited his rage on the students .
+MOH_601 | " Every summer 
+MOH_602 | " Every summer 
+MOH_603 |  They began to volley the tennis ball .
+MOH_604 |  I heard him volley a string of curses .
+MOH_605 |  pigs were wallowing in the mud .
+MOH_606 |  wallow in your success !
+MOH_607 |  She was wearing yellow that day .
+MOH_608 |  He always wears a smile .
+MOH_609 |  wear one 's hair in a certain way .
+MOH_610 |  The bullets whistled past him .
+MOH_611 |  She whistled a melody .
+MOH_612 |  Her optimism whistled away these worries .
+MOH_613 |  He wrestled all his life with his feeling of inferiority .
+MOH_614 |  I wrestled with this decision for years .
+MOH_615 |  The children wrestled in the garden .
+MOH_616 |  He bowed before the King .
+MOH_617 |  I can breathe better when the air is clean .
+MOH_618 |  This rare Bordeaux must be allowed to breathe for at least 2 hours .
+MOH_619 |  The child colored the drawings .
+MOH_620 |  My personal feelings color my judgment in this case .
+MOH_621 |  He and his sons have n't communicated for years .
+MOH_622 |  Please use a computerized disctionary .
+MOH_623 |  Her feelings condensed .
+MOH_624 |  The exercise class drains me of energy .
+MOH_625 |  The company dumped him after many years of service .
+MOH_626 |  engraved the trophy cupt with the winner 's .
+MOH_627 |  The Turks erased the Armenians in 1915 .
+MOH_628 |  Vesuvius erupts once in a while .
+MOH_629 |  Islam is fermenting Africa .
+MOH_630 |  grind lenses for glasses and cameras .
+MOH_631 |  the theater was jampacked .
+MOH_632 |  She leaned over the banister .
+MOH_633 | " after a glass of wine 
+MOH_634 |  They were locked in embrace .
+MOH_635 |  He marched into the classroom and announced the exam .
+MOH_636 |  His heart palpitated .
+MOH_637 |  He peeped at the woman through the window .
+MOH_638 | " Goya wanted to portray his mistress 
+MOH_639 |  We preserve these archeological findings .
+MOH_640 |  We sailed the Atlantic .
+MOH_641 |  She was singing while she was cooking .
+MOH_642 |  stamp fruit extract the juice .
+MOH_643 |  We had to swim for 20 minutes to reach the shore .
+MOH_644 |  She talks a lot of nonsense .
+MOH_645 |  He transformed into a monster .
+MOH_646 |  Gun shots volleyed at the attackers .
+MOH_647 |  She whistled for her maid .

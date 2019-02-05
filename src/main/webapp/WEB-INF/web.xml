@@ -21,7 +21,10 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping> -->
 
-
+	<servlet>
+		<servlet-name>HomepageServlet</servlet-name>
+		<servlet-class>uk.uoa.cs.princSwEng.servlet.HomepageServlet</servlet-class>
+	</servlet>
 	<servlet>
 		<servlet-name>ManagerServlet</servlet-name>
 		<servlet-class>uk.uoa.cs.princSwEng.servlet.ManagerServlet</servlet-class>
@@ -34,6 +37,11 @@
 	<servlet-mapping>
 		<servlet-name>ManagerServlet</servlet-name>
 		<url-pattern>/manager</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>HomepageServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
 	</servlet-mapping>
 
 <!-- 
