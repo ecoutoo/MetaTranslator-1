@@ -1,6 +1,6 @@
 # Natural-Language-Research
 
-This repository contains the work for the Principles Of Software Engineering project.
+This repository contains the work for the Software Engineering project.
 
 1. ##MAVEN
 The entire project is managed with Maven. [link to Maven](http://maven.apache.org) 
