@@ -76,7 +76,7 @@
 		   <br>
 	      <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
 	      <br>
-	      <p><font color="red">Chose the word causing problems in the translation:</font></p>
+	      <p><font color="red">Choose the word causing problems in the translation:</font></p>
 	      <span>	      
 	      	<select>
 	      	  	

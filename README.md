@@ -2,7 +2,7 @@
 
 This repository contains the work for the Principles Of Software Engineering project.
 
-1. #MAVEN
+1. ##MAVEN
 The entire project is managed with Maven. [link to Maven](http://maven.apache.org) 
 When you have a working installation cd into the root directory of your project and use: 
 
