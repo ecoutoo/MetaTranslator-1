@@ -87,7 +87,7 @@ public static Connection getConnection() throws URISyntaxException, SQLException
     //String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 	
 	String username = "postgres";
-	String password = "123xd";
+	String password = "31Mai1998";
 	String dbUrl = "jdbc:postgresql://localhost:5432/postgres";
 
 
