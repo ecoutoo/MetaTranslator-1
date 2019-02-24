@@ -32,13 +32,13 @@ import java.util.List;
 import java.util.ArrayList;
 
 import uk.uoa.cs.princSwEng.resource.Sentence;
-import uk.uoa.cs.princSwEng.resource.Translate;
+import uk.uoa.cs.princSwEng.resource.YandexTranslate;
+//import uk.uoa.cs.princSwEng.resource.GoogleTranslate;
 import uk.uoa.cs.princSwEng.resource.Survey;
 import uk.uoa.cs.princSwEng.database.SearchRandomSentenceDatabase;
 import uk.uoa.cs.princSwEng.database.CreateSurveyDatabase;
 import uk.uoa.cs.princSwEng.database.SearchSurveyDatabase;
 import uk.uoa.cs.princSwEng.database.SearchSentencesFromSurveyDatabase;
-import uk.uoa.cs.princSwEng.resource.Translate;
 import uk.uoa.cs.princSwEng.resource.Language;
 
 public final class HomepageServlet extends AbstractDatabaseServlet {
@@ -58,7 +58,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 
 		// request parameter
 		int key = -1;
-		Translate.setKey("XXXX-XXXX-XXXX-XXXXX-XXXX");
+		YandexTranslate.setKey("trnsl.1.1.20190224T222926Z.dd39b00f32159473.ce47cd6ccb02ff77e95d85e7778eeb15a88b456c");
 
 
 		// model
@@ -101,7 +101,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							{
 								
 								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
 								
 							}
 							break;
@@ -110,7 +110,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							for (int i = 0; i < sent.size(); i++)
 							{
 								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
 							}
 							break;
 
@@ -118,7 +118,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							for (int i = 0; i < sent.size(); i++)
 							{
 								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
 							}
 							break;
 
@@ -126,7 +126,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							for (int i = 0; i < sent.size(); i++)
 							{
 								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
 							}
 							break;
 					}

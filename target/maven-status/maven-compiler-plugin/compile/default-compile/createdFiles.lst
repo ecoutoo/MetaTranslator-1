@@ -5,13 +5,13 @@ uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.class
 uk\uoa\cs\princSwEng\servlet\ManagerServlet.class
 uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.class
 uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.class
+uk\uoa\cs\princSwEng\resource\YandexTranslate.class
 uk\uoa\cs\princSwEng\servlet\AbstractDatabaseServlet.class
 uk\uoa\cs\princSwEng\resource\Global.class
 uk\uoa\cs\princSwEng\resource\Resource.class
 uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.class
 uk\uoa\cs\princSwEng\resource\Sentence.class
 uk\uoa\cs\princSwEng\resource\Survey.class
-uk\uoa\cs\princSwEng\resource\Translate.class
 uk\uoa\cs\princSwEng\resource\ApiKeys.class
 uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.class
 uk\uoa\cs\princSwEng\resource\Language.class
