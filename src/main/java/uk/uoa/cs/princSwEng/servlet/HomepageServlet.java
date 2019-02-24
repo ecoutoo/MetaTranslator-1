@@ -66,6 +66,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		Message m = null;
 		String[] texts = null;
 		String[] translated_texts = null;
+		int texts_size = -111111;
 
 		try {
 
@@ -79,23 +80,31 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			Survey ssd = new SearchSurveyDatabase(getConnection(), key).SearchSurvey();
 			List<Sentence> sent = new SearchSentencesFromSurveyDatabase(getConnection(), ssd).SearchSentencesFromSurvey();
 			texts = new String[sent.size()];
+			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
 			if (true) //TODO check translation engine
 			{
-
 				{
+					
+					for (int i = 0; i < sent.size(); i++) {
+						texts[i] = "Sentence hasn't been set by HomepageServlet.java :(";
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = "Translate.execute not working, probably because we don't have an API";
+					} 
 
 					switch (ssd.getSurveyLanguages()){
+
 						case "Chinese":
 							if (Global.DEBUGMODE)
 								System.out.println("Chinese language not supported yet, going for italian");
 							for (int i = 0; i < sent.size(); i++)
 							{
+								
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+								
 							}
 							break;
-
 
 						case "French":
 							for (int i = 0; i < sent.size(); i++)
@@ -150,6 +159,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		req.setAttribute("key", key);
 		req.setAttribute("texts", texts);
 		req.setAttribute("translated_texts", translated_texts);
+		req.setAttribute("texts_size", texts_size);
 
 		// req.setAttribute("message", m);
 
