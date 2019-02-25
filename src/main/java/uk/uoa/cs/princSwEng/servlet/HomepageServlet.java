@@ -44,6 +44,7 @@ import uk.uoa.cs.princSwEng.resource.Language;
 public final class HomepageServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
     private String language;
+    //private String chinese;
 
 	/**
 	 * List all category.
@@ -84,28 +85,20 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
             language = ssd.getSurveyLanguages();
-             
-            
-			if (true) //TODO check translation engine
-			{
-				{
-                    
-                    
-                    
-                    if (language == "Chinese"){
+            //chinese = "Chinese";
+
+                    if (language.equals("Chinese")){
                     
 							for (int i = 0; i < sent.size(); i++)
 							{
 								
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-								
 							}
 							//break;
-                        
                     }
                         
-                    if (language == "French"){
+                    else if (language.equals("French")){
                         
 							for (int i = 0; i < sent.size(); i++)
 							{
@@ -116,7 +109,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
                         
                     }
 
-                    if (language == "Italian"){
+                    else if (language.equals("Italian")){
                         
 							for (int i = 0; i < sent.size(); i++)
 							{
@@ -127,7 +120,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
                         
                     }
                         
-                    if (language == "German"){
+                    else if (language.equals("German")){
                         
 							for (int i = 0; i < sent.size(); i++)
 							{
@@ -141,17 +134,10 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
                     else {
                         for (int i = 0; i < sent.size(); i++) {
 						  texts[i] = sent.get(i).getSentenceText();
-						  translated_texts[i] = "cannot detect language target.";
+						  translated_texts[i] = language;
                         }
-                    }
-                        
-					
-                
-
-				}
-			}
-
-
+                    }	
+                       
 
         }/* catch (NumberFormatException ex)
 		          {
@@ -176,6 +162,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		req.setAttribute("texts", texts);
 		req.setAttribute("translated_texts", translated_texts);
 		req.setAttribute("texts_size", texts_size);
+		req.setAttribute("language", language);
 
 		// req.setAttribute("message", m);
 
