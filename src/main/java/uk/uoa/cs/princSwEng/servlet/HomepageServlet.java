@@ -134,7 +134,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
                     else {
                         for (int i = 0; i < sent.size(); i++) {
 						  texts[i] = sent.get(i).getSentenceText();
-						  translated_texts[i] = language;
+						  translated_texts[i] = "cannot detect language target.";
                         }
                     }	
                        
