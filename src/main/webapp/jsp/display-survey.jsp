@@ -66,9 +66,9 @@
 
 	<body>
 		<h1 align="center">Survey #<c:out value="${key}"/></h1>
-		<h2 alighn="center">Number of Sentences is equal to #<c:out value="${texts_size}"/></h2>
+		<p alighn="center">Number of Sentences is equal to <c:out value="${texts_size}"/></p>
 		<c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
-	   <p><font color="green">Sentence #<c:out value="${cycle}"/></font></p>
+	   <p><font color="green">Sentence <c:out value="${cycle+1}"/></font></p>
 	   <tr>
 	      <td>Sentence: <c:out value="${texts[cycle]}"/></td>
 	      <br>

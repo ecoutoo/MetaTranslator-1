@@ -34,7 +34,7 @@ import uk.uoa.cs.princSwEng.database.CreateSurveyDatabase;
 public final class ManagerServlet extends AbstractDatabaseServlet
 {
 private static final long serialVersionUID = 1L;
-private final static String SENDGRID_API_KEY ="XXXX-XXXX-XXXX-XXXX-XXXX";
+//private final static String SENDGRID_API_KEY ="XXXX-XXXX-XXXX-XXXX-XXXX";
 
 /**
  * List all category.
@@ -133,7 +133,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 		}
 
 
-		if (!email.equals("")) 
+		/*if (!email.equals("")) 
 		{
 			for (String retval: email.split(";")) 
 			{
@@ -167,7 +167,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 			    }
 
 	     	}			
-		}
+		}*/
 	
 
 		

@@ -43,6 +43,7 @@ import uk.uoa.cs.princSwEng.resource.Language;
 
 public final class HomepageServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
+    private String language;
 
 	/**
 	 * List all category.
@@ -82,21 +83,17 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			texts = new String[sent.size()];
 			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
+            language = ssd.getSurveyLanguages();
+             
+            
 			if (true) //TODO check translation engine
 			{
 				{
-					
-					for (int i = 0; i < sent.size(); i++) {
-						texts[i] = "Sentence hasn't been set by HomepageServlet.java :(";
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = "Translate.execute not working, probably because we don't have an API";
-					} 
-
-					switch (ssd.getSurveyLanguages()){
-
-						case "Chinese":
-							if (Global.DEBUGMODE)
-								System.out.println("Chinese language not supported yet, going for italian");
+                    
+                    
+                    
+                    if (language == "Chinese"){
+                    
 							for (int i = 0; i < sent.size(); i++)
 							{
 								
@@ -104,40 +101,59 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
 								
 							}
-							break;
-
-						case "French":
+							//break;
+                        
+                    }
+                        
+                    if (language == "French"){
+                        
 							for (int i = 0; i < sent.size(); i++)
 							{
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
 							}
-							break;
+							//break;
+                        
+                    }
 
-						case "Italian":
+                    if (language == "Italian"){
+                        
 							for (int i = 0; i < sent.size(); i++)
 							{
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
 							}
-							break;
-
-						case "German":
+							//break;
+                        
+                    }
+                        
+                    if (language == "German"){
+                        
 							for (int i = 0; i < sent.size(); i++)
 							{
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
 							}
-							break;
-					}
-
+							//break;
+                        
+                    }
+                    
+                    else {
+                        for (int i = 0; i < sent.size(); i++) {
+						  texts[i] = sent.get(i).getSentenceText();
+						  translated_texts[i] = "cannot detect language target.";
+                        }
+                    }
+                        
+					
+                
 
 				}
 			}
 
 
 
-		}/* catch (NumberFormatException ex)
+        }/* catch (NumberFormatException ex)
 		          {
 		          m = new Message("Cannot read the company. Invalid input parameters: translator must be a string.",
 		          "E100", ex.getMessage());
