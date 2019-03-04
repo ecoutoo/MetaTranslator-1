@@ -357,6 +357,10 @@ h1, h2, h3, h4, h5, h6, figure {
   outline: none;
 }
 
+td {
+	padding: 10px;
+}
+
 #gtco-project {
   padding: 10em 0;
 }
