@@ -8,6 +8,8 @@ When you have a working installation cd into the root directory of your project 
 
     mvn clean package javadoc:javadoc 
 
+#if it does not work, use mvn clean package without javadoc
+
 This command tells maven to complete the "clean" phase and the "package" which means that it's going to clean temporary files and target directories and then rebuild everything in order to deploy an application. In our case it is going to deploy a war file, which is a web application resource, suitable for TomCat. 
 
 **WHEN YOU CHANGE SOMETHING, ALWAYS CHECK IF THE ENTIRE PROJECT COMPILES (WITH THE ABOVE COMMAND), AND THEN UPLOAD IT ON GITHUB**

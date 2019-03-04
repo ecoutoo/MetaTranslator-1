@@ -32,17 +32,19 @@ import java.util.List;
 import java.util.ArrayList;
 
 import uk.uoa.cs.princSwEng.resource.Sentence;
-import uk.uoa.cs.princSwEng.resource.Translate;
+import uk.uoa.cs.princSwEng.resource.YandexTranslate;
+//import uk.uoa.cs.princSwEng.resource.GoogleTranslate;
 import uk.uoa.cs.princSwEng.resource.Survey;
 import uk.uoa.cs.princSwEng.database.SearchRandomSentenceDatabase;
 import uk.uoa.cs.princSwEng.database.CreateSurveyDatabase;
 import uk.uoa.cs.princSwEng.database.SearchSurveyDatabase;
 import uk.uoa.cs.princSwEng.database.SearchSentencesFromSurveyDatabase;
-import uk.uoa.cs.princSwEng.resource.Translate;
 import uk.uoa.cs.princSwEng.resource.Language;
 
 public final class HomepageServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
+    private String language;
+    //private String chinese;
 
 	/**
 	 * List all category.
@@ -58,7 +60,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 
 		// request parameter
 		int key = -1;
-		Translate.setKey("XXXX-XXXX-XXXX-XXXXX-XXXX");
+		YandexTranslate.setKey("trnsl.1.1.20190224T222926Z.dd39b00f32159473.ce47cd6ccb02ff77e95d85e7778eeb15a88b456c");
 
 
 		// model
@@ -66,6 +68,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		Message m = null;
 		String[] texts = null;
 		String[] translated_texts = null;
+		int texts_size = -111111;
 
 		try {
 
@@ -79,56 +82,141 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			Survey ssd = new SearchSurveyDatabase(getConnection(), key).SearchSurvey();
 			List<Sentence> sent = new SearchSentencesFromSurveyDatabase(getConnection(), ssd).SearchSentencesFromSurvey();
 			texts = new String[sent.size()];
+			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
-			if (true) //TODO check translation engine
-			{
+            		language = ssd.getSurveyLanguages();
 
-				{
+//add if statement depending on which translation system needs to be used.
 
-					switch (ssd.getSurveyLanguages()){
-						case "Chinese":
-							if (Global.DEBUGMODE)
-								System.out.println("Chinese language not supported yet, going for italian");
-							for (int i = 0; i < sent.size(); i++)
-							{
-								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-							}
-							break;
-
-
-						case "French":
-							for (int i = 0; i < sent.size(); i++)
-							{
-								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
-							}
-							break;
-
-						case "Italian":
-							for (int i = 0; i < sent.size(); i++)
-							{
-								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-							}
-							break;
-
-						case "German":
-							for (int i = 0; i < sent.size(); i++)
-							{
-								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = Translate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
-							}
-							break;
+			/*if (ssd.getSurveyTranslator().equals("Google")) {
+				if (language.equals("Chinese")){
+              				for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
 					}
-
-
+							
+                    		}
+                        
+                    		else if (language.equals("French")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+					}
 				}
-			}
 
+                    		else if (language.equals("Italian")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+	 			}
+                        
+                    		else if (language.equals("German")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+					}
+				}
+                    
+                    		else {
+                        		for (int i = 0; i < sent.size(); i++) {
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = "cannot detect language target.";
+                        		}
+                    		}
+			}*/
+			
+			/*if (ssd.getSurveyTranslator().equals("Yandex")) {
+				if (language.equals("Chinese")){
+              				for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+							
+                    		}
+                        
+                    		else if (language.equals("French")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+					}
+				}
 
+                    		else if (language.equals("Italian")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+	 			}
+                        
+                    		else if (language.equals("German")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+					}
+				}
+                    
+                    		else {
+                        		for (int i = 0; i < sent.size(); i++) {
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = "cannot detect language target.";
+                        		}
+                    		}
+			}*/
 
-		}/* catch (NumberFormatException ex)
+                    if (language.equals("Chinese")){
+                    
+							for (int i = 0; i < sent.size(); i++)
+							{
+								
+								texts[i] = sent.get(i).getSentenceText();
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+							}
+							//break;
+                    }
+                        
+                    else if (language.equals("French")){
+                        
+							for (int i = 0; i < sent.size(); i++)
+							{
+								texts[i] = sent.get(i).getSentenceText();
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+							}
+							//break;
+                        
+                    }
+
+                    else if (language.equals("Italian")){
+                        
+							for (int i = 0; i < sent.size(); i++)
+							{
+								texts[i] = sent.get(i).getSentenceText();
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+							}
+							//break;
+                        
+                    }
+                        
+                    else if (language.equals("German")){
+                        
+							for (int i = 0; i < sent.size(); i++)
+							{
+								texts[i] = sent.get(i).getSentenceText();
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+							}
+							//break;
+                        
+                    }
+                    
+                    else {
+                        for (int i = 0; i < sent.size(); i++) {
+						  texts[i] = sent.get(i).getSentenceText();
+						  translated_texts[i] = "cannot detect language target.";
+                        }
+                    }	
+                       
+
+        }/* catch (NumberFormatException ex)
 		          {
 		          m = new Message("Cannot read the company. Invalid input parameters: translator must be a string.",
 		          "E100", ex.getMessage());
@@ -150,6 +238,8 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		req.setAttribute("key", key);
 		req.setAttribute("texts", texts);
 		req.setAttribute("translated_texts", translated_texts);
+		req.setAttribute("texts_size", texts_size);
+		req.setAttribute("language", language);
 
 		// req.setAttribute("message", m);
 

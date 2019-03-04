@@ -85,14 +85,17 @@
 					<form action="manager" method="post" id="nlp">
 					<input type="radio" name="translator" value="google" checked> Google Translator<br>
 					<input type="radio" name="translator" value="bing"> Bing<br>
-					<input type="radio" name="translator" value="both"> Both <br>
+					<input type="radio" name="translator" value="both"> Yandex<br>
 					<br>
 					<p>Target language</p>
 					<select name="languages" form="nlp">
+						<!-- Aside from Chinese the lhs strings werent' capitalised
+						and wasn't allowing sentences to be displayed properly. Jacob -->
 					  <option value="Chinese">Chinese</option>
-					  <option value="italian">Italian</option>
-					  <option value="french">French</option>
-					  <option value="german">German</option>
+					  <option value="Italian">Italian</option>
+					  <option value="French">French</option>
+					  <option value="German">German</option>
+
 					</select>
 					<br>
 					<br>
