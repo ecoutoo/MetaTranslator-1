@@ -93,7 +93,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							{
 								
 								texts[i] = sent.get(i).getSentenceText();
-								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.CHINESE);
 							}
 							//break;
                     }

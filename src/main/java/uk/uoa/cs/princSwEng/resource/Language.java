@@ -10,6 +10,7 @@ public enum Language {
   BULGARIAN("bg"),
   CATALAN("ca"),
   CROATIAN("hr"),
+  CHINESE("zh"),
   CZECH("cs"),
   DANISH("da"),
   DUTCH("nl"),
