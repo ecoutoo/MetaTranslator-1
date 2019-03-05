@@ -84,8 +84,85 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			texts = new String[sent.size()];
 			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
-            language = ssd.getSurveyLanguages();
-            //chinese = "Chinese";
+            		language = ssd.getSurveyLanguages();
+
+//add if statement depending on which translation system needs to be used.
+
+			/*if (ssd.getSurveyTranslator().equals("Google")) {
+				if (language.equals("Chinese")){
+              				for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+							
+                    		}
+                        
+                    		else if (language.equals("French")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+					}
+				}
+
+                    		else if (language.equals("Italian")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+	 			}
+                        
+                    		else if (language.equals("German")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+					}
+				}
+                    
+                    		else {
+                        		for (int i = 0; i < sent.size(); i++) {
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = "cannot detect language target.";
+                        		}
+                    		}
+			}*/
+			
+			/*if (ssd.getSurveyTranslator().equals("Yandex")) {
+				if (language.equals("Chinese")){
+              				for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+							
+                    		}
+                        
+                    		else if (language.equals("French")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+					}
+				}
+
+                    		else if (language.equals("Italian")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+					}
+	 			}
+                        
+                    		else if (language.equals("German")){
+                        		for (int i = 0; i < sent.size(); i++){
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+					}
+				}
+                    
+                    		else {
+                        		for (int i = 0; i < sent.size(); i++) {
+						texts[i] = sent.get(i).getSentenceText();
+						translated_texts[i] = "cannot detect language target.";
+                        		}
+                    		}
+			}*/
 
                     if (language.equals("Chinese")){
                     
