@@ -13,13 +13,13 @@ import java.util.*;
 
 
 
-public class GoogleTranslate {
+/*public class GoogleTranslate {
     private static final String TAG = GoogleTranslate.class.getSimpleName();
     private static final String API_KEY = "AIzaSyAkjqDtrIaZ96s4cQTHVR-SkHZIhehL3Gc";
 
     private GoogleTranslate() {
         // Private constructor to enforce noninstantiability
-    }
+    }*/
 
      /**
    * Translates text from a given Language to another given Language using Google Translate.
@@ -31,7 +31,7 @@ public class GoogleTranslate {
    * @throws Exception on error.
    */
 
-   public static String execute(final String text, final Language from, final Language to) throws
+   /*public static String execute(final String text, final Language from, final Language to) throws
      Exception {
        Translate translate = TranslateOptions.getDefaultInstance().getService();
        Translation translation = translate.translate(
@@ -40,7 +40,7 @@ public class GoogleTranslate {
 		TranslateOption.targetLanguage("to"); 
 
 	return(translation.getTranslatedText());
-     } 
-   } 
+     }
+   }*/
        
 }

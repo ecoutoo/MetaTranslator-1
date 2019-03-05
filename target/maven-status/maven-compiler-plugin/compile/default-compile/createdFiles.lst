@@ -1,10 +1,13 @@
 uk\uoa\cs\princEngSw\rest\RestResource.class
-uk\uoa\cs\princSwEng\resource\GoogleTranslate.class
+uk\uoa\cs\princSwEng\servlet\LoginServlet.class
 uk\uoa\cs\princSwEng\servlet\HomepageServlet.class
 uk\uoa\cs\princSwEng\resource\Message.class
 uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.class
 uk\uoa\cs\princSwEng\servlet\ManagerServlet.class
+uk\uoa\cs\princSwEng\database\SearchResearcherDatabase.class
 uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.class
+uk\uoa\cs\princSwEng\database\CreateResearcherDatabase.class
+uk\uoa\cs\princSwEng\resource\Researcher.class
 uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.class
 uk\uoa\cs\princSwEng\resource\YandexTranslate.class
 uk\uoa\cs\princSwEng\servlet\AbstractDatabaseServlet.class
@@ -14,5 +17,6 @@ uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.class
 uk\uoa\cs\princSwEng\resource\Sentence.class
 uk\uoa\cs\princSwEng\resource\Survey.class
 uk\uoa\cs\princSwEng\resource\ApiKeys.class
+uk\uoa\cs\princSwEng\servlet\RegistrationServlet.class
 uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.class
 uk\uoa\cs\princSwEng\resource\Language.class
