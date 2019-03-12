@@ -84,7 +84,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			texts = new String[sent.size()];
 			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
-            		language = ssd.getSurveyLanguages();
+            language = ssd.getSurveyLanguages();
 
 //add if statement depending on which translation system needs to be used.
 
