@@ -4,10 +4,22 @@ body {
     color: #808080;
 }
 p {font-size: 16px;}
+
 .bg-1 { 
     padding: 40px;
     /* background-color: #008f78; Green */
-    color: #808080;
+    color: #008f78;
+}
+
+.bg-3 {
+    width: 80%;
+    margin: 60px auto;
+    background: #efefef;
+    padding: 60px 120px 80px 120px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    color: ;
 }
 
 .container-fluid {
@@ -74,4 +86,15 @@ p {font-size: 16px;}
 
 .label-active {
   top: -5em;
+}
+
+form {
+    width: 60%;
+    margin: 60px auto;
+    background: #efefef;
+    padding: 60px 120px 80px 120px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    color: #808080;
 }
