@@ -5,6 +5,7 @@ body {
 }
 p {font-size: 16px;}
 .bg-1 { 
+    padding: 40px;
     background-color: #008f78; /* Green */
     color: #ffffff;
 }
@@ -16,9 +17,13 @@ p {font-size: 16px;}
     background-color: #ffffff; /* White */
     color: #555555;
 }
-.bg-4 { 
-    background-color: #2f2f2f; /* Black Gray */
+.footer { 
+    background-color: #808080; /* Black Gray */
     color: #fff;
+    position: relative;
+    bottom: 0px;
+    overflow: hidden;
+    text-align: center;
 }
 .container-fluid {
     padding-top: 40px;
@@ -27,9 +32,9 @@ p {font-size: 16px;}
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
+    border: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
     font-size: 12px;
     letter-spacing: 5px;
 }
@@ -55,4 +60,3 @@ input:focus, textarea:focus {
 input:hover {
     border:1px solid #97d6eb;
 }
- 
