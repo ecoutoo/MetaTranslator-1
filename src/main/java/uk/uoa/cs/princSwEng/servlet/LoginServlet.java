@@ -37,14 +37,6 @@ import uk.uoa.cs.princSwEng.database.SearchResearcherDatabase;
 
 public final class LoginServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
-	/**
-	 * List all category.
-	 *
-	 * @param req the HTTP request from the client.
-	 * @param res the HTTP response from the server.
-	 * @throws ServletException if any error occurs while executing the servlet.
-	 * @throws IOException      if any error occurs in the client/server communication.
-	 */
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
@@ -95,28 +87,10 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 //		req.setAttribute("email", email);
 		// req.setAttribute("message", m);
 		// forwards the control to the read-company-result JSP
-		req.getRequestDispatcher("jsp/display-rkey.jsp").forward(req, res);
+		req.getRequestDispatcher("html/manager.html").forward(req, res);
 
 	}
 
 
-	// public String translate(String key, String text, String language, String format) throws ParsingException, IOException, URISyntaxException {
- //        String url = "https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + key + "&text=" + URLEncoder.encode(text, "UTF-8") + "&lang" + language;
-        
-	// 	HttpClient client = new HttpClient(new URI(url)); //+ "&format" + format
-	// 	HttpResponse response = client.sendData(HttpClient.HTTP_METHOD.GET);
-	// 	if (!response.hasError()) {
-	// 		String jsonString = response.getData();
-	// 		// if(Global.DEBUGMODE)
-	// 		// 	System.out.println("The response is: " + jsonString);
-	// 		JsTypeComplex jsonResponse = (JsTypeComplex) JsonStringParser.parseJsonString(jsonString);
-	// 		JsTypeList resultsArr = (JsTypeList) jsonResponse.get("results");
-	// 		return jsonString;
-
-
-	// 	}
-		
-	// 	return "Error";
-	// }
 
 }
