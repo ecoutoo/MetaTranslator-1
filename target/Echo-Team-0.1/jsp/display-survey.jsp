@@ -2,143 +2,113 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 
-
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Metatranslate</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="gettemplates.co" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MetaTranslate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+        <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+        <meta name="author" content="gettemplates.co" />
 
-  	<!-- Facebook and Twitter integration -->
+        <link rel="stylesheet" href="css/style.css">
 	
-	<!-- <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet"> -->
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="css/icomoon.css">
+        <!-- Themify Icons-->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+	   <![endif]-->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+        <style>
+            body {font:10px Montserrat, sans-serif;}
+            .navbar {
+                border: 0px;
+                border-radius: 0px;
+                margin-bottom: 0px;
+            }
+        </style>
+    </head>
 
-
-
-	</head>
-	<body>
-		
-	<div class="gtco-loader"></div>
-	
-	<div id="page">
-
-		<nav class="gtco-nav" role="navigation">
-			<div class="container">
-				
-				<div class="row">
-					<div class="col-sm-2 col-xs-2">
-						<div id="gtco-logo"><a href="index.html"></a>MetaTranslator<sup>&trade;</sup></div>
-					</div>
-
-				</div>
-				
-			</div>
-		</nav>
-
-
-
-	<body>
-		<h1 align="center">Survey #<c:out value="${key}"/></h1>
-		<p alighn="center">Number of Sentences is <c:out value="${texts_size}"/></p>
-		<c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
-	   <p><font color="green">Sentence <c:out value="${cycle+1}"/></font></p>
-	   <tr>
-	      <td>Sentence: <c:out value="${texts[cycle]}"/></td>
-	      <br>
-		   <td>Translation: <c:out value="${translated_texts[cycle]}"/></td>
-		   <br>
-	      <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
-	      <br>
-	      <p><font color="red">Choose the word causing problems in the translation:</font></p>
-	      <span>	      
-	      	<select>
-	      	  	
-
-	      <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
-	      
-	      	<br>
-
-	      	<option value="${string[internal]}"><c:out value="${string[internal]}"/></option>
-	      	<br>
-	      	
-	      </c:forEach>
-	      
-	      </select>
-	     
-	      </span>
-
-	      <span>
-	      	<button type="button">Correct translation!</button>
-	      </span>
-
-	      <br>
-	   </tr>
-	   <br>
-</c:forEach>
-	</body>
-
-
-
-<!-- 		<footer id="fh5co-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<div class="fh5co-footer-widget">
-							<a href="index.html">Motion <sup>&trade;</sup></a> Free HTML5 &copy; All Rights Reserved.  <br> Designed by <a href="http://gettemplates.co" target="_blank">GetTemplates.co</a> Images: <a href="http://pixeden.com" target="_blank">Pixeden</a>
-						</div>
-					</div>
-					<div class="col-md-3 col-md-push-1">
-						<div class="fh5co-footer-widget">
-							<p><a href="tel://+1 234 567 8910">+1 234 567 8910</a> <br> <a href="#">info@metatranslate.com</a></p>
-						</div>
-					</div>
-					<div class="col-md-4 col-md-push-1">
-						<div class="fh5co-footer-widget gtco-social-wrap">
-							<ul class="gtco-social">
-								<li><a href="#" class="icon-twitter"></a></li>
-								<li><a href="#" class="icon-dribbble"></a></li>
-								<li><a href="#" class="icon-instagram"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer> -->
-		
-
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navabar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand">MetaTranslate</a>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="login" id="login">LOGIN</a></li>
+                            <li><a href="registration" id="registration">REGISTER</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+        
+        
+        <div class="container-fluid bg-1 text-center">
+                <h4 class="margin" style="line-height: 1.5em"><br>SURVEY <c:out value="${key}"/>
+                    <br><br><br> 
+                    NUMBER OF SENTENCES: <c:out value="${texts_size}"/>
+                </h4>
+        </div>
+        <c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
+            <br><br>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6" style="text-align: center">
+                    Sentence <c:out value ="${cycle+1}"/> 
+                    <div class="container-fluid bg-3">
+                        <p>
+                            Sentence: <c:out value="${texts[cycle]}"/>
+                            <br><br>
+                            Translation: <c:out value="${translated_texts[cycle]}"/>
+                            <br>
+                            <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
+                            <br>
+                        </p>
+                        <p>Choose the word causing problems in the translation:</p>
+                        <span>	      
+                            <select>
+                                <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
+                                    <br>
+                                    <option value="${string[internal]}"><c:out value="${string[internal]}"/></option>   
+                                    <br>
+                                </c:forEach>
+                            </select>
+                        </span>
+                        <span>
+                            <button type="button">Correct translation!</button>
+                        </span>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
+        
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -149,8 +119,10 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 
 	<!-- Main -->
-	<script src="js/main.js"></script>
+	<script src="js/main.js"></script>      
+        
+    
+    </body>
 
-	</body>
+
 </html>
-

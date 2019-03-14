@@ -1,118 +1,166 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Create Survey</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Create survey" />
-	<meta name="keywords" content="survey, metaphors" />
-	<meta name="author" content="gettemplates.co" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create Survey</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+        <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+        <meta name="author" content="gettemplates.co" />
 
-	<!-- <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet"> -->
-
-	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
 	
-	<!-- Animate.css -->
-	<!-- <link rel="stylesheet" href="css/animate.css"> -->
-	<!-- Icomoon Icon Fonts-->
-	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
-	<!-- Themify Icons-->
-	<!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Theme style  -->
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Icomoon Icon Fonts-->
+        <link rel="stylesheet" href="css/icomoon.css">
+        <!-- Themify Icons-->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Theme style  -->
+        <link rel="stylesheet" href="css/style.css">
 
-	<!-- Modernizr JS -->
-	<!-- <script src="js/modernizr-2.6.2.min.js"></script> -->
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+        <!-- Modernizr JS -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+	   <![endif]-->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <style>
+            body {font:10px Montserrat, sans-serif;}
+            .navbar {
+                border: 0px;
+                border-radius: 0px;
+                margin-bottom: 0px;
+            }
+            form {
+                width: 80%;
+                margin: 60px auto;
+                background: #efefef;
+                padding: 60px 120px 80px 120px;
+                text-align: center;
+                -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                color: #808080;
+            }
+            label {
+                display: block;
+                position: relative;
+                margin: 40px 0px;
+            }
+        </style>
+    </head>
 
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navabar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="../index.html">MetaTranslate</a>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="login.html">LOGIN</a></li>
+                            <li><a href="registration.html">REGISTER</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+        
+        
+        <div class="container-fluid bg-1 text-center">
+            <div class="col-lg-2 col-sm-1"></div>
+            <div class="col-lg-8 col-sm-10 col-centered" style="vertical-align">
+                <h2 class="label-txt" align="center">CREATE SURVEY</h2>
+                <h4 class="margin" align="center"> 
+                    <br> <br>
+                    Create survey by selecting the parameters you want to use. 
+                    <br><br>
+                    <form action="manager" method="post" id="nlp">
+                        <label>
+                            <p class="label-txt">TRANSLATOR ENGINE</p>
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-2"></div>
+                                <div class="col-lg-8 col-sm-8" style="text-align: justify">
+                                    <br>
+                                    <input type="radio" name="translator"  value="google" checked> &nbsp; Google Translator <br>
+                                    <input type="radio" name="translator" value="bing"> &nbsp; Bing Translator<br>
+                                    <input type="radio" name="translator" value="yandex"> &nbsp; Yandex Translator <br>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="line-box">
+                                    <div class="line"></div>
+                            </div>
+                        </label>
+                        <label>
+                            <p class="label-txt">TARGET LANGUAGE</p>
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-2"></div>
+                                <div class="col-lg-8 col-sm-8" style="text-align: justify">
+                                    <select name="languages" form="nlp">
+                                        <option value="Chinese">Chinese</option>
+                                        <option value="Italian">Italian</option>
+                                        <option value="French">French</option>
+                                        <option value="German">German</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="line-box">
+                                    <div class="line"></div>
+                            </div>
+                        </label>
+                        <label>
+                            <p class="label-txt">NUMBER OF SENTENCES</p>
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-2"></div>
+                                <div class="col-lg-8 col-sm-8" style="text-align: justify">
+                                    <br>
+                                    <input type="radio" name="number" value="5" checked> &nbsp; 5<br>
+                                    <input type="radio" name="number" value="10"> &nbsp; 10<br>
+                                    <input type="radio" name="number" value="15"> &nbsp; 15<br>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="line-box">
+                                    <div class="line"></div>
+                            </div>
+                        </label>
+                        <label>
+                            <p class="label-txt">CORPORA</p>
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-2"></div>
+                                <div class="col-lg-8 col-sm-8" style="text-align: justify">
+                                    <br>
+                                    <input type="radio" name="corpora"  value="VUA" checked> &nbsp; VUA <br>
+                                    <input type="radio" name="corpora" value="MOH"> &nbsp; MOH-X<br>
+                                    <input type="radio" name="corpora" value="FLA"> &nbsp; FLA <br>
+                                </div>
+                            </div>
+                        </label>
+                        <button type="submit" class="btn btn-basic" value="Submit">submit</button>
+                    </form>                   
+                </h4>
+            </div>
+        </div>
 
-
-	</head>
-	<body>
-		
-	<div class="gtco-loader"></div>
-	
-	<div id="page">
-
-		<nav class="gtco-nav" role="navigation">
-			<div class="container">
-				
-				<div class="row">
-					<div class="col-sm-2 col-xs-2">
-						<div id="gtco-logo"><a href="index.html" id="index">MetaTranslator</a></div>
-					</div>
-					<!-- <div class="col-xs-10 text-right fh5co-top-social">
-						<ul class="gtco-social">
-							<li><a href="#" class="icon-twitter"></i></a></li>
-							<li><a href="#" class="icon-dribbble"></i></a></li>
-							<li><a href="#" class="icon-instagram"></i></a></li>
-						</ul>
-					</div> -->
-				</div>
-				
-			</div>
-		</nav>
-
-
-		
-
-		<h2 align="center">Create survey</h2>
-		<p align="center">This page can be accessed only by NLP-Researchers to create survey and retrieve back the unique-key for that given survey</p>
-
-
-		<div class="container">
-			<div class="row">
-				<div class="col-md2">
-					<p>Choose the translator engine to be used:</p>
-					<form action="manager" method="post" id="nlp">
-					<input type="radio" name="translator" value="google" checked> Google Translator<br>
-					<input type="radio" name="translator" value="bing"> Bing<br>
-					<input type="radio" name="translator" value="both"> Yandex<br>
-					<br>
-					<p>Target language</p>
-					<select name="languages" form="nlp">
-						<!-- Aside from Chinese the lhs strings werent' capitalised
-						and wasn't allowing sentences to be displayed properly. Jacob -->
-					  <option value="Chinese">Chinese</option>
-					  <option value="Italian">Italian</option>
-					  <option value="French">French</option>
-					  <option value="German">German</option>
-
-					</select>
-					<br>
-					<br>
-					<p>Choose the number of questions in the survey</p>
-					<input type="radio" name="number" value="5" checked> 5<br>
-					<input type="radio" name="number" value="10"> 10<br>
-					<input type="radio" name="number" value="15"> 15 <br>
-					<br>
-					<p>Choose the corpora of sentences to be used</p>
-					<input type="radio" name="corpora" value="VUA" checked> VUA<br>
-					<input type="radio" name="corpora" value="MOH"> MOH-X<br>
-					<input type="radio" name="corpora" value="FLA"> FLA <br>
-					<br>
-					<!-- <p>Enter here the email of your clients to send directly the unique key number to them. Separate values with a semicolon, NO SPACES please.</p>
-					<input type="text" name="email"> -->
-					<br>
-					<br>
-					<input type="submit" value="Submit" style="background-color:yellowgreen;color:white;padding:5px;font-size:18px;border:none;padding:8px;">
-					</form>
-				</div>
-			</div>	
-		</div>
-
-
-
-	</div>
-
-	<!-- jQuery -->
+    <!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
@@ -123,7 +171,8 @@
 
 	<!-- Main -->
 	<script src="js/main.js"></script>
+        
+    </body>
 
-	</body>
+
 </html>
-
