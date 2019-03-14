@@ -6,9 +6,7 @@ This repository contains the work for the Software Engineering project.
 The entire project is managed with Maven. [link to Maven](http://maven.apache.org) 
 When you have a working installation cd into the root directory of your project and use: 
 
-    mvn clean package javadoc:javadoc 
-
-#if it does not work, use mvn clean package without javadoc
+    mvn clean package
 
 This command tells maven to complete the "clean" phase and the "package" which means that it's going to clean temporary files and target directories and then rebuild everything in order to deploy an application. In our case it is going to deploy a war file, which is a web application resource, suitable for TomCat. 
 
@@ -31,4 +29,3 @@ We are going to discuss together the database design to understand how we are go
 
 * pom.xml, context.xml, web.xml are configuration files for the server and the database
 
-LINK TO ACCESS THE WEBSITE: https://metatranslator.herokuapp.com/
