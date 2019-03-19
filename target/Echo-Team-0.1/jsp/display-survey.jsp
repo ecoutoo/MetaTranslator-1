@@ -89,10 +89,16 @@
                             <br>
                             <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
                             <br>
-                        </p>
-                        <p>Choose the word causing problems in the translation:</p>
+                        </p>                 
+						<span>
+							<input type="radio" name="CorrectTranslation" value="Incorrect"> Incorrect Translation
+							
+							<input type="radio" name="CorrectTranslation" value="Correct"> Correct Translation
+						</span>
+						<br>
+						<p>Choose the word causing problems in the translation:</p>
                         <span>	      
-                            <select>
+                            <select name="Incorrect word">
                                 <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
                                     <br>
                                     <option value="${string[internal]}"><c:out value="${string[internal]}"/></option>   
@@ -100,15 +106,30 @@
                                 </c:forEach>
                             </select>
                         </span>
-                        <span>
-                            <button type="button">Correct translation!</button>
-                        </span>
+						<br>
+						<p>Confidence (1-5):</p>
+						<span>
+							<select name="Confidence">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</span>
+						<br>
+						<p>Suggest your own translation:</p>
+						<span>
+							<input type="text" name="OwnTranslation" value="" size="100"/>
+						</span>
                         <br><br>
                     </div>
                 </div>
             </div>
         </c:forEach>
-        
+       
+	<button type="button">Submit!</button>
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -121,7 +142,6 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>      
         
-    
     </body>
 
 
