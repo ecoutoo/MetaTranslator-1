@@ -80,20 +80,20 @@
             <br><br>
             <div class="row">
                 <div class="col-lg-6 col-sm-6" style="text-align: center">
-                    Sentence <c:out value ="${cycle+1}"/> 
+                    <p>Sentence <c:out value ="${cycle+1}"/></p>
                     <div class="container-fluid bg-3">
                         <p>
-                            Sentence: <c:out value="${texts[cycle]}"/>
+                            <b>Sentence:</b><c:out value="${texts[cycle]}"/>
                             <br><br>
-                            Translation: <c:out value="${translated_texts[cycle]}"/>
+                            <b>Translation:</b> <c:out value="${translated_texts[cycle]}"/>
                             <br>
                             <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
                             <br>
                         </p>                 
 						<span>
-							<input type="radio" name="CorrectTranslation" value="Incorrect"> Incorrect Translation
+							<p><input type="radio" name="CorrectTranslation" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
 							
-							<input type="radio" name="CorrectTranslation" value="Correct"> Correct Translation
+							<input type="radio" name="CorrectTranslation" value="Correct"> &nbsp; Correct Translation</p>
 						</span>
 						<br>
 						<p>Choose the word causing problems in the translation:</p>
@@ -106,6 +106,7 @@
                                 </c:forEach>
                             </select>
                         </span>
+                        <br>
 						<br>
 						<p>Confidence (1-5):</p>
 						<span>
@@ -117,18 +118,22 @@
 								<option>5</option>
 							</select>
 						</span>
+                        <br>
 						<br>
 						<p>Suggest your own translation:</p>
-						<span>
-							<input type="text" name="OwnTranslation" value="" size="100"/>
-						</span>
+                        <input type="text" class="input" name="OwnTranslation" value="" size="100"/>
+                        <div class="line-box">
+                            <div class="line"></div>
+                        </div>
                         <br><br>
                     </div>
                 </div>
             </div>
         </c:forEach>
-       
-	<button type="button">Submit!</button>
+        <div class="col-lg-6 col-sm-6" style="text-align: center">
+            <button type="button" class="btn btn-secondary">Submit!</button>
+            <br><br><br>
+        </div>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
