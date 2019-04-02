@@ -86,84 +86,6 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			translated_texts = new String[sent.size()];
             language = ssd.getSurveyLanguages();
 
-//add if statement depending on which translation system needs to be used.
-
-			/*if (ssd.getSurveyTranslator().equals("Google")) {
-				if (language.equals("Chinese")){
-              				for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-					}
-							
-                    		}
-                        
-                    		else if (language.equals("French")){
-                        		for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
-					}
-				}
-
-                    		else if (language.equals("Italian")){
-                        		for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-					}
-	 			}
-                        
-                    		else if (language.equals("German")){
-                        		for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = GoogleTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
-					}
-				}
-                    
-                    		else {
-                        		for (int i = 0; i < sent.size(); i++) {
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = "cannot detect language target.";
-                        		}
-                    		}
-			}*/
-			
-			/*if (ssd.getSurveyTranslator().equals("Yandex")) {
-				if (language.equals("Chinese")){
-              				for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-					}
-							
-                    		}
-                        
-                    		else if (language.equals("French")){
-                        		for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
-					}
-				}
-
-                    		else if (language.equals("Italian")){
-                        		for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
-					}
-	 			}
-                        
-                    		else if (language.equals("German")){
-                        		for (int i = 0; i < sent.size(); i++){
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
-					}
-				}
-                    
-                    		else {
-                        		for (int i = 0; i < sent.size(); i++) {
-						texts[i] = sent.get(i).getSentenceText();
-						translated_texts[i] = "cannot detect language target.";
-                        		}
-                    		}
-			}*/
-
                     if (language.equals("Chinese")){
                     
 							for (int i = 0; i < sent.size(); i++)
@@ -240,11 +162,19 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		req.setAttribute("translated_texts", translated_texts);
 		req.setAttribute("texts_size", texts_size);
 		req.setAttribute("language", language);
+		req.setAttribute("error", "Unoverwritten error");
 
 		// req.setAttribute("message", m);
 
 		// forwards the control to the read-company-result JSP
-		req.getRequestDispatcher("jsp/display-survey.jsp").forward(req, res);
+		try {
+			req.getRequestDispatcher("jsp/display-survey.jsp").forward(req, res);
+		}
+		catch (Exception e) {
+			req.setAttribute("error", "Key not found, please try again.");
+			req.getRequestDispatcher("index.jsp").forward(req, res);	
+
+		}
 
 	}
 
