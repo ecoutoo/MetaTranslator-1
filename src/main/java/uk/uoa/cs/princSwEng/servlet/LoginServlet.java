@@ -48,6 +48,10 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 		String pwda;
 		// model
 		Message m = null;
+		String username = null;
+		String name = null;
+		String surname = null;
+		String email = null;
 		try {
 			rkey = (int) Integer.parseInt((req.getParameter("rkey")));
 			pwda = req.getParameter("password");
@@ -55,11 +59,11 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 				System.out.println("Parameters retrieved: " + rkey + pwda);
 			Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher();
 			String pwdb = rsc.getResearcherPassword();
-			String username = rsc.getResearcherUsername();
-			String name = rsc.getResearcherName();
-			String surname = rsc.getResearcherSurname();
-			String email = rsc.getResearcherEmail();
-			if (pwda != pwdb) {
+			username = rsc.getResearcherUsername();
+			name = rsc.getResearcherName();
+			surname = rsc.getResearcherSurname();
+			email = rsc.getResearcherEmail();
+			if (!pwda.equals(pwdb)) {
 				System.out.println("Wrong password: " + pwda + pwdb);
 			}
 		}/* catch (NumberFormatException ex)
@@ -76,18 +80,18 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 		// catch (ParsingException e) {
 		// 	e.printStackTrace();
 		// } 
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}		
-		req.setAttribute("rkey", rkey);
-//		req.setAttribute("username", username);
-//		req.setAttribute("name", name);
-//		req.setAttribute("surname", surname);
-//		req.setAttribute("email", email);
+		//catch(Exception e)
+		//{
+		//	e.printStackTrace();
+		//}		
+		req.setAttribute("rkey",rkey);
+		req.setAttribute("username",username);
+		req.setAttribute("name",name);
+		req.setAttribute("surname",surname);
+		req.setAttribute("email",email);
 		// req.setAttribute("message", m);
 		// forwards the control to the read-company-result JSP
-		req.getRequestDispatcher("html/manager.html").forward(req, res);
+		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
 
 	}
 

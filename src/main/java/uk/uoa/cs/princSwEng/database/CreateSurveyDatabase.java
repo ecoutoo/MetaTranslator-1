@@ -11,6 +11,7 @@ import uk.uoa.cs.princSwEng.resource.Survey;
 
 public class CreateSurveyDatabase
 {
+private static final String STATEMENT = "INSERT INTO USERSURVEYRECORD (user_id, survey_id) VALUES (?,?) RETURNING *";
 private static final String STATEMENT5 = "INSERT INTO SURVEYS (corpora, translator, languages, num, sent1, sent2, sent3, sent4, sent5) VALUES (?,?,?,?,?,?,?,?,?) RETURNING *";
 private static final String STATEMENT10 = "INSERT INTO SURVEYS (corpora, translator, languages, num, sent1, sent2, sent3, sent4, sent5, sent6, sent7, sent8, sent9, sent10) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) RETURNING *";
 private static final String STATEMENT15 = "INSERT INTO SURVEYS (corpora, translator, languages, num, sent1, sent2, sent3, sent4, sent5, sent6, sent7, sent8, sent9, sent10, sent11, sent12, sent13, sent14, sent15) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) RETURNING *";
@@ -74,14 +75,18 @@ public int createSurvey() throws SQLException
 					default: 
 					System.err.println("Error, switch case default value in CreateSurveyDatabase");
 				}
-				System.err.println("Before executing executeQuery on CreateSurveyDatabase");
+				System.err.println("Before executing executeQuery on Surveys in CreateSurveyDatabase");
 				rs = pstmt.executeQuery();
 
 				if (rs.next())
 				{
 					result = rs.getInt("id");
 				}
-
+				pstmt = con.prepareStatement(STATEMENT);
+				pstmt.setInt(1,surv.getSurveyRkey());
+				pstmt.setInt(2,result);
+				System.err.println("Before executing executeQuery on UserSurveyRecord in CreateSurveyDatabase");
+				rs = pstmt.executeQuery();
 		}
 		catch(SQLException ex)
 		{

@@ -69,6 +69,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 		String languages;
 		int number;
 		String corpora;
+		int rkey = -1;
 		List<Sentence> sentences; 
 		int[] arr;
 		int key = -1;
@@ -87,6 +88,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 				number = (int)Integer.parseInt((req.getParameter("number")));
 				corpora = req.getParameter("corpora");
 				email = req.getParameter("email");
+				rkey = (int)Integer.parseInt((req.getParameter("rkey")));
 
 				arr = new int[number];
 
@@ -112,7 +114,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 				for (int i=0; i<sentences.size(); i++)
 					arr[i] = (int)sentences.get(i).getSentenceId();
 
-				Survey sur = new Survey(corpora, translator, languages, number, arr);
+				Survey sur = new Survey(corpora, translator, languages, number, arr, rkey);
 
 
 				key = new CreateSurveyDatabase(getConnection(), sur).createSurvey();
@@ -178,6 +180,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 
 		// stores the deleted company and the message as a request attribute
 		 req.setAttribute("key", key);
+		 req.setAttribute("rkey", rkey);
 		// req.setAttribute("message", m);
 
 		// forwards the control to the read-company-result JSP

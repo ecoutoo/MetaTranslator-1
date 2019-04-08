@@ -12,16 +12,18 @@ private final String translator;
 private final String languages;
 private final int num; 
 private final int[] sent;
+private final int rkey;
 
 
 
-public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent)
+public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent, final int rkey)
 {
 		this.corpora = corpora;
 		this.translator = translator;
 		this.languages = languages;
 		this.num = num;
 		this.sent = sent;
+		this.rkey = rkey;
 }
 
 
@@ -70,6 +72,11 @@ public final int getSurveyNum()
 public final int[] getSurveyId()
 {
 	return sent;
+}
+
+public final int getSurveyRkey()
+{
+	return rkey;
 }
 
 // @Override

@@ -43,12 +43,16 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		int rkey = -1;
 		// model
 		Message m = null;
+		String username = null;
+		String name = null;
+		String surname = null;
+		String email = null;
 		try
 		{
-			String username = req.getParameter("username");
-			String name = req.getParameter("name");
-			String surname = req.getParameter("surname");
-			String email = req.getParameter("email");
+			username = req.getParameter("username");
+			name = req.getParameter("name");
+			surname = req.getParameter("surname");
+			email = req.getParameter("email");
 			String password = req.getParameter("password");
 			//cpassword = req.getParameter("cpassword");
 			if (Global.DEBUGMODE)
@@ -70,5 +74,11 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		{
 			m = new Message("There is a problem with the URI during the database connection phase.", "DB100", ex.getMessage());
 		}
+		req.setAttribute("rkey",rkey);
+		req.setAttribute("username",username);
+		req.setAttribute("name",name);
+		req.setAttribute("surname",surname);
+		req.setAttribute("email",email);
+		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req,res);
 	}
 }

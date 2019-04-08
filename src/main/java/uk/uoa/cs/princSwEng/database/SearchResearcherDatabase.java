@@ -37,7 +37,7 @@ public class SearchResearcherDatabase
 			rs = pstmt.executeQuery();
 			if (rs.next())
 			{
-				rsc = new Researcher(rs.getString("username"),rs.getString("name"), rs.getString("surname"), rs.getString("email"), rs.getString("password"));
+				rsc = new Researcher(rs.getString("username"),rs.getString("firstname"), rs.getString("surname"), rs.getString("email"), rs.getString("password"));
 			}
 		}
 		catch(SQLException ex)

@@ -46,7 +46,7 @@ public class SearchSurveyDatabase
 					sent[i] = rs.getInt(senti);					
 				}
 
-				sur = new Survey(rs.getString("corpora"), rs.getString("translator"), rs.getString("languages"), num, sent);
+				sur = new Survey(rs.getString("corpora"), rs.getString("translator"), rs.getString("languages"), num, sent, 0);
 			}
 		}
 		catch(SQLException ex)
