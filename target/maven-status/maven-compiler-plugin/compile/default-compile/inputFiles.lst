@@ -1,27 +1,3 @@
-<<<<<<< Updated upstream
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Researcher.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\ApiKeys.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\rest\RestResource.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Message.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\AbstractDatabaseServlet.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Sentence.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Language.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\LoginServlet.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\ManagerServlet.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Global.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchResearcherDatabase.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Resource.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Survey.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\HomepageServlet.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\RegistrationServlet.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\YandexTranslate.java
-C:\Users\AsusLaptop\Desktop\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateResearcherDatabase.java
-=======
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\rest\RestResource.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateResearcherDatabase.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\RegistrationServlet.java
@@ -44,4 +20,3 @@ C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resou
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\LoginServlet.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Sentence.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.java
->>>>>>> Stashed changes

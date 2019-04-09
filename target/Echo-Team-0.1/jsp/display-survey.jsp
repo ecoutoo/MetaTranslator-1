@@ -13,9 +13,7 @@
         <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
         <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
         <meta name="author" content="gettemplates.co" />
-
         <link rel="stylesheet" href="css/style.css">
-	
         <!-- Animate.css -->
         <link rel="stylesheet" href="css/animate.css">
         <!-- Icomoon Icon Fonts-->
@@ -26,19 +24,16 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
-
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <!-- FOR IE9 below -->
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
-	   <![endif]-->
-        
+		<![endif]-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
         <style>
             body {font:10px Montserrat, sans-serif;}
             .navbar {
@@ -48,7 +43,6 @@
             }
         </style>
     </head>
-
     <body>
         <nav class="navbar navbar-default">
             <div class="container">
@@ -58,7 +52,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.html" id="index">MetaTranslate</a>
+                    <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="login" id="login">LOGIN</a></li>
@@ -68,13 +62,11 @@
                 </div>
             </div>
         </nav> 
-        
-        
         <div class="container-fluid bg-1 text-center">
-                <h4 class="margin" style="line-height: 1.5em"><br>SURVEY <c:out value="${key}"/>
-                    <br><br><br> 
-                    NUMBER OF SENTENCES: <c:out value="${texts_size}"/>
-                </h4>
+            <h4 class="margin" style="line-height: 1.5em">
+				<br>SURVEY <c:out value="${key}"/><br><br><br> 
+                NUMBER OF SENTENCES: <c:out value="${texts_size}"/>
+            </h4>
         </div>
         <c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
             <br><br>
@@ -92,13 +84,13 @@
                         </p>                 
 						<span>
 							<p><input type="radio" name="CorrectTranslation" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
-							
-							<input type="radio" name="CorrectTranslation" value="Correct"> &nbsp; Correct Translation</p>
+							<input type="radio" name="CorrectTranslation" value="Correct" checked> &nbsp; Correct Translation</p>
 						</span>
 						<br>
 						<p>Choose the word causing problems in the translation:</p>
                         <span>	      
                             <select name="Incorrect word">
+								<option hidden disabled selected value>Select a word</option>
                                 <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
                                     <br>
                                     <option value="${string[internal]}"><c:out value="${string[internal]}"/></option>   
@@ -134,20 +126,15 @@
             <button type="button" class="btn btn-secondary">Submit!</button>
             <br><br><br>
         </div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-
-	<!-- Main -->
-	<script src="js/main.js"></script>      
-        
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Main -->
+		<script src="js/main.js"></script>      
     </body>
-
-
 </html>

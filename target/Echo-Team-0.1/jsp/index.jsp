@@ -12,9 +12,7 @@
         <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
         <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
         <meta name="author" content="gettemplates.co" />
-
         <link rel="stylesheet" href="css/style.css">
-    
         <!-- Animate.css -->
         <link rel="stylesheet" href="css/animate.css">
         <!-- Icomoon Icon Fonts-->
@@ -25,19 +23,16 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
-
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <!-- FOR IE9 below -->
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
-       <![endif]-->
-        
+		<![endif]-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
         <style>
             body {font:10px Montserrat, sans-serif;}
             .navbar {
@@ -47,7 +42,6 @@
             }
         </style>
     </head>
-
     <body>
         <nav class="navbar navbar-default">
             <div class="container">
@@ -57,7 +51,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.html" id="index">MetaTranslate</a>
+                    <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="login" id="login">LOGIN</a></li>
@@ -67,8 +61,6 @@
                 </div>
             </div>
         </nav> 
-        
-        
         <div class="container-fluid bg-1 text-center">
             <div class="col-lg-2 col-sm-1"></div>
             <div class="col-lg-8 col-sm-10" style="vertical-align">
@@ -100,7 +92,6 @@
                 </form>
             </div>
         </div>
-        
         <div class="container-fluid bg-3" style="text-align: center">    
             <h3 class="margin" style="text-align: center">How to fill in the survey?</h3><br><br><br><br>
             <div class="row">
@@ -115,21 +106,15 @@
                 </div>
             </div>
         </div>
-        
-        
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
-
-    <!-- Main -->
-    <script src="js/main.js"></script>        
-    
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Main -->
+		<script src="js/main.js"></script>        
     </body>
-
-
 </html>
