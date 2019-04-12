@@ -4,8 +4,6 @@ import com.sendgrid.*;
 import java.io.IOException;
 
 import uk.uoa.cs.princSwEng.resource.Global;
-
-
 import uk.uoa.cs.princSwEng.resource.Message;
 
 import java.io.IOException;
@@ -31,9 +29,8 @@ import uk.uoa.cs.princSwEng.resource.Survey;
 import uk.uoa.cs.princSwEng.database.SearchRandomSentenceDatabase;
 import uk.uoa.cs.princSwEng.database.CreateSurveyDatabase;
 
-public final class ManagerServlet extends AbstractDatabaseServlet
-{
-private static final long serialVersionUID = 1L;
+public final class ManagerServlet extends AbstractDatabaseServlet {
+	private static final long serialVersionUID = 1L;
 //private final static String SENDGRID_API_KEY ="XXXX-XXXX-XXXX-XXXX-XXXX";
 
 /**
@@ -51,19 +48,14 @@ private static final long serialVersionUID = 1L;
  */
 
 
-public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
-{
-
-		
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
+	{
 		// forwards the control to the ManagerPage
 		req.getRequestDispatcher("/html/manager.html").forward(req, res);
+	}
 
-}
-
-
-public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
-{
-
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
+	{
 		// request parameter
 		String translator;
 		String languages;
@@ -74,15 +66,11 @@ public void doPost(HttpServletRequest req, HttpServletResponse res) throws Servl
 		int[] arr;
 		int key = -1;
 		String email = "";
-
-
 		// model
-		
 		Message m = null;
 
 		try
 		{
-
 				translator = req.getParameter("translator");
 				languages = req.getParameter("languages");
 				number = (int)Integer.parseInt((req.getParameter("number")));

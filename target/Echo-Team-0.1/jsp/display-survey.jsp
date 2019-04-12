@@ -50,8 +50,8 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
+                        <span class="icon-bar"></span>
+					</button>
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
@@ -68,10 +68,15 @@
                 NUMBER OF SENTENCES: <c:out value="${texts_size}"/>
             </h4>
         </div>
+		<form action="completion" method="post" style="width:100%">
+		<input type="hidden" name="survkey" value="${key}">
+		<input type="hidden" name="survsize" value="${texts_size}">
+		<!--<input type="hidden" name="sentids" value="<c:out value="${sentids}"/>">-->
         <c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
             <br><br>
             <div class="row">
-                <div class="col-lg-6 col-sm-6" style="text-align: center">
+                <div class="col-lg-6 col-sm-6" style="text-align:center;width:100%">
+					<!--<input type="hidden" name="sentkey<c:out value="${cycle+1}"/>" value="<c:out value="${sentid[cycle]}"/>">-->
                     <p>Sentence <c:out value ="${cycle+1}"/></p>
                     <div class="container-fluid bg-3">
                         <p>
@@ -83,13 +88,13 @@
                             <br>
                         </p>                 
 						<span>
-							<p><input type="radio" name="CorrectTranslation" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
-							<input type="radio" name="CorrectTranslation" value="Correct" checked> &nbsp; Correct Translation</p>
+							<p><input type="checkbox" name="CorrectTranslation" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
+							<input type="checkbox" name="CorrectTranslation" value="Correct" checked> &nbsp; Correct Translation</p>
 						</span>
 						<br>
 						<p>Choose the word causing problems in the translation:</p>
                         <span>	      
-                            <select name="Incorrect word">
+                            <select name="IncorrectWord">
 								<option hidden disabled selected value>Select a word</option>
                                 <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
                                     <br>
@@ -122,8 +127,12 @@
                 </div>
             </div>
         </c:forEach>
-        <div class="col-lg-6 col-sm-6" style="text-align: center">
-            <button type="button" class="btn btn-secondary">Submit!</button>
+			<div class="col-lg-12">
+                <p><input class="btn btn-basic" type="submit" value="Submit" style="color: black"></p>
+            </div>
+        </form>
+        <!--<div class="col-lg-6 col-sm-6" style="text-align: center">
+            <button type="button" class="btn btn-secondary"><input type="submit" valueSubmit!</button>-->
             <br><br><br>
         </div>
 		<!-- jQuery -->

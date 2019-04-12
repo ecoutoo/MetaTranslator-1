@@ -68,6 +68,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		Message m = null;
 		String[] texts = null;
 		String[] translated_texts = null;
+		int[] sentids = null;
 		int texts_size = -111111;
 
 		try {
@@ -82,6 +83,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 			Survey ssd = new SearchSurveyDatabase(getConnection(), key).SearchSurvey();
 			List<Sentence> sent = new SearchSentencesFromSurveyDatabase(getConnection(), ssd).SearchSentencesFromSurvey();
 			texts = new String[sent.size()];
+			sentids = new int[sent.size()];
 			texts_size = sent.size();
 			translated_texts = new String[sent.size()];
             language = ssd.getSurveyLanguages();
@@ -93,6 +95,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 								
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.CHINESE);
+								sentids[i] = sent.get(i).getSentenceId();
 							}
 							//break;
                     }
@@ -103,6 +106,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							{
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.FRENCH);
+								sentids[i] = sent.get(i).getSentenceId();
 							}
 							//break;
                         
@@ -114,6 +118,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							{
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.ITALIAN);
+								sentids[i] = sent.get(i).getSentenceId();
 							}
 							//break;
                         
@@ -125,6 +130,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 							{
 								texts[i] = sent.get(i).getSentenceText();
 								translated_texts[i] = YandexTranslate.execute(texts[i], Language.ENGLISH, Language.GERMAN);
+								sentids[i] = sent.get(i).getSentenceId();
 							}
 							//break;
                         
@@ -134,6 +140,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
                         for (int i = 0; i < sent.size(); i++) {
 						  texts[i] = sent.get(i).getSentenceText();
 						  translated_texts[i] = "cannot detect language target.";
+						  sentids[i] = sent.get(i).getSentenceId();
                         }
                     }	
                        
@@ -162,6 +169,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 		req.setAttribute("translated_texts", translated_texts);
 		req.setAttribute("texts_size", texts_size);
 		req.setAttribute("language", language);
+		req.setAttribute("sentids", sentids);
 		req.setAttribute("error", "Unoverwritten error");
 
 		// req.setAttribute("message", m);

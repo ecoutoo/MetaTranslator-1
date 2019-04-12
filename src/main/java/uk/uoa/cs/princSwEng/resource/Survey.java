@@ -3,30 +3,22 @@ package uk.uoa.cs.princSwEng.resource;
 import com.fasterxml.jackson.core.*;
 import java.io.*;
 
+public class Survey extends Resource {
+	private final String corpora;
+	private final String translator;
+	private final String languages;
+	private final int num; 
+	private final int[] sent;
+	private final int rkey;
 
-public class Survey extends Resource
-{
-
-private final String corpora;
-private final String translator;
-private final String languages;
-private final int num; 
-private final int[] sent;
-private final int rkey;
-
-
-
-public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent, final int rkey)
-{
+	public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent, final int rkey) {
 		this.corpora = corpora;
 		this.translator = translator;
 		this.languages = languages;
 		this.num = num;
 		this.sent = sent;
 		this.rkey = rkey;
-}
-
-
+	}
 
 /**
  * Returns the corpora of the Survey.
@@ -34,11 +26,10 @@ public Survey(final String corpora,final String translator,final String language
  * @return the corpora of the Survey.
  */
 
-public final String getSurveyCorpora()
-{
-	return corpora;
-}
-
+	public final String getSurveyCorpora()
+	{
+		return corpora;
+	}
 
 /**
  * Returns the translator of the Survey.
@@ -46,12 +37,10 @@ public final String getSurveyCorpora()
  * @return the translator of the Survey.
  */
 
-public final String getSurveyTranslator()
-{
-	return translator;
-}
-
-
+	public final String getSurveyTranslator()
+	{
+		return translator;
+	}
 
 /**
  * Returns the languages of the Survey.
@@ -59,29 +48,28 @@ public final String getSurveyTranslator()
  * @return the languages of the Survey.
  */
 
-public final String getSurveyLanguages()
-{
+	public final String getSurveyLanguages()
+	{
 		return languages;
-}
+	}
 
-public final int getSurveyNum()
-{
-	return num;
-}
+	public final int getSurveyNum()
+	{
+		return num;
+	}
 
-public final int[] getSurveyId()
-{
-	return sent;
-}
+	public final int[] getSurveyId()
+	{
+		return sent;
+	}
 
-public final int getSurveyRkey()
-{
-	return rkey;
-}
+	public final int getSurveyRkey()
+	{
+		return rkey;
+	}
 
 // @Override
- public final void toJSON(final OutputStream out) throws IOException
-{
+	public final void toJSON(final OutputStream out) throws IOException {
 // 		final JsonGenerator jg = JSON_FACTORY.createGenerator(out);
 
 // 		jg.writeStartObject();
@@ -91,7 +79,7 @@ public final int getSurveyRkey()
 // 		jg.writeEndObject();
 // 		jg.writeEndObject();
 // 		jg.flush();
-}
+	}
 
 /**
  * Creates a {@code category} from its JSON representation.
