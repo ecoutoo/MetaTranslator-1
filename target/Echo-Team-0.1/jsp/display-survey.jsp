@@ -34,6 +34,15 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function corincCheck(i) {
+				if (document.getElementById('incCheck'+i).checked) {
+					document.getElementById('ifInc'+i).style.display='block';
+				} else if (document.getElementById('corCheck'+i).checked) {
+					document.getElementById('ifInc'+i).style.display='none';
+				}
+			}
+		</script>
         <style>
             body {font:10px Montserrat, sans-serif;}
             .navbar {
@@ -88,41 +97,46 @@
                             <br>
                         </p>                 
 						<span>
-							<p><input type="radio" name="CorrectTranslation${cycle}" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
-							<input type="radio" name="CorrectTranslation${cycle}" value="Correct" checked> &nbsp; Correct Translation</p>
+							<p>
+								<input type="radio" onclick="javascript:corincCheck(${cycle})" name="CorrectTranslation${cycle}" id="incCheck${cycle}" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
+								<input type="radio" onclick="javascript:corincCheck(${cycle})" name="CorrectTranslation${cycle}" id="corCheck${cycle}" value="Correct" checked> &nbsp; Correct Translation
+							</p>
 						</span>
-						<br>
-						<p>Choose the word causing problems in the translation:</p>
-                        <span>	      
-                            <select name="IncorrectWord">
-								<option hidden disabled selected value>Select a word</option>
-                                <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
-                                    <br>
-                                    <option value="${string[internal]}"><c:out value="${string[internal]}"/></option>   
-                                    <br>
-                                </c:forEach>
-                            </select>
-                        </span>
-                        <br>
-						<br>
-						<p>Confidence (1-5):</p>
-						<span>
-							<select name="Confidence">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</span>
-                        <br>
-						<br>
-						<p>Suggest your own translation:</p>
-                        <input type="text" class="input" name="OwnTranslation" value="" size="100"/>
-                        <div class="line-box">
-                            <div class="line"></div>
-                        </div>
-                        <br><br>
+						<div id="ifInc${cycle}" style="display:none">
+							<br>
+							<p>Choose the word causing problems in the translation:</p>
+							<span>	      
+								<select name="IncorrectWord">
+								<!--<option hidden disabled selected value>Select a word</option>-->
+									<c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
+										<br>
+										<option value="${string[internal]}"><c:out value="${string[internal]}"/></option>   
+										<br>
+									</c:forEach>
+								</select>
+							</span>
+							<br>
+							<br>
+							<p>Confidence (1-5):</p>
+							<span>
+								<select name="Confidence">
+								<!--<option hidden disabled selected value>Select a number</option>-->
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</span>
+							<br>
+							<br>
+							<p>Suggest your own translation:</p>
+							<input type="text" class="input" name="OwnTranslation" value="" size="100"/>
+							<div class="line-box">
+								<div class="line"></div>
+							</div>
+							<br><br>
+						</div>
                     </div>
                 </div>
             </div>

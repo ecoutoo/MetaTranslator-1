@@ -81,16 +81,18 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 			while (lo1 < survsize) {
 				if (prmcorrect[lo1].equals("Correct")) {
 					correct[lo1] = true;
+					confidence[lo1] = 0;
+					problemphrase[lo1] = "";
 				} else if (prmcorrect[lo1].equals("Incorrect")) {
 					correct[lo1] = false;
+					confidence[lo1] = (int)Integer.valueOf(prmconfidence[lo1]);
 				}
-				confidence[lo1] = (int)Integer.valueOf(prmconfidence[lo1]);
-				lo1 = lo1 + 1;
+				lo1 += 1;
 			}
 			while (lo2 < survsize) {
 				Result loadres = new Result(sentence[lo2],group,correct[lo2],problemphrase[lo2],confidence[lo2],owntranslation[lo2]);
 				reskey = new CreateResultDatabase (getConnection(), loadres).createSurveyResult();
-				lo2 = lo2 + 1;
+				lo2 += 1;
 			}
 		}
 		catch (SQLException ex) {
