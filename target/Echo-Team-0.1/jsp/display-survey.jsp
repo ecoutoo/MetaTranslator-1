@@ -88,8 +88,8 @@
                             <br>
                         </p>                 
 						<span>
-							<p><input type="checkbox" name="CorrectTranslation" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
-							<input type="checkbox" name="CorrectTranslation" value="Correct" checked> &nbsp; Correct Translation</p>
+							<p><input type="radio" name="CorrectTranslation${cycle}" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
+							<input type="radio" name="CorrectTranslation${cycle}" value="Correct" checked> &nbsp; Correct Translation</p>
 						</span>
 						<br>
 						<p>Choose the word causing problems in the translation:</p>

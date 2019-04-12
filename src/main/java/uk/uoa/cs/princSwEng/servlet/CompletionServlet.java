@@ -48,9 +48,9 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 		//model
 		Message m = null;
 		int reskey = -1;
-		int lo11 = 0;
-		int lo12 = lo11;
-		int currres2 = 0;
+		int lo1 = 0;
+		int lo2 = 0;
+		int lo3 = 0;
 		boolean[] correct = null;
 		int[] sentence = null;
 		int[] confidence = null;
@@ -62,10 +62,11 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 			Survey surv = new SearchSurveyDatabase(getConnection(), group).SearchSurvey();
 			sentence = new int[survsize];
 			sentence = surv.getSurveyId();
-//			prmsentence = new String[survsize];
-//			prmsentence = req.getParameterValues("sentids");
 			prmcorrect = new String[survsize];
-			prmcorrect = req.getParameterValues("CorrectTranslation");
+			while (lo3 < survsize) {
+				prmcorrect[lo3] = req.getParameter("CorrectTranslation"+lo3);
+				lo3 += 1;
+			}
 			problemphrase = new String[survsize];
 			problemphrase = req.getParameterValues("IncorrectWord");
 			prmconfidence = new String[survsize];
@@ -77,21 +78,19 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 			}
 			correct = new boolean[survsize];
 			confidence = new int[survsize];
-			while (lo11 < survsize) {
-				lo12 = lo11;
-				prova = prmcorrect[lo12];
-				if (prova.equals("Correct")) {
-					correct[lo12] = true;
-				} else if (prova.equals("Incorrect")) {
-					correct[lo12] = false;
+			while (lo1 < survsize) {
+				if (prmcorrect[lo1].equals("Correct")) {
+					correct[lo1] = true;
+				} else if (prmcorrect[lo1].equals("Incorrect")) {
+					correct[lo1] = false;
 				}
-				confidence[lo12] = (int)Integer.valueOf(prmconfidence[lo12]);
-				lo11 = lo11 + 1;
+				confidence[lo1] = (int)Integer.valueOf(prmconfidence[lo1]);
+				lo1 = lo1 + 1;
 			}
-			while (currres2 < survsize) {
-				Result loadres = new Result(sentence[currres2],group,correct[currres2],problemphrase[currres2],confidence[currres2],owntranslation[currres2]);
+			while (lo2 < survsize) {
+				Result loadres = new Result(sentence[lo2],group,correct[lo2],problemphrase[lo2],confidence[lo2],owntranslation[lo2]);
 				reskey = new CreateResultDatabase (getConnection(), loadres).createSurveyResult();
-				currres2 = currres2 + 1;
+				lo2 = lo2 + 1;
 			}
 		}
 		catch (SQLException ex) {
