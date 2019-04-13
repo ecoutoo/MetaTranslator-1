@@ -51,7 +51,7 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
-		req.getRequestDispatcher("/html/manager.html").forward(req, res);
+		req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 	}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException

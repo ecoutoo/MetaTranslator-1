@@ -104,7 +104,7 @@
 						</span>
 						<div id="ifInc${cycle}" style="display:none">
 							<br>
-							<p>Choose the word causing problems in the translation:</p>
+							<p>Choose the words causing problems in the translation:</p>
 							<div id="ck-button">
 								<label>
 									<input type="checkbox" name="IncorrectWord${cycle}" value=" " checked>

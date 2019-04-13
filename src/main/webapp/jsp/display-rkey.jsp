@@ -65,12 +65,13 @@
         </div>
 		<div class="row">
 			<div class="col-lg-5 col-sm-5">
-				<form action="manager" style="text-align:left;width:80%">
+				<form action="creation" style="text-align:left;width:80%" method="post">
 					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
 					<b>Name</b> <c:out value="${name}"/><br>
 					<b>Surname</b> <c:out value="${surname}"/><br>
 					<b>Email</b> <c:out value="${email}"/><br></p>
-					<button type="submit" class="btn btn-basic" value="Create Survey">Create Survey</button>
+					<input type="hidden" name="rkey" value="${rkey}">
+					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
 				</form>
 			</div>
 			<div class="col-lg-7 col-sm-7">
