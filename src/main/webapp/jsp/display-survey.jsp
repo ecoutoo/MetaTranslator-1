@@ -104,17 +104,19 @@
 						</span>
 						<div id="ifInc${cycle}" style="display:none">
 							<br>
-							<p>Choose the word causing problems in the translation:</p>
-							<span>	      
-								<select name="IncorrectWord">
-								<!--<option hidden disabled selected value>Select a word</option>-->
-									<c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
-										<br>
-										<option value="${string[internal]}"><c:out value="${string[internal]}"/></option>   
-										<br>
-									</c:forEach>
-								</select>
-							</span>
+							<p>Choose the words causing problems in the translation:</p>
+							<div id="ck-button">
+								<label>
+									<input type="checkbox" name="IncorrectWord${cycle}" value=" " checked>
+									<span>&nbsp;</span>
+								</label>
+								<c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
+									<label>
+										<input type="checkbox" name="IncorrectWord${cycle}" value="${string[internal]}">
+										<span><c:out value="${string[internal]}"/>&nbsp;</span>
+									</label>
+								</c:forEach>
+							</div>
 							<br>
 							<br>
 							<p>Confidence (1-5):</p>

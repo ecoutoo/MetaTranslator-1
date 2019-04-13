@@ -52,6 +52,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 		String name = null;
 		String surname = null;
 		String email = null;
+//		int[] survlist = null
 		try {
 			rkey = (int) Integer.parseInt((req.getParameter("rkey")));
 			pwda = req.getParameter("password");
@@ -66,6 +67,10 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 			if (!pwda.equals(pwdb)) {
 				System.out.println("Wrong password: " + pwda + pwdb);
 			}
+//			Survey[] srvlst = new SearchResearcherSurveysDatabase(getConnection(), rkey).searchResearcherSurveys();
+//			for (int i = 0; i < srvlst.size(); i++) {
+//				survlist[i] = srvlst[i].getSurveyRkey();
+//			}
 		}/* catch (NumberFormatException ex)
 		          {
 		          m = new Message("Cannot read the company. Invalid input parameters: translator must be a string.",
@@ -89,12 +94,11 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 		req.setAttribute("name",name);
 		req.setAttribute("surname",surname);
 		req.setAttribute("email",email);
+//		req.setAttribute("survlist",survlist);
 		// req.setAttribute("message", m);
 		// forwards the control to the read-company-result JSP
 		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
 
 	}
-
-
-
 }
+

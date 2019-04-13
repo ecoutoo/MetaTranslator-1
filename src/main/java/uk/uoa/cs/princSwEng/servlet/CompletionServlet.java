@@ -42,15 +42,19 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 		int survsize = -1;
 		int group = -1;
 		String[] prmcorrect = null;
+//		String[] prmproblemphrase;
 		String[] problemphrase = null;
 		String[] prmconfidence = null;
 		String[] owntranslation = null;
+		String prblph = "";
 		//model
 		Message m = null;
 		int reskey = -1;
 		int lo1 = 0;
 		int lo2 = 0;
 		int lo3 = 0;
+		int lo4 = 0;
+		int lo5 = 0;
 		boolean[] correct = null;
 		int[] sentence = null;
 		int[] confidence = null;
@@ -68,7 +72,16 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 				lo3 += 1;
 			}
 			problemphrase = new String[survsize];
-			problemphrase = req.getParameterValues("IncorrectWord");
+			while (lo4 < survsize) {
+				prblph = "";
+//				prmproblemphrase = new String[];
+				String prmproblemphrase[] = req.getParameterValues("IncorrectWord"+lo4);
+				for (int prv = 0; prv < prmproblemphrase.length; prv++) {
+					prblph = prblph + " " + prmproblemphrase[prv];
+				}
+				problemphrase[lo4] = prblph;
+				lo4 += 1;
+			}
 			prmconfidence = new String[survsize];
 			prmconfidence = req.getParameterValues("Confidence");
 			owntranslation = new String[survsize];

@@ -73,7 +73,8 @@
 					<button type="submit" class="btn btn-basic" value="Create Survey">Create Survey</button>
 				</form>
 			</div>
-			<div class="col-lg-7 col-sm-7"></div>
+			<div class="col-lg-7 col-sm-7">
+			</div>
 		</div>
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>

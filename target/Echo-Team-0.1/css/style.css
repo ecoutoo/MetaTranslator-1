@@ -102,3 +102,38 @@ form {
     box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
     color: #808080;
 }
+
+#ck-button {
+    margin: 4px auto;
+    background-color:#BCBCBC;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:none;
+	font-size:16px;
+}
+
+#ck-button:hover {
+    background:#8BC34A;
+}
+
+#ck-button label {
+    float:left;
+}
+
+#ck-button label span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+}
+
+#ck-button label input {
+	display:none;
+    position:relative;
+    top:-20px;
+}
+
+#ck-button input:checked + span {
+    background-color:#649130;
+    color:#fff;
+}
