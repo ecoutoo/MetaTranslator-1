@@ -35,7 +35,7 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
-		req.getRequestDispatcher("/html/registration.html").forward(req, res);
+		req.getRequestDispatcher("/jsp/registration.jsp").forward(req, res);
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{

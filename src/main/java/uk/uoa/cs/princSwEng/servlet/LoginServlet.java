@@ -40,7 +40,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
-		req.getRequestDispatcher("/html/login.html").forward(req, res);
+		req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// request parameter
