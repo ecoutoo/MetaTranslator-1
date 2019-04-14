@@ -61,6 +61,8 @@
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
+                            <li><a href="login" id="login">LOGIN</a></li>
+                            <li><a href="logout" id="logout">LOGOUT</a></li>
                             <li><a href="registration" id="registration">REGISTER</a>
                         </ul>
                     </div>
@@ -78,6 +80,7 @@
                     <br><br>
                     <form action="login" method="post">
                         <label>
+                            <p> <c:out value="${error}"/></p>
                             <p class="label-txt">ENTER YOUR RESEARCHER KEY</p>
                             <input type="text" class="input" name="rkey">
                             <div class="line-box">

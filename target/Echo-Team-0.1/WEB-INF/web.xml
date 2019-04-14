@@ -38,6 +38,10 @@
 		<servlet-class>uk.uoa.cs.princSwEng.servlet.LoginServlet</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>uk.uoa.cs.princSwEng.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>CompletionServlet</servlet-name>
 		<servlet-class>uk.uoa.cs.princSwEng.servlet.CompletionServlet</servlet-class>
 	</servlet>
@@ -61,6 +65,10 @@
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>CompletionServlet</servlet-name>

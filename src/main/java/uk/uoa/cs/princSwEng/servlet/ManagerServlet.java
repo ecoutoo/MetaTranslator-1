@@ -19,6 +19,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import java.util.List;
@@ -48,14 +49,28 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
  */
 
 
-	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
-	{
-		// forwards the control to the ManagerPage
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	HttpSession session = req.getSession(true);
+    if (session.getAttribute("user") == null) {
+		req.setAttribute("Error", "Please login");
+		req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+	}
+
+    else {
 		req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 	}
+}
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
+
+		HttpSession session = req.getSession(true);
+		if (session.getAttribute("user") == null) {
+			req.setAttribute("Error", "Please login");
+			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+
+		}
+
 		// request parameter
 		String translator;
 		String languages;

@@ -60,18 +60,25 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navabar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navabar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login" id="login">LOGIN</a></li>
+                        <li><a href="logout" id="logout">LOGOUT</a></li>
+                        <li><a href="registration" id="registration">REGISTER</a>
+                    </ul>
                 </div>
             </div>
-        </nav> 
+        </div>
+    </nav>
         <div class="container-fluid bg-1 text-center">
             <div class="col-lg-2 col-sm-1"></div>
             <div class="col-lg-8 col-sm-10 col-centered" style="vertical-align">

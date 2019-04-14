@@ -29,22 +29,6 @@ import uk.uoa.cs.princSwEng.resource.Researcher;
 import uk.uoa.cs.princSwEng.database.CreateResearcherDatabase;
 import uk.uoa.cs.princSwEng.database.SearchResearcherDatabase;
 
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.crypto.hash.Sha256Hash;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.SecurityUtils;
-
-import org.apache.shiro.authc.*;
-import org.apache.shiro.config.IniSecurityManagerFactory;
-import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.session.Session;
-import org.apache.shiro.util.Factory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import io.jsonwebtoken.SignatureAlgorithm;
-import java.security.Key;
-
 
 public final class LogoutServlet extends AbstractDatabaseServlet {
     private static final long serialVersionUID = 1L;

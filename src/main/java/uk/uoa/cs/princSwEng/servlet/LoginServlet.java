@@ -26,6 +26,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import java.util.List;
@@ -40,10 +41,23 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
-		req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+		HttpSession session = req.getSession(true);
+		if (session.getAttribute("user") != null) {
+			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+		}
+
+		else {
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+		}
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// request parameter
+		HttpSession session = req.getSession(true);
+		if (session.getAttribute("user") != null) {
+			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+		}
+		System.out.println("Request getSession");
+		System.out.println(req.getSession());
 		int rkey = -1;
 		String pwda;
 		// model
@@ -55,50 +69,70 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 //		int[] survlist = null
 		try {
 			rkey = (int) Integer.parseInt((req.getParameter("rkey")));
+		}
+		catch (Exception e) {
+			req.setAttribute("error", "Please enter a number in correct format");
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+		}
+
 			pwda = req.getParameter("password");
 			if (Global.DEBUGMODE)
 				System.out.println("Parameters retrieved: " + rkey + pwda);
-			Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher();
-			String pwdb = rsc.getResearcherPassword();
-			username = rsc.getResearcherUsername();
-			name = rsc.getResearcherName();
-			surname = rsc.getResearcherSurname();
-			email = rsc.getResearcherEmail();
+			try {
+				Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher();
+			}
+
+			catch (Exception e) {
+				if (e instanceof NullPointerException) {
+					req.setAttribute("error", "Your researcher key does not exist, please check and try again.");
+					req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+				}
+			}
+
+			try {
+				//HttpSession session = req.getSession(true);
+				Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher(); //Should be unreachable?
+				String pwdb = rsc.getResearcherPassword();
+				username = rsc.getResearcherUsername();
+				name = rsc.getResearcherName();
+				surname = rsc.getResearcherSurname();
+				email = rsc.getResearcherEmail();
+
 			if (!pwda.equals(pwdb)) {
 				System.out.println("Wrong password: " + pwda + pwdb);
+				req.setAttribute("error", "Incorrect username and password, please try again");
+				req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 			}
-//			Survey[] srvlst = new SearchResearcherSurveysDatabase(getConnection(), rkey).searchResearcherSurveys();
-//			for (int i = 0; i < srvlst.size(); i++) {
-//				survlist[i] = srvlst[i].getSurveyRkey();
-//			}
-		}/* catch (NumberFormatException ex)
-		          {
-		          m = new Message("Cannot read the company. Invalid input parameters: translator must be a string.",
-		          "E100", ex.getMessage());
-		          }*/ 
-		catch (SQLException ex) {
-			m = new Message("Cannot find the company: unexpected error while accessing the database.",
-					"E200", ex.getMessage());
-		} catch (URISyntaxException ex) {
-			m = new Message("There is a problem with the URI during the database connection phase.", "DB100", ex.getMessage());
-		}
-		// catch (ParsingException e) {
-		// 	e.printStackTrace();
-		// } 
-		//catch(Exception e)
-		//{
-		//	e.printStackTrace();
-		//}		
-		req.setAttribute("rkey",rkey);
-		req.setAttribute("username",username);
-		req.setAttribute("name",name);
-		req.setAttribute("surname",surname);
-		req.setAttribute("email",email);
-//		req.setAttribute("survlist",survlist);
-		// req.setAttribute("message", m);
-		// forwards the control to the read-company-result JSP
-		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
 
+			else {
+				req.setAttribute("error", "No error has been set");
+				req.setAttribute("rkey", rkey);
+				req.setAttribute("username", username);
+				req.setAttribute("name", name);
+				req.setAttribute("surname", surname);
+				req.setAttribute("email", email);
+				System.out.println(email.getClass());
+				req.setAttribute("myfoo", "myfoo");
+				session.setAttribute("user", "rkey");
+
+				try {
+					System.out.println("Forwarding to manager page");
+					req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+				}
+				catch (Exception e) {
+					System.out.println("Did it break?");
+				}
+
+
+			}
+
+			}
+
+			catch (Exception e) {
+				if (e instanceof NullPointerException) {
+					req.setAttribute("error", "Your researcher key does not exist, please check and try again.");
+					req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+				}
+			}
 	}
 }
-
