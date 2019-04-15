@@ -19,14 +19,27 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 public final class CreationServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req,res);
+		HttpSession session = req.getSession(true);
+		if (session.getAttribute("current_logged_in") == null) {
+			req.setAttribute("Error", "Please login");
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+		}
+		else {
+			req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
+		}
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		HttpSession session = req.getSession(true);
+		if (session.getAttribute("current_logged_in") == null) {
+			req.setAttribute("Error", "Please login");
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+		}
 		//parameters
 		int rkey;
 		//model
@@ -35,6 +48,7 @@ public final class CreationServlet extends AbstractDatabaseServlet {
 		if (Global.DEBUGMODE) 
 			System.out.println("Parameter retrieved: " + rkey);
 		req.setAttribute("rkey",rkey);
+		session.setAttribute("current_logged_in", "rkey");
 		req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 	}
 }

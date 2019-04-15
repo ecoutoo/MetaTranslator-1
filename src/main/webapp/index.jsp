@@ -62,7 +62,6 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="login" id="login">LOGIN</a></li>
-                        <li><a href="logout" id="logout">LOGOUT</a></li>
                         <li><a href="registration" id="registration">REGISTER</a>
                     </ul>
                 </div>

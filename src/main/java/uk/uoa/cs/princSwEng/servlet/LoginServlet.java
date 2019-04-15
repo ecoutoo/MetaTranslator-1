@@ -100,7 +100,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 
 			if (!pwda.equals(pwdb)) {
 				System.out.println("Wrong password: " + pwda + pwdb);
-				req.setAttribute("error", "Incorrect username and password, please try again");
+				req.setAttribute("error", "Incorrect researcher ID and password, please try again");
 				req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 			}
 
@@ -113,11 +113,11 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 				req.setAttribute("email", email);
 				System.out.println(email.getClass());
 				req.setAttribute("myfoo", "myfoo");
-				session.setAttribute("user", "rkey");
+				session.setAttribute("current_logged_in", "rkey");
 
 				try {
-					System.out.println("Forwarding to manager page");
-					req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+					System.out.println("Forwarding to user page");
+					req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
 				}
 				catch (Exception e) {
 					System.out.println("Did it break?");

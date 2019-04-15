@@ -22,5 +22,6 @@ uk\uoa\cs\princSwEng\resource\Global.class
 uk\uoa\cs\princSwEng\resource\Result.class
 uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.class
 uk\uoa\cs\princSwEng\resource\Survey.class
+uk\uoa\cs\princSwEng\servlet\LogoutServlet.class
 uk\uoa\cs\princSwEng\resource\ApiKeys.class
 uk\uoa\cs\princSwEng\resource\Language.class

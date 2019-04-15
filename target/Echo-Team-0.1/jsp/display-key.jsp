@@ -56,6 +56,12 @@
                         <span class="icon-bar"></span>                        
                     </button>
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="logout" id="logout">LOGOUT</a></li>
+							<li><a href="registration" id="registration">REGISTER</a>
+						</ul>
+					</div>
                 </div>
             </div>
         </nav>

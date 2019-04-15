@@ -50,27 +50,23 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-	HttpSession session = req.getSession(true);
-    if (session.getAttribute("current_logged_in") == null) {
-		req.setAttribute("Error", "Please login");
-		req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
-	}
-
-    else {
-		req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
-	}
-}
-
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
-	{
-
 		HttpSession session = req.getSession(true);
 		if (session.getAttribute("current_logged_in") == null) {
 			req.setAttribute("Error", "Please login");
-			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
-
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 		}
+		else {
+			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+		}
+	}
 
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
+	{
+		HttpSession session = req.getSession(true);
+		if (session.getAttribute("current_logged_in") == null) {
+			req.setAttribute("Error", "Please login");
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
+		}
 		// request parameter
 		String translator;
 		String languages;
@@ -86,41 +82,36 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 
 		try
 		{
-				translator = req.getParameter("translator");
-				languages = req.getParameter("languages");
-				number = (int)Integer.parseInt((req.getParameter("number")));
-				corpora = req.getParameter("corpora");
-				email = req.getParameter("email");
-				rkey = (int)Integer.parseInt((req.getParameter("rkey")));
+			translator = req.getParameter("translator");
+			languages = req.getParameter("languages");
+			number = (int)Integer.parseInt((req.getParameter("number")));
+			corpora = req.getParameter("corpora");
+			email = req.getParameter("email");
+			rkey = (int)Integer.parseInt((req.getParameter("rkey")));
+			arr = new int[number];
+			if (Global.DEBUGMODE)
+				System.out.println("Parameters retrieved: " + translator + languages + number + corpora);
+			switch (corpora)
+			{
+				case "VUA":
+					sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
+					break;
+				case "MOH":
+					sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
+					break;
+				case "FLA":
+					sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
+					break;
+				default: 
+					System.err.println("No value received for the corpora, terminating");
+					return;
+			}
+			for (int i=0; i<sentences.size(); i++)
+				arr[i] = (int)sentences.get(i).getSentenceId();
 
-				arr = new int[number];
+			Survey sur = new Survey(corpora, translator, languages, number, arr, rkey);
 
-				if (Global.DEBUGMODE)
-					System.out.println("Parameters retrieved: " + translator + languages + number + corpora);
-
-				switch (corpora)
-				{
-					case "VUA":
-						sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
-						break;
-					case "MOH":
-						sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
-						break;
-					case "FLA":
-						sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
-						break;
-					default: 
-						System.err.println("No value received for the corpora, terminating");
-						return;
-
-				}
-				for (int i=0; i<sentences.size(); i++)
-					arr[i] = (int)sentences.get(i).getSentenceId();
-
-				Survey sur = new Survey(corpora, translator, languages, number, arr, rkey);
-
-
-				key = new CreateSurveyDatabase(getConnection(), sur).createSurvey();
+			key = new CreateSurveyDatabase(getConnection(), sur).createSurvey();
 
 		}/* catch (NumberFormatException ex)
 		          {
@@ -129,14 +120,13 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 		          }*/
 		catch (SQLException ex)
 		{
-				m = new Message("Cannot find the company: unexpected error while accessing the database.",
+			m = new Message("Cannot find the company: unexpected error while accessing the database.",
 				                "E200", ex.getMessage());
 		}
 		catch (URISyntaxException ex)
 		{
 			m = new Message("There is a problem with the URI during the database connection phase.", "DB100", ex.getMessage());
 		}
-
 
 		/*if (!email.equals("")) 
 		{
@@ -174,16 +164,10 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 	     	}			
 		}*/
 	
-
-		
-
-
-
-
-
 		// stores the deleted company and the message as a request attribute
-		 req.setAttribute("key", key);
-		 req.setAttribute("rkey", rkey);
+		req.setAttribute("key", key);
+		req.setAttribute("rkey", rkey);
+		session.setAttribute("current_logged_in", "rkey");
 		// req.setAttribute("message", m);
 
 		// forwards the control to the read-company-result JSP
