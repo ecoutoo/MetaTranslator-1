@@ -42,7 +42,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 	{
 		// forwards the control to the ManagerPage
 		HttpSession session = req.getSession(true);
-		if (session.getAttribute("user") != null) {
+		if (session.getAttribute("current_logged_in") != null) {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 		}
 
@@ -53,7 +53,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// request parameter
 		HttpSession session = req.getSession(true);
-		if (session.getAttribute("user") != null) {
+		if (session.getAttribute("current_logged_in") != null) {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 		}
 		System.out.println("Request getSession");

@@ -21,6 +21,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import java.util.List;
@@ -47,13 +48,21 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		String name = null;
 		String surname = null;
 		String email = null;
+		String password = null;
 		try
 		{
+			System.out.println("Try");
 			username = req.getParameter("username");
 			name = req.getParameter("name");
 			surname = req.getParameter("surname");
 			email = req.getParameter("email");
-			String password = req.getParameter("password");
+			password = req.getParameter("password");
+
+			if (username == ""|| name == ""|| surname == ""|| email == ""|| password == "") {
+				System.out.println("some parameters are empty");
+				req.setAttribute("error", "Please ensure all fields are filled out");
+				req.getRequestDispatcher("/jsp/registration.jsp").forward(req, res);
+			}
 			//cpassword = req.getParameter("cpassword");
 			if (Global.DEBUGMODE)
 				System.out.println("Parameters retrieved: " + username + name + surname + email + password);
@@ -79,6 +88,8 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		req.setAttribute("name",name);
 		req.setAttribute("surname",surname);
 		req.setAttribute("email",email);
+		HttpSession session = req.getSession(true);
+		session.setAttribute("current_logged_in", "rkey");
 		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req,res);
 	}
 }

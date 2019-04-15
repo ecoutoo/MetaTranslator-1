@@ -78,6 +78,7 @@
                     <br><br>
                     <form action="registration" method="post">
                         <label>
+                            <p> <c:out value="${error}"/></p>
                             <p class="label-txt">USERNAME</p>
                             <input type="text" class="input" name="username">
                             <div class="line-box">
