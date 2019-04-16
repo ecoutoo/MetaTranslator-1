@@ -41,10 +41,11 @@ public final class CreationServlet extends AbstractDatabaseServlet {
 			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 		}
 		//parameters
-		int rkey;
+		String rkey;
 		//model
 		Message m = null;
-		rkey = (int)Integer.parseInt(req.getParameter("rkey"));
+		//rkey = (int)Integer.parseInt(req.getParameter("rkey"));
+		rkey = req.getParameter("rkey");
 		if (Global.DEBUGMODE) 
 			System.out.println("Parameter retrieved: " + rkey);
 		req.setAttribute("rkey",rkey);

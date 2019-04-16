@@ -40,7 +40,7 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 	{
 		//request parameter
 		int survsize = -1;
-		int group = -1;
+		String group = "-1";
 		String[] prmcorrect = null;
 		String[] problemphrase = null;
 		String[] prmconfidence = null;
@@ -48,7 +48,7 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 		String prblph = "";
 		//model
 		Message m = null;
-		int reskey = -1;
+		String reskey = "-1";
 		int lo1 = 0;
 		int lo2 = 0;
 		int lo3 = 0;
@@ -60,7 +60,8 @@ public final class CompletionServlet extends AbstractDatabaseServlet {
 		
 		try {
 			survsize = (int)Integer.parseInt((req.getParameter("survsize")));
-			group = (int)Integer.parseInt(req.getParameter("survkey"));
+			//Should it be "key"?
+			group = req.getParameter("survkey");
 			Survey surv = new SearchSurveyDatabase(getConnection(), group).SearchSurvey();
 			sentence = new int[survsize];
 			sentence = surv.getSurveyId();

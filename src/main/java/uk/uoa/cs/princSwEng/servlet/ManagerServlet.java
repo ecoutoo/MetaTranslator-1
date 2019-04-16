@@ -72,10 +72,10 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 		String languages;
 		int number;
 		String corpora;
-		int rkey = -1;
+		String rkey = "-1";
 		List<Sentence> sentences; 
 		int[] arr;
-		int key = -1;
+		String key = "-1";
 		String email = "";
 		// model
 		Message m = null;
@@ -87,7 +87,8 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			number = (int)Integer.parseInt((req.getParameter("number")));
 			corpora = req.getParameter("corpora");
 			email = req.getParameter("email");
-			rkey = (int)Integer.parseInt((req.getParameter("rkey")));
+			//rkey = req.getParameter("rkey");
+			System.out.println("Researcher key is: " + rkey.toString());
 			arr = new int[number];
 			if (Global.DEBUGMODE)
 				System.out.println("Parameters retrieved: " + translator + languages + number + corpora);
@@ -109,9 +110,11 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			for (int i=0; i<sentences.size(); i++)
 				arr[i] = (int)sentences.get(i).getSentenceId();
 
-			Survey sur = new Survey(corpora, translator, languages, number, arr, rkey);
+			//Survey sur = new Survey(corpora, translator, languages, number, arr, rkey);
+			Survey sur = new Survey(corpora, translator, languages, number, arr);
 
 			key = new CreateSurveyDatabase(getConnection(), sur).createSurvey();
+			req.setAttribute("key", key);
 
 		}/* catch (NumberFormatException ex)
 		          {
@@ -165,7 +168,7 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 		}*/
 	
 		// stores the deleted company and the message as a request attribute
-		req.setAttribute("key", key);
+		//req.setAttribute("key", key); -1
 		req.setAttribute("rkey", rkey);
 		session.setAttribute("current_logged_in", "rkey");
 		// req.setAttribute("message", m);

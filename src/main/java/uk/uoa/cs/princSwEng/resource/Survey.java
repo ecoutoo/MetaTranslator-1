@@ -9,15 +9,18 @@ public class Survey extends Resource {
 	private final String languages;
 	private final int num; 
 	private final int[] sent;
-	private final int rkey;
+	//private final String rkey;
+	private final String key; //test
 
-	public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent, final int rkey) {
+	//public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent, final String rkey) {
+	public Survey(final String corpora,final String translator,final String languages,final int num, final int[] sent) {
 		this.corpora = corpora;
 		this.translator = translator;
 		this.languages = languages;
 		this.num = num;
 		this.sent = sent;
-		this.rkey = rkey;
+		//this.rkey = rkey;
+		this.key = "123";
 	}
 
 /**
@@ -63,9 +66,10 @@ public class Survey extends Resource {
 		return sent;
 	}
 
-	public final int getSurveyRkey()
+	public final String getSurveyRkey()
 	{
-		return rkey;
+		//return rkey;
+		return ("This is where rkey should be returned");
 	}
 
 // @Override
