@@ -14,15 +14,12 @@ import uk.uoa.cs.princSwEng.resource.Survey;
 
 public class SearchSurveyDatabase
 {
-
 	private static final String STATEMENT = "SELECT * FROM SURVEYS WHERE id=?";
 	private final Connection con;
-	private final String idsurv;
+	private final int idsurv;
 
-	//Survey ssd = new SearchSurveyDatabase(getConnection(), key).SearchSurvey(); (As called from index)
-	public SearchSurveyDatabase(final Connection con, String survey)
+	public SearchSurveyDatabase(final Connection con, int survey)
 	{
-		//survey == id correct
 		this.con = con;
 		this.idsurv = survey;
 	}
@@ -36,9 +33,8 @@ public class SearchSurveyDatabase
 		try
 		{
 			pstmt = con.prepareStatement(STATEMENT);
-			pstmt.setString(1,idsurv);
+			pstmt.setInt(1,idsurv);
 			rs = pstmt.executeQuery();
-
 			if (rs.next())
 			{
 				int num = rs.getInt("num");
@@ -50,13 +46,7 @@ public class SearchSurveyDatabase
 					sent[i] = rs.getInt(senti);					
 				}
 
-				//sur = new Survey(rs.getString("corpora"), rs.getString("translator"), rs.getString("languages"), num, sent, rs.getString("rkey"));
-				try {
-					sur = new Survey(rs.getString("corpora"), rs.getString("translator"), rs.getString("languages"), num, sent);
-				}
-				catch(SQLException ex) {
-					System.err.println("error when creating new Survey");
-				}
+				sur = new Survey(rs.getString("corpora"), rs.getString("translator"), rs.getString("languages"), num, sent, 0);
 			}
 		}
 		catch(SQLException ex)

@@ -5,14 +5,13 @@ import java.io.*;
 
 public class Result extends Resource {
 	private final int sentence;
-	//private final int group_id;
-	private final String group_id;
+	private final int group_id;
 	private final boolean correct;
 	private final String problem_phrase;
 	private final int confidence;
 	private final String own_translation;
 	
-	public Result(final int sentence, final String group_id, final boolean correct, final String problem_phrase, final int confidence, final String own_translation) {
+	public Result(final int sentence, final int group_id, final boolean correct, final String problem_phrase, final int confidence, final String own_translation) {
 		this.sentence = sentence;
 		this.group_id = group_id;
 		this.correct = correct;
@@ -25,7 +24,7 @@ public class Result extends Resource {
 		return sentence;
 	}
 	
-	public final String getResultGroup() {
+	public final int getResultGroup() {
 		return group_id;
 	}
 	

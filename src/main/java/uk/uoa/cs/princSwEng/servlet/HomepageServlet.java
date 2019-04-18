@@ -59,7 +59,7 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		// request parameter
-		String key = "-1";
+		int key = -1;
 		YandexTranslate.setKey("trnsl.1.1.20190224T222926Z.dd39b00f32159473.ce47cd6ccb02ff77e95d85e7778eeb15a88b456c");
 
 
@@ -72,10 +72,10 @@ public final class HomepageServlet extends AbstractDatabaseServlet {
 
 		try {
 
-			key = req.getParameter("key");
+			key = (int) Integer.parseInt((req.getParameter("key")));
 
 			if (Global.DEBUGMODE)
-				System.out.println("Parameters retrieved: " + key); //correct
+				System.out.println("Parameters retrieved: " + key);
 
 			Survey ssd = new SearchSurveyDatabase(getConnection(), key).SearchSurvey();
 			List<Sentence> sent = new SearchSentencesFromSurveyDatabase(getConnection(), ssd).SearchSentencesFromSurvey();

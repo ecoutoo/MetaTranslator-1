@@ -16,14 +16,14 @@ public class CreateResultDatabase {
 		this.survres = survres;
 	}
 	
-	public String createSurveyResult() throws SQLException {
+	public int createSurveyResult() throws SQLException {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String reskey = "-1";
+		int reskey = -1;
 		try {
 			pstmt = con.prepareStatement(STATEMENT);
 			pstmt.setInt(1,survres.getResultSentence());
-			pstmt.setString(2,survres.getResultGroup());
+			pstmt.setInt(2,survres.getResultGroup());
 			pstmt.setBoolean(3,survres.getResultCorrect());
 			pstmt.setString(4,survres.getResultProblemPhrase());
 			pstmt.setInt(5,survres.getResultConfidence());
@@ -31,7 +31,7 @@ public class CreateResultDatabase {
 			System.err.println("Before executing executeQuery on CreateResultDatabase");
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				reskey = rs.getString("id");
+				reskey = rs.getInt("id");
 			}
 		}
 		catch(SQLException ex) {
