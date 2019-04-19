@@ -58,12 +58,9 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		String surname = null;
 		String email = null;
 		String password = null;
-<<<<<<< Updated upstream
         String subject = null;
-=======
 		int[] survarr = new int[0];
 		
->>>>>>> Stashed changes
 		try
 		{
 			System.out.println("Try");
