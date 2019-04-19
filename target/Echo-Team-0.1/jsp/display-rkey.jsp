@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <!DOCTYPE HTML>
 
@@ -56,11 +57,11 @@
                     </button>
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
 					<div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="logout" id="logout">LOGOUT</a></li>
-                        <li><a href="registration" id="registration">REGISTER</a>
-                    </ul>
-                </div>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="logout" id="logout">LOGOUT</a></li>
+							<li><a href="registration" id="registration">REGISTER</a>
+						</ul>
+					</div>
                 </div>
             </div>
         </nav>
@@ -82,6 +83,20 @@
 				</form>
 			</div>
 			<div class="col-lg-7 col-sm-7">
+				<c:choose>
+					<c:when test="${fn:length(survarr)<1}">
+						<p>You haven't created any survey yet.</p>
+					</c:when>
+					<c:when test="${fn:length(survarr)>0}">
+						<c:forEach begin="0" end="${fn:length(survarr)-1}" var="cycle">
+							<form action="analytics" method="post">
+								<p><c:out value="${survarr[cycle]}"/>
+								<input type="hidden" name="survkey" value="${survarr[cycle]}">
+								<input type="submit" name="Analytics" value="Analytics"></p>
+							</form>
+						</c:forEach>
+					</c:when>
+				</c:choose>
 			</div>
 		</div>
 		<!-- jQuery -->

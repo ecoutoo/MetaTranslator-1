@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.java
 C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Researcher.java
 C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Sentence.java
@@ -26,3 +27,33 @@ C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEn
 C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Global.java
 C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\CreationServlet.java
 C:\Users\flecl\Documents\CS3528\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\RegistrationServlet.java
+=======
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Result.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\rest\RestResource.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\RegistrationServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Language.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\CreationServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchResearcherDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\CompletionServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\LogoutServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateResearcherDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\HomepageServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Message.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Global.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchResearcherSurveysDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\ManagerServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateResultDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Researcher.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Resource.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\YandexTranslate.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\ApiKeys.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Survey.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\AbstractDatabaseServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\LoginServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Sentence.java
+>>>>>>> Stashed changes

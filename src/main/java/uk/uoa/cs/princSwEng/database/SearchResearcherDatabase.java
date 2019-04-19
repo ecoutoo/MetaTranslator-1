@@ -15,7 +15,6 @@ import uk.uoa.cs.princSwEng.resource.Researcher;
 public class SearchResearcherDatabase
 {
 	private static final String STATEMENT = "SELECT * FROM USERS WHERE id=?";
-//	private static final String STATEMENT2 = "SELECT survey_id FROM USERSURVEYRECORD WHERE user_id=?";
 	private final Connection con;
 	private final int idresea;
 
@@ -56,16 +55,4 @@ public class SearchResearcherDatabase
 		}
 		return rsc;
 	}
-//	public int[] getResearcherSurveys() throws SQLException {
-//		PreparedStatement pstmt2 = null;
-//		ResultSet rs2 = null;
-//		int[] survlist = null;
-//		try {
-//			pstmt2 = con.prepareStatement(STATEMENT2);
-//			pstmt2 = setInt(1,idresea);
-//			rs2 = pstmt2.executeQuery();
-	//		while (rs.next()) {
-//			}
-//		}
-//	}
 }

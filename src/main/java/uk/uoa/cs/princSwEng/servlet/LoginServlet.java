@@ -35,30 +35,33 @@ import java.util.ArrayList;
 import uk.uoa.cs.princSwEng.resource.Researcher;
 import uk.uoa.cs.princSwEng.database.CreateResearcherDatabase;
 import uk.uoa.cs.princSwEng.database.SearchResearcherDatabase;
+import uk.uoa.cs.princSwEng.database.SearchResearcherSurveysDatabase;
 
 public final class LoginServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
+		//int prova;
 		HttpSession session = req.getSession(true);
 		if (session.getAttribute("current_logged_in") != null) {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
-		}
-
-		else {
+			//prova = (int) session.getAttribute("current_logged_in");
+			//req.setAttribute("rkey",prova);
+		} else {
 			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 		}
 	}
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// request parameter
+		int rkey = -1;
 		HttpSession session = req.getSession(true);
 		if (session.getAttribute("current_logged_in") != null) {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
+			//rkey = (int) session.getAttribute("current_logged_in");
 		}
 		System.out.println("Request getSession");
 		System.out.println(req.getSession());
-		int rkey = -1;
 		String pwda;
 		// model
 		Message m = null;
@@ -66,7 +69,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 		String name = null;
 		String surname = null;
 		String email = null;
-//		int[] survlist = null
+		int[] survarr = null;
 		try {
 			rkey = (int) Integer.parseInt((req.getParameter("rkey")));
 		}
@@ -74,65 +77,59 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 			req.setAttribute("error", "Please enter a number in correct format");
 			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 		}
-
-			pwda = req.getParameter("password");
-			if (Global.DEBUGMODE)
-				System.out.println("Parameters retrieved: " + rkey + pwda);
-			try {
-				Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher();
+		pwda = req.getParameter("password");
+		if (Global.DEBUGMODE)
+			System.out.println("Parameters retrieved: " + rkey + pwda);
+		try {
+			Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher();
+		}
+		catch (Exception e) {
+			if (e instanceof NullPointerException) {
+				req.setAttribute("error", "Your researcher key does not exist, please check and try again.");
+				req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 			}
-
-			catch (Exception e) {
-				if (e instanceof NullPointerException) {
-					req.setAttribute("error", "Your researcher key does not exist, please check and try again.");
-					req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
-				}
-			}
-
-			try {
-				//HttpSession session = req.getSession(true);
-				Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher(); //Should be unreachable?
-				String pwdb = rsc.getResearcherPassword();
-				username = rsc.getResearcherUsername();
-				name = rsc.getResearcherName();
-				surname = rsc.getResearcherSurname();
-				email = rsc.getResearcherEmail();
+		}
+		try {
+			//HttpSession session = req.getSession(true);
+			Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher(); //Should be unreachable?
+			String pwdb = rsc.getResearcherPassword();
+			username = rsc.getResearcherUsername();
+			name = rsc.getResearcherName();
+			surname = rsc.getResearcherSurname();
+			email = rsc.getResearcherEmail();
+			survarr = new SearchResearcherSurveysDatabase(getConnection(), rkey).searchResearcherSurveys();
 
 			if (!pwda.equals(pwdb)) {
 				System.out.println("Wrong password: " + pwda + pwdb);
 				req.setAttribute("error", "Incorrect researcher ID and password, please try again");
 				req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
-			}
-
-			else {
+			} else {
 				req.setAttribute("error", "No error has been set");
 				req.setAttribute("rkey", rkey);
 				req.setAttribute("username", username);
 				req.setAttribute("name", name);
 				req.setAttribute("surname", surname);
 				req.setAttribute("email", email);
+				req.setAttribute("survarr", survarr);
 				System.out.println(email.getClass());
 				req.setAttribute("myfoo", "myfoo");
-				session.setAttribute("current_logged_in", "rkey");
-
-				try {
-					System.out.println("Forwarding to user page");
-					req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
-				}
-				catch (Exception e) {
-					System.out.println("Did it break?");
-				}
-
-
+				session.setAttribute("current_logged_in", rkey);
+				req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
+				
+		//		try {
+		//			System.out.println("Forwarding to user page");
+		//			req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
+		//		}
+		//		catch (Exception e) {
+		//			System.out.println("Did it break?");
+		//		}
 			}
-
+		}
+		catch (Exception e) {
+			if (e instanceof NullPointerException) {
+				req.setAttribute("error", "Your researcher key does not exist, please check and try again.");
+				req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 			}
-
-			catch (Exception e) {
-				if (e instanceof NullPointerException) {
-					req.setAttribute("error", "Your researcher key does not exist, please check and try again.");
-					req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
-				}
-			}
+		}
 	}
 }

@@ -58,7 +58,12 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		String surname = null;
 		String email = null;
 		String password = null;
+<<<<<<< Updated upstream
         String subject = null;
+=======
+		int[] survarr = new int[0];
+		
+>>>>>>> Stashed changes
 		try
 		{
 			System.out.println("Try");
@@ -98,8 +103,9 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		req.setAttribute("name",name);
 		req.setAttribute("surname",surname);
 		req.setAttribute("email",email);
+		req.setAttribute("survarr",survarr);
 		HttpSession session = req.getSession(true);
-		session.setAttribute("current_logged_in", "rkey");
+		session.setAttribute("current_logged_in",rkey);
 		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req,res);
 	}
 }
