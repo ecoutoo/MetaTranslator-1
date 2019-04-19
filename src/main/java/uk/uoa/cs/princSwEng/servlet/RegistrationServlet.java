@@ -4,8 +4,8 @@ import com.sendgrid.*;
 import java.io.IOException;
 
 import uk.uoa.cs.princSwEng.resource.Global;
-
-
+import uk.uoa.cs.princSwEng.resource.Mailer;
+//import uk.uoa.cs.princSwEng.resource.SendEmail;
 import uk.uoa.cs.princSwEng.resource.Message;
 
 import java.io.IOException;
@@ -33,22 +33,32 @@ import uk.uoa.cs.princSwEng.database.CreateResearcherDatabase;
 public final class RegistrationServlet extends AbstractDatabaseServlet
 {
 	private static final long serialVersionUID = 1L;
+    private String to;
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
 		req.getRequestDispatcher("/jsp/registration.jsp").forward(req, res);
 	}
+
+        String hostname = "smtp.gmail.com";
+        int port = 25;
+        String username = "faust.lecleire@gmail.com";
+        String password = "31mai1998";
+        private Mailer mailer = new Mailer(hostname, port, username, password);
+    
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// request parameter
 		int rkey = -1;
 		// model
 		Message m = null;
+        String message = null;
 		String username = null;
 		String name = null;
 		String surname = null;
 		String email = null;
 		String password = null;
+        String subject = null;
 		try
 		{
 			System.out.println("Try");
@@ -68,15 +78,15 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 				System.out.println("Parameters retrieved: " + username + name + surname + email + password);
 			Researcher resea = new Researcher(username, name, surname, email, password);
 			rkey = new CreateResearcherDatabase(getConnection(), resea).createResearcher();
+            
+            subject = "MetaTranslate Credentials";            
+            message = "Welcome to MetaTranslate, your username is: " + username + ", your password is: " + password + " and your researcher key is: " + rkey;
+            //mailer.send(email, to, subject, message);
 
-		}/* catch (NumberFormatException ex)
-		          {
-		          m = new Message("Cannot read the company. Invalid input parameters: translator must be a string.",
-		          "E100", ex.getMessage());
-		          }*/
+		}
 		catch (SQLException ex)
 		{
-				m = new Message("Cannot find the company: unexpected error while accessing the database.",
+            m = new Message("Cannot find the company: unexpected error while accessing the database.",
 				                "E200", ex.getMessage());
 		}
 		catch (URISyntaxException ex)

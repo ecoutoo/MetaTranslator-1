@@ -112,7 +112,7 @@
                             <div class="line-box">
                                 <div class="line"></div>
                             </div>
-                        </label>
+                        </label>s
                         <button type="submit" class="btn btn-basic" value="Register">submit</button>
                     </form>
                 </h4>
