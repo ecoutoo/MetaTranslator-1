@@ -95,7 +95,10 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			number = (int)Integer.parseInt((req.getParameter("number")));
 			corpora = req.getParameter("corpora");
 			email = req.getParameter("email");
-			rkey = (int)Integer.parseInt((req.getParameter("rkey")));
+//			rkey = (int)Integer.parseInt((req.getParameter("rkey")));
+//			if (rkey == -1) {
+			rkey =  (int) session.getAttribute("rkey");
+//			}
 			arr = new int[number];
 			if (Global.DEBUGMODE)
 				System.out.println("Parameters retrieved: " + translator + languages + number + corpora);
@@ -123,7 +126,7 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
             
             subject = "MetaTranslate Survey Key";            
             message = "Thank you for creating a survey, your survey key is: " + key;
-            mailer.send(email, subject, message);
+            //mailer.send(email, subject, message);
             
 		}/* catch (NumberFormatException ex)
 		          {

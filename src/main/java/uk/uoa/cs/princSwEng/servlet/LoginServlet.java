@@ -106,6 +106,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 			} else {
 				req.setAttribute("error", "No error has been set");
 				req.setAttribute("rkey", rkey);
+				session.setAttribute("rkey", rkey);
 				req.setAttribute("username", username);
 				req.setAttribute("name", name);
 				req.setAttribute("surname", surname);
