@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Metatranslate</title>
+		<title>User page</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
 		<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -53,7 +53,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
+                        <span class="icon-bar"></span>                    
                     </button>
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
 					<div class="collapse navbar-collapse" id="myNavbar">
@@ -70,10 +70,26 @@
                 WELCOME, <c:out value="${username}"/>
             </h4>
         </div>
+<<<<<<< Updated upstream
         <div class="row">
             <div class="col-lg-2 col-sm-2"></div>
             <div class="col-lg-8 col-sm-8">
                 <c:choose>
+=======
+		<div class="row">
+            <div class="col-lg-6 col-sm-6">
+				<form action="creation" style="text-align:left;width:80%" method="post">
+					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
+					<b>Name</b> <c:out value="${name}"/><br>
+					<b>Surname</b> <c:out value="${surname}"/><br>
+					<b>Email</b> <c:out value="${email}"/><br></p>
+					<input type="hidden" name="rkey" value="${rkey}">
+					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
+				</form>
+			</div>
+			<div class="col-lg-6 col-sm-6">
+				<c:choose>
+>>>>>>> Stashed changes
 					<c:when test="${fn:length(survarr)<1}">
 						<p>You haven't created any survey yet.</p>
 					</c:when>
@@ -82,7 +98,7 @@
 							<form action="analytics" method="post">
 								<p><c:out value="${survarr[cycle]}"/>
 								<input type="hidden" name="survkey" value="${survarr[cycle]}">
-								<input type="submit" name="Analytics" value="Analytics"></p>
+								<input class="btn btn-basic" type="submit" name="Analytics" value="Analytics" style="color: black"></p>
 							</form>
 						</c:forEach>
 					</c:when>

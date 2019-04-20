@@ -49,6 +49,10 @@
 		<servlet-name>CreationServlet</servlet-name>
 		<servlet-class>uk.uoa.cs.princSwEng.servlet.CreationServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>AnalyticsServlet</servlet-name>
+		<servlet-class>uk.uoa.cs.princSwEng.servlet.AnalyticsServlet</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>ManagerServlet</servlet-name>
@@ -77,6 +81,10 @@
 	<servlet-mapping>
 		<servlet-name>CreationServlet</servlet-name>
 		<url-pattern>/creation</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AnalyticsServlet</servlet-name>
+		<url-pattern>/analytics</url-pattern>
 	</servlet-mapping>
 
 <!-- 

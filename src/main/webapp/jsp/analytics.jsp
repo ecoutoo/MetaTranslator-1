@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>User page</title>
+		<title>Analytics</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
 		<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -53,7 +53,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                    
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
 					<div class="collapse navbar-collapse" id="myNavbar">
@@ -67,58 +67,40 @@
         </nav>
 		<div class="container-fluid bg-1 text-center">
             <h4 class="margin" style="line-height: 1.5em">
-                WELCOME, <c:out value="${username}"/>
+				<br>SURVEY <c:out value="${survkey}"/> ANALYTICS<br><br> 
+                Number of sentences: <c:out value="${numb}"/><br>
+				Number of completions: <c:out value="${survtaken}"/>
             </h4>
         </div>
-<<<<<<< Updated upstream
-        <div class="row">
-            <div class="col-lg-2 col-sm-2"></div>
-            <div class="col-lg-8 col-sm-8">
-                <c:choose>
-=======
-		<div class="row">
-            <div class="col-lg-6 col-sm-6">
-				<form action="creation" style="text-align:left;width:80%" method="post">
-					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
-					<b>Name</b> <c:out value="${name}"/><br>
-					<b>Surname</b> <c:out value="${surname}"/><br>
-					<b>Email</b> <c:out value="${email}"/><br></p>
-					<input type="hidden" name="rkey" value="${rkey}">
-					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
-				</form>
-			</div>
-			<div class="col-lg-6 col-sm-6">
-				<c:choose>
->>>>>>> Stashed changes
-					<c:when test="${fn:length(survarr)<1}">
-						<p>You haven't created any survey yet.</p>
-					</c:when>
-					<c:when test="${fn:length(survarr)>0}">
-						<c:forEach begin="0" end="${fn:length(survarr)-1}" var="cycle">
-							<form action="analytics" method="post">
-								<p><c:out value="${survarr[cycle]}"/>
-								<input type="hidden" name="survkey" value="${survarr[cycle]}">
-								<input class="btn btn-basic" type="submit" name="Analytics" value="Analytics" style="color: black"></p>
-							</form>
-						</c:forEach>
-					</c:when>
-				</c:choose>
-			</div>
-        </div>
-		<div class="row">
-            <div class="col-lg-2 col-sm-2"></div>
-            <div class="col-lg-8 col-sm-8">
-				<form action="creation" style="text-align:left;width:80%" method="post">
-					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
-					<b>Name</b> <c:out value="${name}"/><br>
-					<b>Surname</b> <c:out value="${surname}"/><br>
-					<b>Email</b> <c:out value="${email}"/><br></p>
-					<input type="hidden" name="rkey" value="${rkey}">
-					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
-				</form>
-			</div>
-		</div>
-		<!-- jQuery -->
+		<c:choose>
+			<c:when test="${survtaken==0}">
+				<div class="row">
+					<div class="col-lg-3 col-sm-3"></div>
+					<div class="col-lg-6 col-sm-6" style="text-align:center;width:100%">
+						<div class="container-fluid bg-3">
+							<p>No one competed the survey yet.</p>
+						</div>
+					</div>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<c:forEach begin="0" end="${numb - 1}" var="cycle">
+					<div class="row">
+						<div class="col-lg-3 col-sm-3"></div>
+						<div class="col-lg-6 col-sm-6" style="text-align:center;width:100%">
+							<p>Sentence ID: <c:out value ="${sentid[cycle]}"/></p>
+							<div class="container-fluid bg-3">
+								<p>
+									<b>Correct:</b> <c:out value="${corres[cycle]}"/>
+									<br>
+									<b>Incorrect:</b> <c:out value="${incorres[cycle]}"/>
+								</p>
+							</div>
+						</div>
+					</div>
+				</c:forEach>
+			</c:otherwise>
+		</c:choose>
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
 		<script src="js/jquery.easing.1.3.js"></script>
@@ -130,4 +112,16 @@
 		<script src="js/main.js"></script>
 	</body>
 </html>
-
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
