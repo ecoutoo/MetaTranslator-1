@@ -2,6 +2,7 @@ uk\uoa\cs\princEngSw\rest\RestResource.class
 uk\uoa\cs\princSwEng\servlet\LoginServlet.class
 uk\uoa\cs\princSwEng\servlet\HomepageServlet.class
 uk\uoa\cs\princSwEng\database\SearchResearcherSurveysDatabase.class
+uk\uoa\cs\princSwEng\resource\Mailer$1.class
 uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.class
 uk\uoa\cs\princSwEng\servlet\CreationServlet.class
 uk\uoa\cs\princSwEng\servlet\ManagerServlet.class
@@ -16,6 +17,7 @@ uk\uoa\cs\princSwEng\servlet\RegistrationServlet.class
 uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.class
 uk\uoa\cs\princSwEng\resource\Mailer.class
 uk\uoa\cs\princSwEng\resource\Message.class
+uk\uoa\cs\princSwEng\resource\SendEmail.class
 uk\uoa\cs\princSwEng\servlet\CompletionServlet.class
 uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.class
 uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.class

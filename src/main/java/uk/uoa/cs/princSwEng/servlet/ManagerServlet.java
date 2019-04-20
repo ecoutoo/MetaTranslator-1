@@ -4,6 +4,7 @@ import com.sendgrid.*;
 import java.io.IOException;
 
 import uk.uoa.cs.princSwEng.resource.Global;
+import uk.uoa.cs.princSwEng.resource.Mailer;
 import uk.uoa.cs.princSwEng.resource.Message;
 
 import java.io.IOException;
@@ -59,6 +60,11 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 		}
 	}
+    String hostname = "smtp.gmail.com";
+    int port = 587;
+    String username = "MetaTranslate19@gmail.com";
+    String password = "EchoTeam19*";
+    private Mailer mailer = new Mailer(hostname, port, username, password);
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
@@ -68,6 +74,8 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			req.getRequestDispatcher("/jsp/login.jsp").forward(req, res);
 		}
 		// request parameter
+        String message = null;
+        String subject = null;
 		String translator;
 		String languages;
 		int number;
@@ -112,7 +120,11 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			Survey sur = new Survey(corpora, translator, languages, number, arr, rkey);
 
 			key = new CreateSurveyDatabase(getConnection(), sur).createSurvey();
-
+            
+            subject = "MetaTranslate Survey Key";            
+            message = "Thank you for creating a survey, your survey key is: " + key;
+            mailer.send(email, subject, message);
+            
 		}/* catch (NumberFormatException ex)
 		          {
 		          m = new Message("Cannot read the company. Invalid input parameters: translator must be a string.",
@@ -128,47 +140,13 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			m = new Message("There is a problem with the URI during the database connection phase.", "DB100", ex.getMessage());
 		}
 
-		/*if (!email.equals("")) 
-		{
-			for (String retval: email.split(";")) 
-			{
-		        Email from = new Email("do-not-reply@metatranslate.com");  
-			    String subject = "A survey was generated for you...";
-			    Email to = new Email(retval);
-			    Content content = new Content("text/plain", "Testing out the integration to send automatically emails when you generate a survey. Type on Metatranslate website the key to access the survey. Unique key to access your survey is: " + String.valueOf(key));  
-			    Mail mail = new Mail(from, subject, to, content);
-
-			    //SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
-			    SendGrid sg = new SendGrid(SENDGRID_API_KEY);
-
-			    //String API_KEY = System.getenv("SENDGRIP_API_KEY");
-			    //System.err.println("SENDGRIP_API_KEY: " + API_KEY);
-			    Request request = new Request();
-			    try {
-			      request.setMethod(Method.POST);
-			      request.setEndpoint("mail/send");
-			      request.setBody(mail.build());
-			      Response response = sg.api(request);
-			      if (Global.DEBUGMODE)
-			      	{
-			      		System.out.println(response.getStatusCode());
-			      		System.out.println(response.getBody());
-			      		System.out.println(response.getHeaders());
-			      	}
-			    } catch (IOException ex) {
-			      m = new Message("Error with SendGrip", "EM400", ex.getMessage());
-			      res.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-				  m.toJSON(res.getOutputStream());
-			    }
-
-	     	}			
-		}*/
 	
 		// stores the deleted company and the message as a request attribute
 		req.setAttribute("key", key);
 		req.setAttribute("rkey", rkey);
 		session.setAttribute("current_logged_in", "rkey");
 		// req.setAttribute("message", m);
+    
 
 		// forwards the control to the read-company-result JSP
 		req.getRequestDispatcher("/jsp/display-key.jsp").forward(req, res);

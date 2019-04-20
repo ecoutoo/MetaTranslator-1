@@ -40,11 +40,11 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		req.getRequestDispatcher("/jsp/registration.jsp").forward(req, res);
 	}
 
-        String hostname = "smtp.gmail.com";
-        int port = 25;
-        String username = "faust.lecleire@gmail.com";
-        String password = "31mai1998";
-        private Mailer mailer = new Mailer(hostname, port, username, password);
+    String hostname = "smtp.gmail.com";
+    int port = 587;
+    String username = "MetaTranslate19@gmail.com";
+    String password = "EchoTeam19*";
+    private Mailer mailer = new Mailer(hostname, port, username, password);
     
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
@@ -53,12 +53,12 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		// model
 		Message m = null;
         String message = null;
+        String subject = null;
 		String username = null;
 		String name = null;
 		String surname = null;
 		String email = null;
 		String password = null;
-        String subject = null;
 		int[] survarr = new int[0];
 		
 		try
@@ -83,7 +83,7 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
             
             subject = "MetaTranslate Credentials";            
             message = "Welcome to MetaTranslate, your username is: " + username + ", your password is: " + password + " and your researcher key is: " + rkey;
-            //mailer.send(email, to, subject, message);
+            mailer.send(email, subject, message);
 
 		}
 		catch (SQLException ex)

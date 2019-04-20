@@ -38,6 +38,11 @@ p {font-size: 16px;}
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
 }
+
+.navbar .icon {
+  display: none;
+}
+
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -79,7 +84,6 @@ p {font-size: 16px;}
 
 .label-txt {
   top: -1.6em;
-  padding: 10px;
   letter-spacing: 1px;
   transition: ease .3s;
 }
@@ -92,7 +96,7 @@ form {
     width: 60%;
     margin: 60px auto;
     background: #efefef;
-    padding: 60px 120px 80px 120px;
+    padding: 60px 60px 60px 60px;
     text-align: center;
     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
     box-shadow: 2px 2px 3px rgba(0,0,0,0.1);

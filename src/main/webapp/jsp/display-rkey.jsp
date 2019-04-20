@@ -70,19 +70,10 @@
                 WELCOME, <c:out value="${username}"/>
             </h4>
         </div>
-		<div class="row">
-            <div class="col-lg- col-sm-5">
-				<form action="creation" style="text-align:left;width:80%" method="post">
-					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
-					<b>Name</b> <c:out value="${name}"/><br>
-					<b>Surname</b> <c:out value="${surname}"/><br>
-					<b>Email</b> <c:out value="${email}"/><br></p>
-					<input type="hidden" name="rkey" value="${rkey}">
-					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
-				</form>
-			</div>
-			<div class="col-lg-7 col-sm-7">
-				<c:choose>
+        <div class="row">
+            <div class="col-lg-2 col-sm-2"></div>
+            <div class="col-lg-8 col-sm-8">
+                <c:choose>
 					<c:when test="${fn:length(survarr)<1}">
 						<p>You haven't created any survey yet.</p>
 					</c:when>
@@ -96,6 +87,19 @@
 						</c:forEach>
 					</c:when>
 				</c:choose>
+			</div>
+        </div>
+		<div class="row">
+            <div class="col-lg-2 col-sm-2"></div>
+            <div class="col-lg-8 col-sm-8">
+				<form action="creation" style="text-align:left;width:80%" method="post">
+					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
+					<b>Name</b> <c:out value="${name}"/><br>
+					<b>Surname</b> <c:out value="${surname}"/><br>
+					<b>Email</b> <c:out value="${email}"/><br></p>
+					<input type="hidden" name="rkey" value="${rkey}">
+					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
+				</form>
 			</div>
 		</div>
 		<!-- jQuery -->
