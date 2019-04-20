@@ -17,11 +17,8 @@ uk\uoa\cs\princSwEng\servlet\RegistrationServlet.class
 uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.class
 uk\uoa\cs\princSwEng\resource\Mailer.class
 uk\uoa\cs\princSwEng\resource\Message.class
-<<<<<<< Updated upstream
-uk\uoa\cs\princSwEng\resource\SendEmail.class
-=======
 uk\uoa\cs\princSwEng\servlet\AnalyticsServlet.class
->>>>>>> Stashed changes
+uk\uoa\cs\princSwEng\resource\SendEmail.class
 uk\uoa\cs\princSwEng\servlet\CompletionServlet.class
 uk\uoa\cs\princSwEng\database\SearchResultsDatabase.class
 uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.class

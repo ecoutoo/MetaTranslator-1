@@ -70,12 +70,6 @@
                 WELCOME, <c:out value="${username}"/>
             </h4>
         </div>
-<<<<<<< Updated upstream
-        <div class="row">
-            <div class="col-lg-2 col-sm-2"></div>
-            <div class="col-lg-8 col-sm-8">
-                <c:choose>
-=======
 		<div class="row">
             <div class="col-lg-6 col-sm-6">
 				<form action="creation" style="text-align:left;width:80%" method="post">
@@ -89,7 +83,6 @@
 			</div>
 			<div class="col-lg-6 col-sm-6">
 				<c:choose>
->>>>>>> Stashed changes
 					<c:when test="${fn:length(survarr)<1}">
 						<p>You haven't created any survey yet.</p>
 					</c:when>
@@ -103,19 +96,6 @@
 						</c:forEach>
 					</c:when>
 				</c:choose>
-			</div>
-        </div>
-		<div class="row">
-            <div class="col-lg-2 col-sm-2"></div>
-            <div class="col-lg-8 col-sm-8">
-				<form action="creation" style="text-align:left;width:80%" method="post">
-					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
-					<b>Name</b> <c:out value="${name}"/><br>
-					<b>Surname</b> <c:out value="${surname}"/><br>
-					<b>Email</b> <c:out value="${email}"/><br></p>
-					<input type="hidden" name="rkey" value="${rkey}">
-					<input class="btn btn-basic" type="submit" value="Create Survey" style="color: black">
-				</form>
 			</div>
 		</div>
 		<!-- jQuery -->
