@@ -119,6 +119,13 @@
 															style: {
 																fontWeight: 'bold',
 																color: 'white'
+															},
+															formatter: function() {
+																if (this.y != 0) {
+																	return this.x;
+																} else {
+																	return null;
+																}
 															}
 														},
 														startAngle: -90,
