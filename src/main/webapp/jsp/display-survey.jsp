@@ -73,7 +73,8 @@
         </nav> 
         <div class="container-fluid bg-1 text-center">
             <h4 class="margin" style="line-height: 1.5em">
-				<br>SURVEY <c:out value="${key}"/><br><br><br> 
+				<br>SURVEY <c:out value="${key}"/><br>
+                TRANSLATOR: <c:out value="${translator}"/><br>
                 NUMBER OF SENTENCES: <c:out value="${texts_size}"/>
             </h4>
         </div>

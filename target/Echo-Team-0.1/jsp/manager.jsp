@@ -94,7 +94,6 @@
                                 <div class="col-lg-8 col-sm-8" style="text-align: justify">
                                     <br>
                                     <input type="radio" name="translator"  value="google" checked> &nbsp; Google Translator <br>
-                                    <input type="radio" name="translator" value="bing"> &nbsp; Bing Translator<br>
                                     <input type="radio" name="translator" value="yandex"> &nbsp; Yandex Translator <br>
                                 </div>
                             </div>

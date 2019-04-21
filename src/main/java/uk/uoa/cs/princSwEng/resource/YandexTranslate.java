@@ -47,7 +47,7 @@ public final class YandexTranslate extends YandexTranslatorAPI {
   
   public static void main(String[] args) {
     try {
-      YandexTranslate.setKey(ApiKeys.YANDEX_API_KEY);
+      YandexTranslatorAPI.setKey(ApiKeys.YANDEX_API_KEY);
       String translation = YandexTranslate.execute("The quick brown fox jumps over the lazy dog.", Language.ENGLISH, Language.SPANISH);
       System.out.println("Translation: " + translation);
     } catch (Exception e) {

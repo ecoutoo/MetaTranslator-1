@@ -53,7 +53,7 @@ public abstract class YandexTranslatorAPI {
   private static String retrieveResponse(final URL url) throws Exception {
     final HttpsURLConnection uc = (HttpsURLConnection) url.openConnection();
     if(referrer!=null)
-      uc.setRequestProperty("referer", referrer);
+    uc.setRequestProperty("referrer", referrer);
     uc.setRequestProperty("Content-Type","text/plain; charset=" + ENCODING);
     uc.setRequestProperty("Accept-Charset",ENCODING);
     uc.setRequestMethod("GET");
