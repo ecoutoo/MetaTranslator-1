@@ -78,6 +78,7 @@
 					<b>Surname</b> <c:out value="${surname}"/><br>
 					<b>Email</b> <c:out value="${email}"/><br></p>
 					<input type="hidden" name="rkey" value="${rkey}">
+				<!--<input type="file" name="owncorpora" size="50" />-->
 					<input class="btn btn-basic" type="submit" id = "displayrkey_createSurvey" value="Create Survey" style="color: black">
 				</form>
 			</div>

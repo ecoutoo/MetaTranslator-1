@@ -2,7 +2,7 @@
 -- DROP DATABASE postgres;
 
 DROP TABLE IF EXISTS Sentences cascade;
-CREATE TABLE Sentences (id SERIAL, internal_id VARCHAR(35), sentence VARCHAR(1000), PRIMARY KEY(id));
+CREATE TABLE Sentences (id SERIAL, internal_id VARCHAR(35), sentence VARCHAR(1000), user_id INTEGER DEFAULT 1, batch INTEGER DEFAULT 0, PRIMARY KEY(id), FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE RESTRICT ON UPDATE CASCADE);
 COPY Sentences(internal_id, sentence) FROM 'C:\Users\Nucci\Documents\MetaTranslator\src\main\database\corpora\VUA1\AwkParsingFinalResult.txt' DELIMITER '|' ENCODING 'latin1';
 COPY Sentences(internal_id, sentence) FROM 'C:\Users\Nucci\Documents\Metatranslator\src\main\database\corpora\MOH1\MOHAWK.txt'  DELIMITER '|' ENCODING 'UTF-8';
 COPY Sentences(internal_id, sentence) FROM 'C:\Users\Nucci\Documents\Metatranslator\src\main\database\corpora\FLA1\Affective_with_metaphors_pos.txt'  DELIMITER '|' ENCODING 'UTF-8';
@@ -14,6 +14,7 @@ ALTER SEQUENCE surveys_id_seq RESTART WITH 16328 INCREMENT BY 73;
 																								
 DROP TABLE IF EXISTS Users cascade;
 CREATE TABLE Users (id SERIAL, username VARCHAR(50), password VARCHAR(50), firstname VARCHAR(50), surname VARCHAR(50), email VARCHAR(100), PRIMARY KEY (id));
+INSERT INTO Users VALUES (1,'admin', 'password', 'Admin', 'Istrator', 'admin@metatranslate.com');
 
 DROP TABLE IF EXISTS SurveyResults cascade;
 CREATE TABLE SurveyResults (id SERIAL, sentence INTEGER, group_id INTEGER, correct BOOLEAN, problem_phrase VARCHAR(1000), confidence INTEGER, own_translation VARCHAR(1000), PRIMARY KEY (id), FOREIGN KEY (sentence) REFERENCES Sentences(id) ON DELETE RESTRICT ON UPDATE CASCADE, FOREIGN KEY (group_id) REFERENCES Surveys(id) ON DELETE RESTRICT ON UPDATE CASCADE);

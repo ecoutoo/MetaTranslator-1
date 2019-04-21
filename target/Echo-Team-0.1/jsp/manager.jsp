@@ -93,14 +93,8 @@
                                 <div class="col-lg-2 col-sm-2"></div>
                                 <div class="col-lg-8 col-sm-8" style="text-align: justify">
                                     <br>
-<<<<<<< HEAD
                                     <input type="radio" name="translator"  value="google" checked> &nbsp; Google Translator <br>
                                     <input type="radio" name="translator" value="yandex"> &nbsp; Yandex Translator <br>
-=======
-                                    <input type="radio" name="translator" id = "googleButton"  value="google" checked> &nbsp; Google Translator <br>
-                                    <!--<input type="radio" name="translator" value="bing"> &nbsp; Bing Translator<br> -->
-                                    <input type="radio" name="translator" id = "yandexButton"> &nbsp; Yandex Translator <br>
->>>>>>> 2d912874156b3b169d7771bb965b82120aa8d5d2
                                 </div>
                             </div>
                             <br><br>

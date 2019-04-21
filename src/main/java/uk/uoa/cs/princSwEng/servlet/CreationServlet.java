@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
+import javax.servlet.http.Part;
 
 public final class CreationServlet extends AbstractDatabaseServlet {
 	private static final long serialVersionUID = 1L;
@@ -47,6 +48,10 @@ public final class CreationServlet extends AbstractDatabaseServlet {
 		rkey = (int)Integer.parseInt(req.getParameter("rkey"));
 		if (Global.DEBUGMODE) 
 			System.out.println("Parameter retrieved: " + rkey);
+	//	Part filePart = req.getPart("file");
+	//	if ((filePart != null) && (filePart.getSize() > 0)) {
+	//		System.out.println("Sentences uploaded");
+	//	}
 		req.setAttribute("rkey",rkey);
 		session.setAttribute("current_logged_in", "rkey");
 		req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);

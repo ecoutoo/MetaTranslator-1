@@ -108,10 +108,10 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 					sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
 					break;
 				case "MOH":
-					sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
+					sentences = new SearchRandomSentenceDatabase(getConnection(), "MOH%", number).searchRandomSentence();
 					break;
 				case "FLA":
-					sentences = new SearchRandomSentenceDatabase(getConnection(), "VUA%", number).searchRandomSentence();
+					sentences = new SearchRandomSentenceDatabase(getConnection(), "FLA%", number).searchRandomSentence();
 					break;
 				default: 
 					System.err.println("No value received for the corpora, terminating");
