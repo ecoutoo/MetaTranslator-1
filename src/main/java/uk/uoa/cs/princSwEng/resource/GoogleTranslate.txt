@@ -8,34 +8,42 @@ import com.google.cloud.translate.TranslateOptions;
 import com.google.cloud.translate.Translation;
 import java.util.*;
 
+/**
+ * Translates a given text to a target language.
+ *
+ * @param projectId - Id of the project.
+ * @param location - location name.
+ * @param text - Text for translation.
+ * @param sourceLanguageCode - Language code of text. e.g. "en"
+ * @param targetLanguageCode - Language code for translation. e.g. "sr"
+ */
+static TranslateTextResponse translateText(
+    String projectId,
+    String location,
+    String text,
+    String sourceLanguageCode,
+    String targetLanguageCode) {
+  try (TranslationServiceClient translationServiceClient = TranslationServiceClient.create()) {
 
+    LocationName locationName =
+        LocationName.newBuilder().setProject(projectId).setLocation(location).build();
 
-public class GoogleTranslate {
-    private static final String TAG = GoogleTranslate.class.getSimpleName();
-    private static final String API_KEY = "AIzaSyAkjqDtrIaZ96s4cQTHVR-SkHZIhehL3Gc";
+    TranslateTextRequest translateTextRequest =
+        TranslateTextRequest.newBuilder()
+            .setParent(locationName.toString())
+            .setMimeType("text/plain")
+            .setSourceLanguageCode(sourceLanguageCode)
+            .setTargetLanguageCode(targetLanguageCode)
+            .addContents(text)
+            .build();
 
-    private GoogleTranslate() {
-        // Private constructor to enforce noninstantiability
-    }
+    // Call the API
+    TranslateTextResponse response = translationServiceClient.translateText(translateTextRequest);
+    System.out.format(
+        "Translated Text: %s", response.getTranslationsList().get(0).getTranslatedText());
+    return response;
 
-     /**
-   * Translates text from a given Language to another given Language using Google Translate.
-   * 
-   * @param text The String to translate.
-   * @param from The language code to translate from.
-   * @param to The language code to translate to.
-   * @return The translated String.
-   * @throws Exception on error.
-   */
-
-   public static String execute(final String text, final Language from, final Language to) throws
-     Exception {
-       Translate translate = TranslateOptions.getDefaultInstance().getService();
-       Translation translation = translate.translate(
-		text); 
-		TranslateOption.sourceLanguage("from"); 
-		TranslateOption.targetLanguage("to"); 
-
-	return(translation.getTranslatedText());
-     }
-   }
+  } catch (Exception e) {
+    throw new RuntimeException("Couldn't create client.", e);
+  }
+}

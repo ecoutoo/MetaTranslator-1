@@ -293,7 +293,7 @@
 		<dependency>
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-translate</artifactId>
-			<version>1.63.0</version>
+			<version>1.70.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.google.android/android -->
