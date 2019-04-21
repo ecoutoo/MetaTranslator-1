@@ -93,8 +93,14 @@
                                 <div class="col-lg-2 col-sm-2"></div>
                                 <div class="col-lg-8 col-sm-8" style="text-align: justify">
                                     <br>
+<<<<<<< HEAD
                                     <input type="radio" name="translator"  value="google" checked> &nbsp; Google Translator <br>
                                     <input type="radio" name="translator" value="yandex"> &nbsp; Yandex Translator <br>
+=======
+                                    <input type="radio" name="translator" id = "googleButton"  value="google" checked> &nbsp; Google Translator <br>
+                                    <!--<input type="radio" name="translator" value="bing"> &nbsp; Bing Translator<br> -->
+                                    <input type="radio" name="translator" id = "yandexButton"> &nbsp; Yandex Translator <br>
+>>>>>>> 2d912874156b3b169d7771bb965b82120aa8d5d2
                                 </div>
                             </div>
                             <br><br>
@@ -107,7 +113,7 @@
                             <div class="row">
                                 <div class="col-lg-2 col-sm-2"></div>
                                 <div class="col-lg-8 col-sm-8" style="text-align: justify">
-                                    <select name="languages" form="nlp">
+                                    <select name="languages" id = "languagesButton" form="nlp">
                                         <option value="Chinese">Chinese</option>
                                         <option value="Italian">Italian</option>
                                         <option value="French">French</option>
@@ -126,9 +132,9 @@
                                 <div class="col-lg-2 col-sm-2"></div>
                                 <div class="col-lg-8 col-sm-8" style="text-align: justify">
                                     <br>
-                                    <input type="radio" name="number" value="5" checked> &nbsp; 5<br>
-                                    <input type="radio" name="number" value="10"> &nbsp; 10<br>
-                                    <input type="radio" name="number" value="15"> &nbsp; 15<br>
+                                    <input type="radio" name="number" id = "radio5" value="5" checked> &nbsp; 5<br>
+                                    <input type="radio" name="number" id = "radio10" value="10"> &nbsp; 10<br>
+                                    <input type="radio" name="number" id = "radio15" value="15"> &nbsp; 15<br>
                                 </div>
                             </div>
                             <br><br>
@@ -142,14 +148,14 @@
                                 <div class="col-lg-2 col-sm-2"></div>
                                 <div class="col-lg-8 col-sm-8" style="text-align: justify">
                                     <br>
-                                    <input type="radio" name="corpora"  value="VUA" checked> &nbsp; VUA <br>
-                                    <input type="radio" name="corpora" value="MOH"> &nbsp; MOH-X<br>
-                                    <input type="radio" name="corpora" value="FLA"> &nbsp; FLA <br>
+                                    <input type="radio" name="corpora" id = "buttonVUA" value="VUA" checked> &nbsp; VUA <br>
+                                    <input type="radio" name="corpora" id = "buttonMOH" value="MOH"> &nbsp; MOH-X<br>
+                                    <input type="radio" name="corpora" id = "buttonFLA" value="FLA"> &nbsp; FLA <br>
                                 </div>
                             </div>
                         </label>
 						<input type="hidden" name="rkey" value="${rkey}">
-						<input class="btn btn-basic" type="submit" value="Submit" style="color: black">
+						<input class="btn btn-basic" type="submit" id = "surveyCreationManager" value="Submit" style="color: black">
                     </form>                   
                 </h4>
             </div>

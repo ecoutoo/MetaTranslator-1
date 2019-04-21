@@ -69,7 +69,7 @@
             <h4 class="margin" style="line-height: 1.5em">
 				<br>RESEARCHER ID <c:out value="${rkey}"/><br><br> 
                 Thank you for creating a new survey.<br>
-				The unique key of your survey is <c:out value="${key}"/>.
+				<p id = "uniqueKeyValue">The unique key of your survey is <c:out value="${key}"/></p>
             </h4>
         </div>
 		<div class="gototop js-top">

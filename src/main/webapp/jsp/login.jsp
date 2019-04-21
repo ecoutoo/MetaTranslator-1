@@ -92,7 +92,7 @@
                                 <div class="line"></div>
                             </div>
                         </label>
-                        <button type="submit" class="btn btn-basic" value="Login">submit</button>
+                        <button type="submit" class="btn btn-basic" id = "loginButton" value="Login">submit</button>
                     </form>
                 </h4>
             </div>

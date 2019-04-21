@@ -38,259 +38,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<script src="https://code.highcharts.com/highcharts.js"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				var myChart = Highcharts.chart('piechart0', {
-					chart: {
-						plotBackgroundColor: null,
-						plotBorderWidth: 0,
-						plotShadow: false
-					},
-					title: {
-						text: 'Correctness',
-						align: 'center',
-						verticalAlign: 'middle',
-						y: 40
-					},
-					tooltip: {
-						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-					},
-					plotOptions: {
-						pie: {
-							dataLabels: {
-								enabled: true,
-								distance: -50,
-								style: {
-									fontWeight: 'bold',
-									color: 'white'
-								}
-							},
-							startAngle: -90,
-							endAngle: 90,
-							center: ['50%', '75%'],
-							size: '110%'
-						}
-					},
-					series: [{
-						type: 'pie',
-						name: 'Correctness',
-						innerSize: '50%',
-						data: [
-							['Correct', <c:out value="${corres[0]}"/>],
-							['Incorrect', <c:out value="${incorres[0]}"/>],
-							{
-								name: 'Other',
-								y: 0.0,
-								dataLabels: {
-									enabled: false
-								}
-							}
-						]
-					}]	
-				});
-			});
-			document.addEventListener('DOMContentLoaded', function () {
-				var myChart = Highcharts.chart('piechart1', {
-					chart: {
-						plotBackgroundColor: null,
-						plotBorderWidth: 0,
-						plotShadow: false
-					},
-					title: {
-						text: 'Correctness',
-						align: 'center',
-						verticalAlign: 'middle',
-						y: 40
-					},
-					tooltip: {
-						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-					},
-					plotOptions: {
-						pie: {
-							dataLabels: {
-								enabled: true,
-								distance: -50,
-								style: {
-									fontWeight: 'bold',
-									color: 'white'
-								}
-							},
-							startAngle: -90,
-							endAngle: 90,
-							center: ['50%', '75%'],
-							size: '110%'
-						}
-					},
-					series: [{
-						type: 'pie',
-						name: 'Correctness',
-						innerSize: '50%',
-						data: [
-							['Correct', <c:out value="${corres[1]}"/>],
-							['Incorrect', <c:out value="${incorres[1]}"/>],
-							{
-								name: 'Other',
-								y: 0.0,
-								dataLabels: {
-									enabled: false
-								}
-							}
-						]
-					}]	
-				});
-			});
-			document.addEventListener('DOMContentLoaded', function () {
-				var myChart = Highcharts.chart('piechart2', {
-					chart: {
-						plotBackgroundColor: null,
-						plotBorderWidth: 0,
-						plotShadow: false
-					},
-					title: {
-						text: 'Correctness',
-						align: 'center',
-						verticalAlign: 'middle',
-						y: 40
-					},
-					tooltip: {
-						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-					},
-					plotOptions: {
-						pie: {
-							dataLabels: {
-								enabled: true,
-								distance: -50,
-								style: {
-									fontWeight: 'bold',
-									color: 'white'
-								}
-							},
-							startAngle: -90,
-							endAngle: 90,
-							center: ['50%', '75%'],
-							size: '110%'
-						}
-					},
-					series: [{
-						type: 'pie',
-						name: 'Correctness',
-						innerSize: '50%',
-						data: [
-							['Correct', <c:out value="${corres[2]}"/>],
-							['Incorrect', <c:out value="${incorres[2]}"/>],
-							{
-								name: 'Other',
-								y: 0.0,
-								dataLabels: {
-									enabled: false
-								}
-							}
-						]
-					}]	
-				});
-			});
-			document.addEventListener('DOMContentLoaded', function () {
-				var myChart = Highcharts.chart('piechart3', {
-					chart: {
-						plotBackgroundColor: null,
-						plotBorderWidth: 0,
-						plotShadow: false
-					},
-					title: {
-						text: 'Correctness',
-						align: 'center',
-						verticalAlign: 'middle',
-						y: 40
-					},
-					tooltip: {
-						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-					},
-					plotOptions: {
-						pie: {
-							dataLabels: {
-								enabled: true,
-								distance: -50,
-								style: {
-									fontWeight: 'bold',
-									color: 'white'
-								}
-							},
-							startAngle: -90,
-							endAngle: 90,
-							center: ['50%', '75%'],
-							size: '110%'
-						}
-					},
-					series: [{
-						type: 'pie',
-						name: 'Correctness',
-						innerSize: '50%',
-						data: [
-							['Correct', <c:out value="${corres[3]}"/>],
-							['Incorrect', <c:out value="${incorres[3]}"/>],
-							{
-								name: 'Other',
-								y: 0.0,
-								dataLabels: {
-									enabled: false
-								}
-							}
-						]
-					}]	
-				});
-			});
-			document.addEventListener('DOMContentLoaded', function () {
-				var myChart = Highcharts.chart('piechart4', {
-					chart: {
-						plotBackgroundColor: null,
-						plotBorderWidth: 0,
-						plotShadow: false
-					},
-					title: {
-						text: 'Correctness',
-						align: 'center',
-						verticalAlign: 'middle',
-						y: 40
-					},
-					tooltip: {
-						pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-					},
-					plotOptions: {
-						pie: {
-							dataLabels: {
-								enabled: true,
-								distance: -50,
-								style: {
-									fontWeight: 'bold',
-									color: 'white'
-								}
-							},
-							startAngle: -90,
-							endAngle: 90,
-							center: ['50%', '75%'],
-							size: '110%'
-						}
-					},
-					series: [{
-						type: 'pie',
-						name: 'Correctness',
-						innerSize: '50%',
-						data: [
-							['Correct', <c:out value="${corres[4]}"/>],
-							['Incorrect', <c:out value="${incorres[4]}"/>],
-							{
-								name: 'Other',
-								y: 0.0,
-								dataLabels: {
-									enabled: false
-								}
-							}
-						]
-					}]	
-				});
-			});
-
-		</script>
         <style>
             body {font:10px Montserrat, sans-serif;}
             .navbar {
@@ -345,10 +92,68 @@
 							<p>Sentence ID: <c:out value ="${sentid[cycle]}"/></p>
 							<div class="container-fluid bg-3">
 								<p>
-									<b>Correct:</b> <c:out value="${corres[cycle]}"/>
+									<b>Confidence:</b> <c:out value="${prmavg[cycle]}"/>
 									<br>
-									<b>Incorrect:</b> <c:out value="${incorres[cycle]}"/>
-								<div id="piechart${cycle}" style="width:100%;height:400px"></div>
+									<script>
+										document.addEventListener('DOMContentLoaded', function () {
+											var myChart = Highcharts.chart("piechart${cycle}", {
+												chart: {
+													plotBackgroundColor: null,
+													plotBorderWidth: 0,
+													plotShadow: false
+												},
+												title: {
+													text: 'Correctness',
+													align: 'center',
+													verticalAlign: 'middle',
+													y: 40
+												},
+												tooltip: {
+													pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+												},
+												plotOptions: {
+													pie: {
+														dataLabels: {
+															enabled: true,
+															distance: -50,
+															style: {
+																fontWeight: 'bold',
+																color: 'white'
+															},
+															formatter: function() {
+																if (this.y != 0) {
+																	return this.x;
+																} else {
+																	return null;
+																}
+															}
+														},
+														startAngle: -90,
+														endAngle: 90,
+														center: ['50%', '75%'],
+														size: '110%'
+													}
+												},
+												series: [{
+													type: 'pie',
+													name: 'Correctness',
+													innerSize: '50%',
+													data: [
+														['Correct', <c:out value="${corres[cycle]}"/>],
+														['Incorrect', <c:out value="${incorres[cycle]}"/>],
+														{
+															name: 'Other',
+															y: 0.0,
+															dataLabels: {
+																enabled: false
+															}
+														}
+													]
+												}]	
+											});
+										});
+									</script>
+									<div id="piechart${cycle}" style="width:100%;height:400px"></div>
 								</p>
 							</div>
 						</div>
