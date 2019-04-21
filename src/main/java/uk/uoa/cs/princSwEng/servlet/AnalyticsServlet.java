@@ -38,6 +38,8 @@ public final class AnalyticsServlet extends AbstractDatabaseServlet {
 		int numb = -1;
 		int count = 0;
 		int survtaken = 0;
+		float[] prmcorr = null;
+		float[] prmincorr = null;
 		
 		try {
 			survkey = (int)Integer.parseInt(req.getParameter("survkey"));
@@ -50,6 +52,8 @@ public final class AnalyticsServlet extends AbstractDatabaseServlet {
 			sentid = new int[numb];
 			corres = new int[numb];
 			incorres = new int[numb];
+			prmcorr = new float[numb];
+			prmincorr = new float[numb];
 			sentid = sur.getSurveyId();
 			System.out.println("Sentence ids "+sentid[0]+ " " +sentid[1]+ " " +sentid[2]+ " " +sentid[3]+ " " +sentid[4]);
 			if (resultlist.size() > 0) {
@@ -70,6 +74,12 @@ public final class AnalyticsServlet extends AbstractDatabaseServlet {
 			}
 			System.out.println("Correct "+corres[0]+ " " +corres[1]+ " " +corres[2]+ " " +corres[3]+ " " +corres[4]);
 			System.out.println("Incorrect "+incorres[0]+ " " +incorres[1]+ " " +incorres[2]+ " " +incorres[3]+ " " +incorres[4]);
+			for (int a=0; a<numb; a++) {
+				prmcorr[a] = ( (float)corres[a] / (float)survtaken) * 100;
+				prmincorr[a] = ( (float)incorres[a] / (float)survtaken) * 100;
+			}
+			System.out.println("Correct "+prmcorr[0]+ " " +prmcorr[1]+ " " +prmcorr[2]+ " " +prmcorr[3]+ " " +prmcorr[4]);
+			System.out.println("Incorrect "+prmincorr[0]+ " " +prmincorr[1]+ " " +prmincorr[2]+ " " +prmincorr[3]+ " " +prmincorr[4]);
 		} catch (SQLException ex) {
 			m = new Message("Cannot find the company: unexpected error while accessing the database.",
 				                "E200", ex.getMessage());
@@ -77,8 +87,8 @@ public final class AnalyticsServlet extends AbstractDatabaseServlet {
 			m = new Message("There is a problem with the URI during the database connection phase.", "DB100", ex.getMessage());
 		}
 		req.setAttribute("sentid", sentid);
-		req.setAttribute("corres", corres);
-		req.setAttribute("incorres", incorres);
+		req.setAttribute("corres", prmcorr);
+		req.setAttribute("incorres", prmincorr);
 		req.setAttribute("survkey", survkey);
 		req.setAttribute("survtaken", survtaken);
 		req.setAttribute("numb", numb);
