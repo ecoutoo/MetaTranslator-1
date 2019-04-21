@@ -80,40 +80,40 @@
                         <label>
                             <p> <c:out value="${error}"/></p>
                             <p class="label-txt">USERNAME</p>
-                            <input type="text" class="input" name="username">
+                            <input type="text" class="input" id = "username" name="username">
                             <div class="line-box">
                                 <div class="line"></div>
                             </div>
                         </label>
                         <label>
                             <p class="label-txt">NAME</p>
-                            <input type="text" class="input" name="name">
+                            <input type="text" class="input" id = "name" name="name">
                             <div class="line-box">
                                 <div class="line"></div>
                             </div>
                         </label>
                         <label>
                             <p class="label-txt">SURNAME</p>
-                            <input type="text" class="input" name="surname">
+                            <input type="text" class="input" id = "surname" name="surname">
                             <div class="line-box">
                                 <div class="line"></div>
                             </div>
                         </label>
                         <label>
                             <p class="label-txt">EMAIL</p>
-                            <input type="text" class="input" name="email">
+                            <input type="text" class="input" id = "email" name="email">
                             <div class="line-box">
                                 <div class="line"></div>
                             </div>
                         </label>
                         <label>
                             <p class="label-txt"> PASSWORD</p>
-                            <input type="password" class="input" name="password">
+                            <input type="password" class="input" id = "password" name="password">
                             <div class="line-box">
                                 <div class="line"></div>
                             </div>
                         </label>
-                        <button type="submit" class="btn btn-basic" value="Register">submit</button>
+                        <button type="submit" class="btn btn-basic" id = "registrationSubmit" value="Register">submit</button>
                     </form>
                 </h4>
             </div>

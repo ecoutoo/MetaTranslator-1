@@ -85,6 +85,20 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
             message = "Welcome to MetaTranslate, your username is: " + username + ", your password is: " + password + " and your researcher key is: " + rkey;
             mailer.send(email, subject, message);
 
+			try {
+				System.out.println("Trying to send");
+				mailer.send(email, subject, message);
+			}
+			catch (Exception e) {
+				System.err.println("Error of type SendFailedException Occurred");
+				System.err.println(e);
+				req.setAttribute("error", "Please enter a correct email");
+				req.getRequestDispatcher("/jsp/registration.jsp").forward(req, res);
+
+			}
+
+
+
 		}
 		catch (SQLException ex)
 		{
