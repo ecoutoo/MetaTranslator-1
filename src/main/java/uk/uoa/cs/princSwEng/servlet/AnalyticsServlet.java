@@ -52,6 +52,9 @@ public final class AnalyticsServlet extends AbstractDatabaseServlet {
 			incorres = new int[numb];
 			sentid = sur.getSurveyId();
 			System.out.println("Sentence ids "+sentid[0]+ " " +sentid[1]+ " " +sentid[2]+ " " +sentid[3]+ " " +sentid[4]);
+			if (resultlist.size() > 0) {
+				survtaken = 1;
+			}
 			for (Result rsl : resultlist) {
 				if (count == numb) {
 					count = 0;
@@ -64,9 +67,6 @@ public final class AnalyticsServlet extends AbstractDatabaseServlet {
 					incorres[count] = incorres[count] + 1;
 				}
 				count = count + 1;
-			}
-			if (survtaken > 0) {
-				survtaken = survtaken + 1;
 			}
 			System.out.println("Correct "+corres[0]+ " " +corres[1]+ " " +corres[2]+ " " +corres[3]+ " " +corres[4]);
 			System.out.println("Incorrect "+incorres[0]+ " " +incorres[1]+ " " +incorres[2]+ " " +incorres[3]+ " " +incorres[4]);

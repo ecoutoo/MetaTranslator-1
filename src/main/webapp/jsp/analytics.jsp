@@ -37,6 +37,61 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script>document.addEventListener('DOMContentLoaded', function () {
+			var myChart = Highcharts.chart('container', {
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: 0,
+					plotShadow: false
+				},
+				title: {
+					text: 'Browser<br>shares<br>2017',
+					align: 'center',
+					verticalAlign: 'middle',
+					y: 40
+				},
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				plotOptions: {
+					pie: {
+						dataLabels: {
+							enabled: true,
+							distance: -50,
+							style: {
+								fontWeight: 'bold',
+								color: 'white'
+							}
+						},
+						startAngle: -90,
+						endAngle: 90,
+						center: ['50%', '75%'],
+						size: '110%'
+					}
+				},
+				series: [{
+					type: 'pie',
+					name: 'Browser share',
+					innerSize: '50%',
+					data: [
+						['Chrome', 58.9],
+						['Firefox', 13.29],
+						['Internet Explorer', 13],
+						['Edge', 3.78],
+						['Safari', 3.42],
+						{
+							name: 'Other',
+							y: 7.61,
+							dataLabels: {
+								enabled: false
+							}
+						}
+					]
+				}]	
+			});
+		});
+		</script>
         <style>
             body {font:10px Montserrat, sans-serif;}
             .navbar {
@@ -94,6 +149,7 @@
 									<b>Correct:</b> <c:out value="${corres[cycle]}"/>
 									<br>
 									<b>Incorrect:</b> <c:out value="${incorres[cycle]}"/>
+								<div id="container" style="width:100%;height:400px"></div>
 								</p>
 							</div>
 						</div>
