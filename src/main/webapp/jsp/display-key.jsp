@@ -65,7 +65,7 @@
                 </div>
             </div>
         </nav>
-		<div class="container-fluid bg-1 text-center">
+		<div class="container-fluid bg-3 text-center">
             <h4 class="margin" style="line-height: 1.5em">
 				<br>RESEARCHER ID <c:out value="${rkey}"/><br><br> 
                 Thank you for creating a new survey.<br>

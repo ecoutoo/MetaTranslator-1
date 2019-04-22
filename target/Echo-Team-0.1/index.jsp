@@ -46,6 +46,17 @@
                 border-radius: 0px;
                 margin-bottom: 0px;
             }
+            
+            form {
+                width: 60%;
+                margin: 60px auto;
+                background-color: #efefef;
+                padding: 60px 60px 60px 60px;
+                text-align: center;
+                -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                color: #808080;
+            }
         </style>
     </head>
 
@@ -56,7 +67,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
                 </button>
                 <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -90,7 +101,7 @@
                     <p class="label-txt"><br>ENTER THE SURVEY KEY<br></p>
                     <div class="row">
                         <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-sm-12">
                             <div class="form-group">
                                 <input type="text" class="input" id="key" name="key">
                                 <div class="line-box">
@@ -99,13 +110,14 @@
                             </div>
                             <br>
                         </div>
-                        <!-- <input type="text" name="key" style="width:350px"> -->
                         <div class="col-lg-3"><br></div>
                     </div>
                     <br>
-                    <div class="col-lg-12">
-                        <p><input class="btn btn-basic" type="submit" value="Start Survey!" style="color: black"></p>
-                        <p> <c:out value="${error}"/></p>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                            <p><input class="btn btn-basic" type="submit" value="Start Survey!" style="color: black"></p>
+                            <p> <c:out value="${error}"/></p>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -115,13 +127,13 @@
             <h3 class="margin" style="text-align: center">How to fill in the survey?</h3><br><br><br><br>
             <div class="row">
                 <div class="col-sm-4">
-                    <p>Explanation on how to select incorrect words, translation. etc..</p>
+                    <p>You will evaluate whether the translation of each sentence in the survey is correct. If you deem the translation is incorrect, please select incorrect translation. More functions will then appear.</p>
                 </div>
                 <div class="col-sm-4"> 
-                    <p>Explanation on how to get dictionary definition for a word.</p>
+                    <p>Select any words you think might cause the translation to fail by simply clicking on them. When selected, the words will appear highlighted. If you wish to deselect a word, you can just click on it again and will be unhighlighted. Then select rate the translation is from 1 to 5. 1 being the lowest and 5 being the highest. </p>
                 </div>
                 <div class="col-sm-4"> 
-                    <p>Explanation about the different translations.</p>
+                    <p>Lastly, if the translation is incorrect, you can suggest what you think would be the correct translation. Simply type your suggestion in the text box provided.</p>
                 </div>
             </div>
         </div>

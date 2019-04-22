@@ -40,6 +40,16 @@
                 border-radius: 0px;
                 margin-bottom: 0px;
             }
+            form {
+                width: 60%;
+                margin: 60px auto;
+                background-color: #efefef;
+                padding: 60px 60px 60px 60px;
+                text-align: center;
+                -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                color: #808080;
+            }
         </style>
     </head>
     <body>

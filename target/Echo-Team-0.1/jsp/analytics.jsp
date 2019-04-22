@@ -153,7 +153,6 @@
 										});
 									</script>
 									<div id="piechart${cycle}" style="width:100%;height:400px"></div>
-								</p>
 							</div>
 						</div>
 					</div>

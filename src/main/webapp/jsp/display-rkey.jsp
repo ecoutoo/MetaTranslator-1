@@ -44,6 +44,13 @@
                 border-radius: 0px;
                 margin-bottom: 0px;
             }
+            form {
+                width: 60%;
+                margin: 60px auto;
+                background-color: rgba(0,0,0,0);
+                padding: 60px 60px 60px 60px;
+                text-align: center;
+            }
         </style>
 	</head>
 	<body>
@@ -71,59 +78,67 @@
             </h4>
         </div>
 		<div class="row">
-            <div class="col-lg-6 col-sm-6">
-				<form action="creation" style="text-align:left;width:80%" method="post">
-					<p><b>Researcher ID</b> <c:out value="${rkey}"/><br>
-					<b>Name</b> <c:out value="${name}"/><br>
-					<b>Surname</b> <c:out value="${surname}"/><br>
-					<b>Email</b> <c:out value="${email}"/><br></p>
-					<input type="hidden" name="rkey" value="${rkey}">
-				<!--<input type="file" name="owncorpora" size="50" />-->
-					<input class="btn btn-basic" type="submit" id = "displayrkey_createSurvey" value="Create Survey" style="color: black">
-				</form>
-			</div>
-			<div class="col-lg-6 col-sm-6">
-				<form action="upload" style="text-align:left;width:80%" method="post">
-					<p><b>Create a survey with your own sentences</b><br><br>
-					Number of sentences: <input type="radio" name="num" value="5" checked> 5 &nbsp; <input type="radio" name="num" value="10"> 10 &nbsp; <input type="radio" name="num" value="15"> 15<br>
-					<input type="hidden" name="rkey" value="${rkey}">
-					<br><input type="submit" class="btn btn-basic" name="upload" value="Upload" style="color: black"></p>
-				</form>
-			</div>
-		</div>
-		<c:choose>
-			<c:when test="${fn:length(survarr)<1}">
-				<div class="row">
-					<div class="col-lg-2 col-sm-2"></div>
-					<div class="col-lg-8 col-sm-8">
-						<p>You haven't created any survey yet.</p>
-					</div>
-				</div>
-			</c:when>
-			<c:when test="${fn:length(survarr)>0}">
-				<c:forEach begin="0" end="${fn:length(survarr)-1}" var="cycle">
-					<div class="container-fluid bg-1 text-center">
-						<h4 class="margin" style="line-height: 1.5em">
-							SURVEY <c:out value="${survarr[cycle]}"/>
-						</h4>
-					</div>
-					<div class="row">
-						<div class="col-lg-6 col-sm-6">
-							<form action="analytics" method="post">
-								<p><input type="hidden" name="survkey" value="${survarr[cycle]}">
-								<input class="btn btn-basic" type="submit" name="Analytics" value="Analytics" style="color: black"></p>
-							</form>
-						</div>
-						<div class="col-lg-6 col-sm-6">
-							<form action="downloadraw" method="post">
-								<input type="hidden" name="survkey" value="${survarr[cycle]}">
-								<input class="btn btn-basic" type="submit" name="DownloadRaw" value="Download Raw Data" style="color: black"></p>
-							</form>
-						</div>
-					</div>
-				</c:forEach>
-			</c:when>
-		</c:choose>
+            <div class="container-fluid bg-3" style="text-align: center"> 
+                <div class="col-lg-6 col-sm-6">
+                    <form action="creation" style="text-align:left;width:80%" method="post">
+                        <p><b>Researcher ID</b> <c:out value="${rkey}"/><br><br>
+                            <b>Name</b> <c:out value="${name}"/><br><br>
+                            <b>Surname</b> <c:out value="${surname}"/><br><br>
+                            <b>Email</b> <c:out value="${email}"/><br><br></p>
+                        <input type="hidden" name="rkey" value="${rkey}">
+                        <!--<input type="file" name="owncorpora" size="50" />-->
+                        <input class="btn btn-basic" type="submit" id = "displayrkey_createSurvey" value="Create Survey" style="color: black">
+                    </form>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <form action="upload" style="text-align:left;width:80%" method="post">
+                        <p><b>Create a survey with your own sentences</b><br><br>
+                            Number of sentences: <input type="radio" name="num" value="5" checked> 5 &nbsp; <input type="radio" name="num" value="10"> 10 &nbsp; <input type="radio" name="num" value="15"> 15<br>
+                            <input type="hidden" name="rkey" value="${rkey}">
+                            <br><input type="submit" class="btn btn-basic" name="upload" value="Upload" style="color: black"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="container-fluid bg-3" style="text-align: center"> 
+                <c:choose>
+                    <c:when test="${fn:length(survarr)<1}">
+                        <div class="row">
+                            <div class="col-lg-2 col-sm-2"></div>
+                            <div class="col-lg-8 col-sm-8">
+                                <p>You haven't created any survey yet.</p>
+                            </div>
+                        </div>
+                    </c:when>
+                    <c:when test="${fn:length(survarr)>0}">
+                        <c:forEach begin="0" end="${fn:length(survarr)-1}" var="cycle">
+                            <div class="container-fluid bg-1 text-center">
+                                <h4 class="margin" style="line-height: 1.5em">
+                                    SURVEY <c:out value="${survarr[cycle]}"/>
+                                </h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6">
+                                    <form class="diff" action="analytics" method="post">
+                                        <p><input type="hidden" name="survkey" value="${survarr[cycle]}">
+                                            <input class="btn btn-basic" type="submit" name="Analytics" value="Analytics" style="color: black"></p>
+                                    </form>
+                                </div>
+                                <div class="col-lg-6 col-sm-6">
+                                    <form class="diff" action="downloadraw" method="post">
+                                        <input type="hidden" name="survkey" value="${survarr[cycle]}">
+                                        <input class="btn btn-basic" type="submit" name="DownloadRaw" value="Download Raw Data" style="color: black">
+                                    </form>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </c:when>
+                </c:choose>
+            </div>
+        </div>
+        
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->

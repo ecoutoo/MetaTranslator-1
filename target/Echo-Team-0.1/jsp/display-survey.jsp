@@ -50,6 +50,14 @@
                 border-radius: 0px;
                 margin-bottom: 0px;
             }
+            form {
+                width: 60%;
+                margin: 60px auto;
+                background-color: rgba(0,0,0,0);
+                padding: 60px 60px 60px 60px;
+                text-align: center;
+                color: #808080;
+            }
         </style>
     </head>
     <body>
@@ -87,79 +95,80 @@
             </h4>
         </div>
 		<form action="completion" method="post" style="width:100%">
-		<input type="hidden" name="survkey" value="${key}">
-		<input type="hidden" name="survsize" value="${texts_size}">
-		<!--<input type="hidden" name="sentids" value="<c:out value="${sentids}"/>">-->
-        <c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
-            <br><br>
-            <div class="row">
-                <div class="col-lg-6 col-sm-6" style="text-align:center;width:100%">
-					<!--<input type="hidden" name="sentkey<c:out value="${cycle+1}"/>" value="<c:out value="${sentid[cycle]}"/>">-->
-                    <p>Sentence <c:out value ="${cycle+1}"/></p>
-                    <div class="container-fluid bg-3">
-                        <p>
-                            <b>Sentence:</b> <c:out value="${texts[cycle]}"/>
-                            <br><br>
-                            <b>Translation:</b> <c:out value="${translated_texts[cycle]}"/>
-                            <br>
-                            <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
-                            <br>
-                        </p>                 
-						<span>
-							<p>
-								<input type="radio" onclick="javascript:corincCheck(${cycle})" name="CorrectTranslation${cycle}" id="incCheck${cycle}" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
-								<input type="radio" onclick="javascript:corincCheck(${cycle})" name="CorrectTranslation${cycle}" id="corCheck${cycle}" value="Correct" checked> &nbsp; Correct Translation
-							</p>
-						</span>
-						<div id="ifInc${cycle}" style="display:none">
-							<br>
-							<p>Choose the words causing problems in the translation:</p>
-							<div id="ck-button">
-								<label>
-									<input type="checkbox" name="IncorrectWord${cycle}" value=" " checked>
-									<span>&nbsp;</span>
-								</label>
-								<c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
-									<label>
-										<input type="checkbox" name="IncorrectWord${cycle}" value="${string[internal]}">
-										<span><c:out value="${string[internal]}"/>&nbsp;</span>
-									</label>
-								</c:forEach>
-							</div>
-							<br>
-							<br>
-							<p>Confidence (1-5):</p>
-							<span>
-								<select name="Confidence">
-								<!--<option hidden disabled selected value>Select a number</option>-->
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</span>
-							<br>
-							<br>
-							<p>Suggest your own translation:</p>
-							<input type="text" class="input" name="OwnTranslation" value="" size="100"/>
-							<div class="line-box">
-								<div class="line"></div>
-							</div>
-							<br><br>
-						</div>
+        <div class="diff">
+            <input type="hidden" name="survkey" value="${key}">
+            <input type="hidden" name="survsize" value="${texts_size}">
+            <!--<input type="hidden" name="sentids" value="<c:out value="${sentids}"/>">-->
+            <c:forEach begin="0" end="${fn:length(texts) - 1}" var="cycle">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6" style="text-align:center;width:100%">
+                        
+                
+                        <!--<input type="hidden" name="sentkey<c:out value="${cycle+1}"/>" value="<c:out value="${sentid[cycle]}"/>">-->
+                        <div class="container-fluid bg-3">
+                            <p>Sentence <c:out value ="${cycle+1}"/></p>
+                            <p>
+                                <b>Sentence:</b> <c:out value="${texts[cycle]}"/>
+                                <br><br>
+                                <b>Translation:</b> <c:out value="${translated_texts[cycle]}"/>
+                                <br>
+                                <c:set var = "string" value = "${fn:split(texts[cycle], ' ')}"/>
+                                <br>
+                            </p>                 
+                            <span>
+                                <p>
+                                    <input type="radio" onclick="javascript:corincCheck(${cycle})" name="CorrectTranslation${cycle}" id="incCheck${cycle}" value="Incorrect"> &nbsp; Incorrect Translation &nbsp;&nbsp;
+                                    <input type="radio" onclick="javascript:corincCheck(${cycle})" name="CorrectTranslation${cycle}" id="corCheck${cycle}" value="Correct" checked> &nbsp; Correct Translation
+                                </p>
+                            </span>
+                            <div id="ifInc${cycle}" style="display:none">
+                                <br>
+                                <p>Choose the words causing problems in the translation:</p>
+                                <div id="ck-button">
+                                    <label>
+                                        <input type="checkbox" name="IncorrectWord${cycle}" value=" " checked>
+                                        <span>&nbsp;</span>
+                                    </label>
+                                    <c:forEach begin="0" end="${fn:length(string) - 1}" var="internal">
+                                        <label>
+                                            <input type="checkbox" name="IncorrectWord${cycle}" value="${string[internal]}">
+                                            <span><c:out value="${string[internal]}"/>&nbsp;</span>
+                                        </label>
+                                    </c:forEach>
+                                </div>
+                                <br>
+                                <br>
+                                <p>Confidence (1-5):</p>
+                                <span>
+                                    <select name="Confidence">
+                                        <!--<option hidden disabled selected value>Select a number</option>-->
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </span>
+                                <br>
+                                <br>
+                                <p>Suggest your own translation:</p>
+                                <input type="text" class="input" name="OwnTranslation" value="" size="100"/>
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
-            </div>
-        </c:forEach>
-			<div class="col-lg-12">
+            </c:forEach>
+            <div class="col-lg-12">
                 <p><input class="btn btn-basic" type="submit" value="Submit" style="color: black"></p>
             </div>
-        </form>
-        <!--<div class="col-lg-6 col-sm-6" style="text-align: center">
-            <button type="button" class="btn btn-secondary"><input type="submit" valueSubmit!</button>-->
-            <br><br><br>
         </div>
+        </form>
+            <br><br><br>
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
