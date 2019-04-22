@@ -2,7 +2,7 @@
 -- DROP DATABASE postgres;
 
 DROP TABLE IF EXISTS Sentences cascade;
-CREATE TABLE Sentences (id SERIAL, internal_id VARCHAR(35), sentence VARCHAR(1000), user_id INTEGER DEFAULT 1, batch INTEGER DEFAULT 0, PRIMARY KEY(id), FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE RESTRICT ON UPDATE CASCADE);
+CREATE TABLE Sentences (id SERIAL, internal_id VARCHAR(35), sentence VARCHAR(1000), user_id INTEGER DEFAULT 1, PRIMARY KEY(id), FOREIGN KEY (user_id) REFERENCES Users(id) ON DELETE RESTRICT ON UPDATE CASCADE);
 COPY Sentences(internal_id, sentence) FROM 'C:\Users\Nucci\Documents\MetaTranslator\src\main\database\corpora\VUA1\AwkParsingFinalResult.txt' DELIMITER '|' ENCODING 'latin1';
 COPY Sentences(internal_id, sentence) FROM 'C:\Users\Nucci\Documents\Metatranslator\src\main\database\corpora\MOH1\MOHAWK.txt'  DELIMITER '|' ENCODING 'UTF-8';
 COPY Sentences(internal_id, sentence) FROM 'C:\Users\Nucci\Documents\Metatranslator\src\main\database\corpora\FLA1\Affective_with_metaphors_pos.txt'  DELIMITER '|' ENCODING 'UTF-8';
