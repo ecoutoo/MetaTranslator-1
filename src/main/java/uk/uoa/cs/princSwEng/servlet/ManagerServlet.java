@@ -95,10 +95,7 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			number = (int)Integer.parseInt((req.getParameter("number")));
 			corpora = req.getParameter("corpora");
 			email = req.getParameter("email");
-//			rkey = (int)Integer.parseInt((req.getParameter("rkey")));
-//			if (rkey == -1) {
 			rkey =  (int) session.getAttribute("rkey");
-//			}
 			arr = new int[number];
 			if (Global.DEBUGMODE)
 				System.out.println("Parameters retrieved: " + translator + languages + number + corpora);
@@ -143,15 +140,11 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 			m = new Message("There is a problem with the URI during the database connection phase.", "DB100", ex.getMessage());
 		}
 
-	
-		// stores the deleted company and the message as a request attribute
 		req.setAttribute("key", key);
 		req.setAttribute("rkey", rkey);
 		session.setAttribute("current_logged_in", "rkey");
 		// req.setAttribute("message", m);
     
-
-		// forwards the control to the read-company-result JSP
 		req.getRequestDispatcher("/jsp/display-key.jsp").forward(req, res);
 
 }
