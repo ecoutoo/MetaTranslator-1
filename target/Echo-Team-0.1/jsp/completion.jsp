@@ -64,6 +64,7 @@
 									<li><a href="registration" id="registration">REGISTER</a>
 								</c:when>
 								<c:otherwise>
+									<li><a href="userpage" id="userpage">USER PAGE</a></li>
 									<li><a href="logout" id="logout">LOGOUT</a></li>
 								</c:otherwise>
 							</c:choose>

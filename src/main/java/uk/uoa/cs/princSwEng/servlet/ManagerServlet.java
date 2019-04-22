@@ -142,7 +142,7 @@ public final class ManagerServlet extends AbstractDatabaseServlet {
 
 		req.setAttribute("key", key);
 		req.setAttribute("rkey", rkey);
-		session.setAttribute("current_logged_in", "rkey");
+		session.setAttribute("current_logged_in", rkey);
 		// req.setAttribute("message", m);
     
 		req.getRequestDispatcher("/jsp/display-key.jsp").forward(req, res);

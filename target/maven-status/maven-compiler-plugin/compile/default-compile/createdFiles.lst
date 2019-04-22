@@ -5,6 +5,7 @@ uk\uoa\cs\princSwEng\database\SearchResearcherSurveysDatabase.class
 uk\uoa\cs\princSwEng\resource\Mailer$1.class
 uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.class
 uk\uoa\cs\princSwEng\servlet\CreationServlet.class
+uk\uoa\cs\princSwEng\servlet\UserpageServlet.class
 uk\uoa\cs\princSwEng\servlet\ManagerServlet.class
 uk\uoa\cs\princSwEng\servlet\PersonalServlet.class
 uk\uoa\cs\princSwEng\database\SearchResearcherDatabase.class

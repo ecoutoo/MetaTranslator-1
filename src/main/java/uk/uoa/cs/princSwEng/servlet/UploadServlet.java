@@ -51,7 +51,7 @@ public final class UploadServlet extends AbstractDatabaseServlet {
 			System.out.println("Parameter retrieved: " + rkey + num);
 		req.setAttribute("rkey",rkey);
 		req.setAttribute("num",num);
-		session.setAttribute("current_logged_in", "rkey");
+		session.setAttribute("current_logged_in", rkey);
 		req.getRequestDispatcher("/jsp/upload.jsp").forward(req, res);
 	}
 }

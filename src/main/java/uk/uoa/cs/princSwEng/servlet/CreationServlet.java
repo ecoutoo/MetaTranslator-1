@@ -49,7 +49,7 @@ public final class CreationServlet extends AbstractDatabaseServlet {
 		if (Global.DEBUGMODE) 
 			System.out.println("Parameter retrieved: " + rkey);
 		req.setAttribute("rkey",rkey);
-		session.setAttribute("current_logged_in", "rkey");
+		session.setAttribute("current_logged_in", rkey);
 		req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
 	}
 }
