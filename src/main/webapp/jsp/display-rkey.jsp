@@ -59,7 +59,6 @@
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="logout" id="logout">LOGOUT</a></li>
-							<li><a href="registration" id="registration">REGISTER</a>
 						</ul>
 					</div>
                 </div>
@@ -91,28 +90,39 @@
 				</form>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-6 col-sm-6">
-				<c:choose>
-					<c:when test="${fn:length(survarr)<1}">
+		<c:choose>
+			<c:when test="${fn:length(survarr)<1}">
+				<div class="row">
+					<div class="col-lg-2 col-sm-2"></div>
+					<div class="col-lg-8 col-sm-8">
 						<p>You haven't created any survey yet.</p>
-					</c:when>
-					<c:when test="${fn:length(survarr)>0}">
-						<c:forEach begin="0" end="${fn:length(survarr)-1}" var="cycle">
+					</div>
+				</div>
+			</c:when>
+			<c:when test="${fn:length(survarr)>0}">
+				<c:forEach begin="0" end="${fn:length(survarr)-1}" var="cycle">
+					<div class="container-fluid bg-1 text-center">
+						<h4 class="margin" style="line-height: 1.5em">
+							SURVEY <c:out value="${survarr[cycle]}"/>
+						</h4>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-sm-6">
 							<form action="analytics" method="post">
-								<p><c:out value="${survarr[cycle]}"/>
-								<input type="hidden" name="survkey" value="${survarr[cycle]}">
+								<p><input type="hidden" name="survkey" value="${survarr[cycle]}">
 								<input class="btn btn-basic" type="submit" name="Analytics" value="Analytics" style="color: black"></p>
 							</form>
+						</div>
+						<div class="col-lg-6 col-sm-6">
 							<form action="downloadraw" method="post">
 								<input type="hidden" name="survkey" value="${survarr[cycle]}">
 								<input class="btn btn-basic" type="submit" name="DownloadRaw" value="Download Raw Data" style="color: black"></p>
 							</form>
-						</c:forEach>
-					</c:when>
-				</c:choose>
-			</div>
-		</div>
+						</div>
+					</div>
+				</c:forEach>
+			</c:when>
+		</c:choose>
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->

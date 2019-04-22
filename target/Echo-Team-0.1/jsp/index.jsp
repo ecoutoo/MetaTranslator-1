@@ -54,8 +54,15 @@
                     <a class="navbar-brand" href="index.jsp" id="index">MetaTranslate</a>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="login" id="login">LOGIN</a></li>
-                            <li><a href="registration" id="registration">REGISTER</a>
+                            <c:choose>
+								<c:when test="${sessionScope.current_logged_in == null}">
+									<li><a href="login" id="login">LOGIN</a></li>
+									<li><a href="registration" id="registration">REGISTER</a>
+								</c:when>
+								<c:otherwise>
+									<li><a href="logout" id="logout">LOGOUT</a></li>
+								</c:otherwise>
+							</c:choose>
                         </ul>
                     </div>
                 </div>
