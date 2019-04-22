@@ -83,6 +83,16 @@
 				</form>
 			</div>
 			<div class="col-lg-6 col-sm-6">
+				<form action="upload" style="text-align:left;width:80%" method="post">
+					<p><b>Create a survey with your own sentences</b><br><br>
+					Number of sentences: <input type="radio" name="num" value="5" checked> 5 &nbsp; <input type="radio" name="num" value="10"> 10 &nbsp; <input type="radio" name="num" value="15"> 15<br>
+					<input type="hidden" name="rkey" value="${rkey}">
+					<br><input type="submit" class="btn btn-basic" name="upload" value="Upload" style="color: black"></p>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-sm-6">
 				<c:choose>
 					<c:when test="${fn:length(survarr)<1}">
 						<p>You haven't created any survey yet.</p>

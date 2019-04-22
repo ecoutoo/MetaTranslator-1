@@ -6,6 +6,7 @@ uk\uoa\cs\princSwEng\resource\Mailer$1.class
 uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.class
 uk\uoa\cs\princSwEng\servlet\CreationServlet.class
 uk\uoa\cs\princSwEng\servlet\ManagerServlet.class
+uk\uoa\cs\princSwEng\servlet\PersonalServlet.class
 uk\uoa\cs\princSwEng\database\SearchResearcherDatabase.class
 uk\uoa\cs\princSwEng\database\CreateResearcherDatabase.class
 uk\uoa\cs\princSwEng\resource\Researcher.class
@@ -15,6 +16,7 @@ uk\uoa\cs\princSwEng\resource\Sentence.class
 uk\uoa\cs\princSwEng\database\CreateResultDatabase.class
 uk\uoa\cs\princSwEng\servlet\RegistrationServlet.class
 uk\uoa\cs\princSwEng\database\SearchRandomSentenceDatabase.class
+uk\uoa\cs\princSwEng\database\CreateSentenceDatabase.class
 uk\uoa\cs\princSwEng\resource\GoogleTranslate.class
 uk\uoa\cs\princSwEng\resource\Mailer.class
 uk\uoa\cs\princSwEng\resource\Message.class
@@ -25,6 +27,7 @@ uk\uoa\cs\princSwEng\database\SearchResultsDatabase.class
 uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.class
 uk\uoa\cs\princSwEng\database\CreateSurveyDatabase.class
 uk\uoa\cs\princSwEng\servlet\AbstractDatabaseServlet.class
+uk\uoa\cs\princSwEng\servlet\UploadServlet.class
 uk\uoa\cs\princSwEng\resource\Global.class
 uk\uoa\cs\princSwEng\resource\Result.class
 uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.class

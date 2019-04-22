@@ -53,6 +53,14 @@
 		<servlet-name>AnalyticsServlet</servlet-name>
 		<servlet-class>uk.uoa.cs.princSwEng.servlet.AnalyticsServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>uk.uoa.cs.princSwEng.servlet.UploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PersonalServlet</servlet-name>
+		<servlet-class>uk.uoa.cs.princSwEng.servlet.PersonalServlet</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>ManagerServlet</servlet-name>
@@ -86,7 +94,15 @@
 		<servlet-name>AnalyticsServlet</servlet-name>
 		<url-pattern>/analytics</url-pattern>
 	</servlet-mapping>
-
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PersonalServlet</servlet-name>
+		<url-pattern>/personal</url-pattern>
+	</servlet-mapping>
+	
 <!-- 
 	<servlet-mapping>
 		<servlet-name>UpdatePasswordServlet</servlet-name>

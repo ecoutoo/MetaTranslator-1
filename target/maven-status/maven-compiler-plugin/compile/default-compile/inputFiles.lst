@@ -4,6 +4,7 @@ C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\rest\
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\RegistrationServlet.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Language.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\AnalyticsServlet.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\CreateSentenceDatabase.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSentencesFromSurveyDatabase.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\SendEmail.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchResultsDatabase.java
@@ -30,5 +31,7 @@ C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resou
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\AbstractDatabaseServlet.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\database\SearchSurveyDatabase.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\YandexTranslatorAPI.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\PersonalServlet.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\LoginServlet.java
 C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\resource\Sentence.java
+C:\Users\Nucci\Documents\MetaTranslator\src\main\java\uk\uoa\cs\princSwEng\servlet\UploadServlet.java

@@ -90,7 +90,7 @@
                     <p>Sentence <c:out value ="${cycle+1}"/></p>
                     <div class="container-fluid bg-3">
                         <p>
-                            <b>Sentence:</b><c:out value="${texts[cycle]}"/>
+                            <b>Sentence:</b> <c:out value="${texts[cycle]}"/>
                             <br><br>
                             <b>Translation:</b> <c:out value="${translated_texts[cycle]}"/>
                             <br>
