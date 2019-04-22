@@ -104,6 +104,10 @@
 								<input type="hidden" name="survkey" value="${survarr[cycle]}">
 								<input class="btn btn-basic" type="submit" name="Analytics" value="Analytics" style="color: black"></p>
 							</form>
+							<form action="downloadraw" method="post">
+								<input type="hidden" name="survkey" value="${survarr[cycle]}">
+								<input class="btn btn-basic" type="submit" name="DownloadRaw" value="Download Raw Data" style="color: black"></p>
+							</form>
 						</c:forEach>
 					</c:when>
 				</c:choose>

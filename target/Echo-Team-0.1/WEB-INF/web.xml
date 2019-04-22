@@ -61,6 +61,10 @@
 		<servlet-name>PersonalServlet</servlet-name>
 		<servlet-class>uk.uoa.cs.princSwEng.servlet.PersonalServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>DownloadRawServlet</servlet-name>
+		<servlet-class>uk.uoa.cs.princSwEng.servlet.DownloadRawServlet</servlet-class>
+	</servlet>
 	
 	<servlet-mapping>
 		<servlet-name>ManagerServlet</servlet-name>
@@ -101,6 +105,11 @@
 	<servlet-mapping>
 		<servlet-name>PersonalServlet</servlet-name>
 		<url-pattern>/personal</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DownloadRawServlet</servlet-name>
+		<url-pattern>/downloadraw</url-pattern>
 	</servlet-mapping>
 	
 <!-- 

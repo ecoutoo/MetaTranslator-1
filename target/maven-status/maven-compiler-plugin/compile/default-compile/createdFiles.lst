@@ -8,6 +8,7 @@ uk\uoa\cs\princSwEng\servlet\CreationServlet.class
 uk\uoa\cs\princSwEng\servlet\ManagerServlet.class
 uk\uoa\cs\princSwEng\servlet\PersonalServlet.class
 uk\uoa\cs\princSwEng\database\SearchResearcherDatabase.class
+uk\uoa\cs\princSwEng\servlet\DownloadRawServlet.class
 uk\uoa\cs\princSwEng\database\CreateResearcherDatabase.class
 uk\uoa\cs\princSwEng\resource\Researcher.class
 uk\uoa\cs\princSwEng\resource\YandexTranslate.class
