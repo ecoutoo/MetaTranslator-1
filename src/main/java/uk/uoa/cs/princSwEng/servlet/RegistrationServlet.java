@@ -117,6 +117,7 @@ public final class RegistrationServlet extends AbstractDatabaseServlet
 		req.setAttribute("survarr",survarr);
 		HttpSession session = req.getSession(true);
 		session.setAttribute("current_logged_in",rkey);
+		session.setAttribute("rkey",rkey);
 		req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req,res);
 	}
 }

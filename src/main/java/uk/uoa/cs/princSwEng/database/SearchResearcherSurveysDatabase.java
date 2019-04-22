@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 import uk.uoa.cs.princSwEng.resource.Global;
-
 import uk.uoa.cs.princSwEng.resource.Survey;
 
 public class SearchResearcherSurveysDatabase {

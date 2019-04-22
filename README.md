@@ -1,5 +1,9 @@
 # Natural-Language-Research
 
+**HEROKU APP** https://metatranslator.herokuapp.com/
+
+**YOUTUBE PRESENTATION** https://www.google.com/url?q=https://www.youtube.com/channel/UCUZiRsYSoG_YPzg_37Kk07g&sa=D&ust=1555921909751000&usg=AFQjCNG4wzymTTI3S7VinhCPO7lpb15PiQ
+
 This repository contains the work for the Software Engineering project.
 
 1. ##MAVEN

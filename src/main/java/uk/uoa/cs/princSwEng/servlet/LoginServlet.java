@@ -42,7 +42,6 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		// forwards the control to the ManagerPage
-		//int prova;
 		HttpSession session = req.getSession(true);
 		if (session.getAttribute("current_logged_in") != null) {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
@@ -58,7 +57,6 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 		HttpSession session = req.getSession(true);
 		if (session.getAttribute("current_logged_in") != null) {
 			req.getRequestDispatcher("/jsp/manager.jsp").forward(req, res);
-			//rkey = (int) session.getAttribute("current_logged_in");
 		}
 		System.out.println("Request getSession");
 		System.out.println(req.getSession());
@@ -90,8 +88,7 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 			}
 		}
 		try {
-			//HttpSession session = req.getSession(true);
-			Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher(); //Should be unreachable?
+			Researcher rsc = new SearchResearcherDatabase(getConnection(), rkey).SearchResearcher();
 			String pwdb = rsc.getResearcherPassword();
 			username = rsc.getResearcherUsername();
 			name = rsc.getResearcherName();
@@ -116,14 +113,6 @@ public final class LoginServlet extends AbstractDatabaseServlet {
 				req.setAttribute("myfoo", "myfoo");
 				session.setAttribute("current_logged_in", rkey);
 				req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
-				
-		//		try {
-		//			System.out.println("Forwarding to user page");
-		//			req.getRequestDispatcher("/jsp/display-rkey.jsp").forward(req, res);
-		//		}
-		//		catch (Exception e) {
-		//			System.out.println("Did it break?");
-		//		}
 			}
 		}
 		catch (Exception e) {
